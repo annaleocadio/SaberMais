@@ -10,14 +10,16 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Anna Clara Miguel Leocádio
+* Eduardo Moreira Ribeiro
+* Gener Antonio Almeida de Melo
+* Marco Vinicius Oliveira Castro Silva
+* Thais Ferreira Zape Araújo
+* Tiago Vieira Martins
 
 ## Orientador
 
-* Nome completo do professor
+* Rosilane Ribeiro da Mota
 
 ## Instruções de Instalação, Execução e Acesso
 
