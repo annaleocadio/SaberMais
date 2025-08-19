@@ -14,8 +14,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Eduardo Moreira Ribeiro
 * Gener Antonio Almeida de Melo
 * Marco Vinicius Oliveira Castro Silva
-* Thais Ferreira Zape Araújo
-* Tiago Vieira Martins
+
 
 ## Orientador
 
