@@ -4,7 +4,9 @@ Com tantas opções de cursos online disponíveis, escolher o ideal pode ser um 
 
 ## Problema
 
-Com o crescimento das plataformas digitais, os cursos online se tornaram uma opção cada vez mais acessível e popular. A praticidade, a flexibilidade de horários e a grande variedade de conteúdos disponíveis são alguns dos principais atrativos desse formato. No entanto, apesar de todas essas vantagens, muitas pessoas ainda enfrentam dificuldades para encontrar cursos que realmente atendam às suas expectativas. Essas dificuldades podem estar relacionadas à forma como o conteúdo é apresentado, à didática dos instrutores ou à organização dos temas abordados, o que pode comprometer a qualidade da experiência de aprendizado.
+Com o crescimento das plataformas digitais, os cursos online se tornaram uma alternativa prática e acessível para quem quer aprender algo novo ou se especializar. A flexibilidade de horários e a variedade de temas disponíveis são grandes atrativos. Mas, na prática, muita gente ainda se sente perdida diante de tantas opções. Encontrar um curso que realmente faça sentido para o seu perfil pode ser difícil — seja pela forma como o conteúdo é apresentado, pela didática do instrutor ou pela organização dos temas.
+
+Sem uma orientação clara, muitas pessoas acabam escolhendo cursos que não atendem às suas expectativas. Isso pode gerar frustração, perda de tempo e até desmotivação para continuar aprendendo. Além disso, quem está começando ou tem um estilo de aprendizado mais específico pode se sentir ainda mais prejudicado. Falta uma ferramenta que ajude a transformar essa busca em algo mais simples, personalizado e confiável.
 
 ## Objetivos
 
