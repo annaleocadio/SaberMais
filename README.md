@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# Saber+ (nome provisório)
 
 `CURSO`
 
@@ -6,7 +6,7 @@
 
 `SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Nossa página web funciona como uma vitrine de cursos, reunindo indicações de diversas fontes confiáveis. Na plataforma, alunos, profissionais da área e instituições de ensino podem adicionar recomendações de cursos, permitindo que outros usuários descubram formações de qualidade de maneira rápida e organizada. O sistema foi desenvolvido para facilitar a troca de conhecimento, ampliar o acesso a oportunidades de aprendizado e ajudar qualquer pessoa a encontrar cursos relevantes, sejam eles presenciais ou online.
 
 ## Integrantes
 
