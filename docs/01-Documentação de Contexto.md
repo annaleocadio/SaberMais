@@ -34,10 +34,15 @@ Explique de forma clara a relevância da aplicação escolhida, justificando os 
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+O sistema é voltado para pessoas e instituições interessadas em recomendar, divulgar ou encontrar cursos de qualidade. O público-alvo inclui:
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Estudantes de ensino médio, técnico ou universitário que buscam capacitação extra. 
+
+Profissionais que desejam aprimorar suas habilidades ou realizar transição de carreira. 
+
+Professores e educadores que compartilham cursos e formações relevantes para seus alunos. 
+
+Instituições públicas e privadas (escolas, universidades, ONGs, empresas) que desejam divulgar seus próprios cursos. 
+
+Público em geral, formado por pessoas que desejam compartilhar recomendações espontâneas e acessar um espaço confiável de indicações. 
+
