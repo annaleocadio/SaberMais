@@ -1,6 +1,6 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Com tantas opções de cursos online disponíveis, escolher o ideal pode ser um verdadeiro desafio. Cada pessoa aprende de um jeito, tem objetivos diferentes e busca conteúdos que realmente façam sentido para sua jornada. Pensando nisso, este projeto propõe uma aplicação interativa que recomenda cursos com base no perfil de cada usuário e nas experiências de uma comunidade colaborativa. A ideia é tornar essa escolha mais simples, personalizada e eficiente, ajudando cada pessoa a encontrar o curso certo para aprender com mais prazer e propósito.
 
 ## Problema
 
@@ -32,13 +32,13 @@ Pensando nisso, este projeto propõe uma aplicação interativa que recomenda cu
 
 O sistema é voltado para pessoas e instituições interessadas em recomendar, divulgar ou encontrar cursos de qualidade. O público-alvo inclui:
 
-Estudantes de ensino médio, técnico ou universitário que buscam capacitação extra. 
+- Estudantes de ensino médio, técnico ou universitário que buscam capacitação extra. 
 
-Profissionais que desejam aprimorar suas habilidades ou realizar transição de carreira. 
+- Profissionais que desejam aprimorar suas habilidades ou realizar transição de carreira. 
 
-Professores e educadores que compartilham cursos e formações relevantes para seus alunos. 
+- Professores e educadores que compartilham cursos e formações relevantes para seus alunos. 
 
-Instituições públicas e privadas (escolas, universidades, ONGs, empresas) que desejam divulgar seus próprios cursos. 
+- Instituições públicas e privadas (escolas, universidades, ONGs, empresas) que desejam divulgar seus próprios cursos. 
 
-Público em geral, formado por pessoas que desejam compartilhar recomendações espontâneas e acessar um espaço confiável de indicações. 
+- Público em geral, formado por pessoas que desejam compartilhar recomendações espontâneas e acessar um espaço confiável de indicações. 
 
