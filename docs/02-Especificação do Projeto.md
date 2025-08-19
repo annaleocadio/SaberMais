@@ -33,8 +33,16 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Ana Clara  | Uma forma de identificar se uma agência é realmente confiável           | Me sentir mais segura ao contratar seus serviços               |
-|Ana Clara       | Ter um mecanismo eficiente e rápido de comunicação                 | Que eu possa sanar todas as minhas dúvidas rapidamente |
+| João Henrique | Quero filtrar cursos por área de interesse para encontrar rapidamente formações relevantes. | Ter agilidade na procura dos cursos de meu interesse. |
+| João Henrique | Quero salvar cursos favoritos para poder acessá-los facilmente depois. | Que achar meus cursos favoritos com mais facilidade.|
+| Maria Clara | Como professora, quero adicionar recomendações de cursos para meus alunos para ajudá-los a acessar conteúdos de qualidade.| Melhoria na qualidade de cursos divulgados nas plataformas|
+| Maria Clara | Como professora, quero ver quais alunos acessaram ou interagiram com minhas recomendações para acompanhar o engajamento.| Facilitar o compartilhamento das minhas recomendações|
+| Carlos Alberto | Como profissional em transição de carreira, quero visualizar avaliações e comentários de outros usuários para escolher cursos confiáveis.| Para encontrar cursos confiáveis que auxiliem em uma mudança de carreira|
+| Carlos Alberto | Como profissional em transição de carreira, quero comparar cursos similares para decidir qual é mais adequado para meus objetivos com base nas avaliações.| Quero ver qual é adequado com o que eu busco para a minha carreira com comentários de usúarios|
+|Instituto Educar+|Como instituição de ensino, quero divulgar meus cursos na plataforma para alcançar alunos interessados e aumentar minha visibilidade.|Quero mais visibilidade para a minha instituição|
+|Instituto Educar+|Como instituição de ensino, quero acessar relatórios de engajamento das minhas recomendações para entender quais cursos têm maior interesse.|Quero ver o meu alcance e quais cursos são mais bem avaliados.|
+|Ana Beatriz|Como usuária da plataforma, quero compartilhar recomendações de cursos que já fiz para ajudar outras pessoas a encontrarem cursos confiáveis.|Quero compartilhar cursos com quem usa a plataforma|
+|Ana Beatriz|Como usuária da plataforma, quero seguir recomendações de outros usuários com interesses semelhantes para descobrir novos cursos relevantes. |Quero acompanhar os conteúdos que meus amigos recomendam|
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
