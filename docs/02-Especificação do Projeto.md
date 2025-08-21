@@ -88,8 +88,21 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| A aplicação deve ser responsiva. | MÉDIA | 
+|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s. |  BAIXA | 
+|RNF-003| O sistema deve exigir que a senha tenha no mínimo 8 caracteres, incluindo letras, números e caracteres especiais. | MÉDIA | 
+|RNF-004| O sistema deve carregar a página inicial em no máximo 3 segundos em conexões comuns. | MÉDIA | 
+|RNF-005| O sistema deve suportar pelo menos 100 acessos simultâneos sem perda significativa de desempenho. | ALTA | 
+|RNF-006| O sistema deve ser compatível com os principais navegadores web (como Google Chrome, Mozilla Firefox, Safari e Microsoft Edge) e dispositivos móveis (smartphones e tablets). | ALTA | 
+|RNF-007| O sistema deve possuir interface responsiva, adaptando-se a diferentes tamanhos de tela (desktop, tablet e celular). | MÉDIA | 
+|RNF-008| A aplicação deve garantir a proteção dos dados pessoais e financeiros dos usuários por meio de criptografias SSL/TLS para transações seguras. | ALTA | 
+|RNF-009| A aplicação deve manter uma identidade visual consistente em todas as páginas, considerando a paleta de cores, a tipografia e o layout. | ALTA | 
+|RNF-010| O sistema deve ser desenvolvido em linguagem C# com .NET, garantindo compatibilidade com servidores que utilizem essa tecnologia. | MÉDIA | 
+|RNF-011| O sistema deve permitir atualização sem comprometer dados já armazenados. | MÉDIA | 
+|RNF-012| O sistema deve realizar backups automáticos dos dados diariamente para evitar perda de informações em caso de falha. | MÉDIA |
+|RNF-013| O sistema deve seguir as diretrizes de acessibilidade WCAG 2.1, permitindo navegação por teclado e suporte a leitores de tela. | MÉDIA |
+
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -114,6 +127,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
+|03| Exibir claramente as avaliações e comentários dos usuários |
+|04| Implementar um sistema de verificação de cursos, com fotos e descrições detalhadas. |
+|05| Implementar um sistema de verificação de produtos (curso), com fotos, documentos e descrições detalhadas. |
 
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
