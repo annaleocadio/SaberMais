@@ -61,15 +61,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| A aplicação deve permitir que o usuário avalie uma agência de intercâmbio com base na sua experiência. | MÉDIA | 
-|RF-002| A aplicação deve permitir que o usuário inclua comentários ao fazer uma avaliação de uma agência de intercâmbio. | MÉDIA |
-|RF-003| A aplicação deve permitir que o usuário consulte todas as agências de intercâmbio cadastradas ordenando-as com base em suas notas.| ALTA |
-|RF-004| O sistema deve permitir que o usuário crie uma conta utilizando e-mail e senha. | ALTA |
-|RF-005| O sistema deve enviar um e-mail de confirmação para ativação da conta após o cadastro. | ALTA |
-|RF-006| O sistema deve permitir que o usuário visualize e edite seus dados cadastrais, incluindo nome, foto de perfil e localização aproximada. | MÉDIA |
-|RF-007| O sistema deve permitir que um usuário cadastre um item, informando nome, descrição, categoria, localização e imagens. | ALTA |
-|RF-008| O sistema deve permitir que edite ou exclua um item previamente cadastrado. | ALTA |
-|RF-009| O sistema deve permitir que um usuário busque itens disponíveis por categoria, localização, palavra-chave, faixa de preço e data de publicação. | MÉDIA |
+|RF-01| A aplicação deve permitir que o usuário avalie uma agência de intercâmbio com base na sua experiência. | MÉDIA | 
+|RF-02| A aplicação deve permitir que o usuário inclua comentários ao fazer uma avaliação de uma agência de intercâmbio. | MÉDIA |
+|RF-03| A aplicação deve permitir que o usuário consulte todas as agências de intercâmbio cadastradas ordenando-as com base em suas notas.| ALTA |
+|RF-04| O sistema deve permitir que o usuário crie uma conta utilizando e-mail e senha. | ALTA |
+|RF-05| O sistema deve enviar um e-mail de confirmação para ativação da conta após o cadastro. | ALTA |
+|RF-06| O sistema deve permitir que o usuário visualize e edite seus dados cadastrais, incluindo nome, foto de perfil e localização aproximada. | MÉDIA |
+|RF-07| O sistema deve permitir que um usuário cadastre um item, informando nome, descrição, categoria, localização e imagens. | ALTA |
+|RF-08| O sistema deve permitir que edite ou exclua um item previamente cadastrado. | ALTA |
+|RF-09| O sistema deve permitir que um usuário busque itens disponíveis por categoria, localização, palavra-chave, faixa de preço e data de publicação. | MÉDIA |
 |RF-010| O sistema deve exibir uma lista de itens disponíveis na página inicial, organizados por categorias. | ALTA |
 |RF-011| O sistema deve permitir escolher cursos presencias ou online. | ALTA |
 |RF-012| O sistema deve confirmar o envio de documento seja em Ebook, PDF, ou de forma presencial. | ALTA |
@@ -88,15 +88,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva. | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s. |  BAIXA | 
-|RNF-003| O sistema deve exigir que a senha tenha no mínimo 8 caracteres, incluindo letras, números e caracteres especiais. | MÉDIA | 
-|RNF-004| O sistema deve carregar a página inicial em no máximo 3 segundos em conexões comuns. | MÉDIA | 
-|RNF-005| O sistema deve suportar pelo menos 100 acessos simultâneos sem perda significativa de desempenho. | ALTA | 
-|RNF-006| O sistema deve ser compatível com os principais navegadores web (como Google Chrome, Mozilla Firefox, Safari e Microsoft Edge) e dispositivos móveis (smartphones e tablets). | ALTA | 
-|RNF-007| O sistema deve possuir interface responsiva, adaptando-se a diferentes tamanhos de tela (desktop, tablet e celular). | MÉDIA | 
-|RNF-008| A aplicação deve garantir a proteção dos dados pessoais e financeiros dos usuários por meio de criptografias SSL/TLS para transações seguras. | ALTA | 
-|RNF-009| A aplicação deve manter uma identidade visual consistente em todas as páginas, considerando a paleta de cores, a tipografia e o layout. | ALTA | 
+|RNF-01| A aplicação deve ser responsiva. | MÉDIA | 
+|RNF-02| A aplicação deve processar requisições do usuário em no máximo 3s. |  BAIXA | 
+|RNF-03| O sistema deve exigir que a senha tenha no mínimo 8 caracteres, incluindo letras, números e caracteres especiais. | MÉDIA | 
+|RNF-04| O sistema deve carregar a página inicial em no máximo 3 segundos em conexões comuns. | MÉDIA | 
+|RNF-05| O sistema deve suportar pelo menos 100 acessos simultâneos sem perda significativa de desempenho. | ALTA | 
+|RNF-06| O sistema deve ser compatível com os principais navegadores web (como Google Chrome, Mozilla Firefox, Safari e Microsoft Edge) e dispositivos móveis (smartphones e tablets). | ALTA | 
+|RNF-07| O sistema deve possuir interface responsiva, adaptando-se a diferentes tamanhos de tela (desktop, tablet e celular). | MÉDIA | 
+|RNF-08| A aplicação deve garantir a proteção dos dados pessoais e financeiros dos usuários por meio de criptografias SSL/TLS para transações seguras. | ALTA | 
+|RNF-09| A aplicação deve manter uma identidade visual consistente em todas as páginas, considerando a paleta de cores, a tipografia e o layout. | ALTA | 
 |RNF-010| O sistema deve ser desenvolvido em linguagem C# com .NET, garantindo compatibilidade com servidores que utilizem essa tecnologia. | MÉDIA | 
 |RNF-011| O sistema deve permitir atualização sem comprometer dados já armazenados. | MÉDIA | 
 |RNF-012| O sistema deve realizar backups automáticos dos dados diariamente para evitar perda de informações em caso de falha. | MÉDIA |
