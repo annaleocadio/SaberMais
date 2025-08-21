@@ -10,22 +10,106 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Identifique, em torno de, 5 personas. Para cada persona, lembre-se de descrever suas angústicas, frustrações e expectativas de vida relacionadas ao problema. Além disso, defina uma "aparência" para a persona. Para isso, você poderá utilizar sites como [https://this-person-does-not-exist.com/pt#google_vignette](https://this-person-does-not-exist.com/pt) ou https://thispersondoesnotexist.com/ 
 
-Utilize também como referência o exemplo abaixo:
+1. João Henrique – O Estudante
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/IntApplicationProject-Template/blob/main/docs/img/AnaClara1.png" alt="Persona1"/>
+Idade: 19 anos
+Profissão: Estudante de Ensino Médio (3º ano)
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+Objetivos:
 
-> **Links Úteis**:
-> 
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Encontrar cursos gratuitos ou acessíveis para melhorar seu currículo.
+Descobrir recomendações confiáveis feitas por outros estudantes.
+
+Frustrações:
+
+Dificuldade em diferenciar cursos de qualidade de cursos enganosos.
+Pouca orientação de professores na hora de escolher capacitações extras.
+
+Como o sistema ajuda:
+
+Permite visualizar avaliações e recomendações de outros alunos e professores.
+Facilita o acesso a cursos filtrados por área de interesse.
+
+2. Maria Clara – A Professora
+
+Idade: 37 anos
+Profissão: Professora de Matemática em escola pública
+
+Objetivos:
+
+Recomendar cursos e materiais de qualidade para seus alunos.
+Divulgar eventos acadêmicos e cursos de formação continuada.
+
+Frustrações:
+
+Alunos frequentemente não sabem onde buscar cursos confiáveis.
+Pouca visibilidade para formações gratuitas de instituições renomadas.
+
+Como o sistema ajuda:
+
+Dá uma vitrine para que professores compartilhem recomendações.
+Aumenta o alcance de cursos que fortalecem a formação estudantil.
+
+3. Carlos Alberto – O Profissional em Transição de Carreira
+
+Idade: 42 anos
+Profissão: Ex-gerente de vendas, buscando transição para área de tecnologia
+
+Objetivos:
+
+Encontrar cursos de curta duração que ajudem na mudança de área.
+Seguir recomendações de pessoas experientes e instituições confiáveis.
+
+Frustrações:
+
+Excesso de cursos online sem credibilidade.
+Falta de clareza sobre quais cursos realmente têm impacto no mercado de trabalho.
+
+Como o sistema ajuda:
+
+Filtra cursos por recomendações mais relevantes.
+Permite que ele acompanhe o que profissionais e instituições recomendam.
+
+4. Instituto Educar+ – Instituição Privada de Ensino
+
+Tipo: Escola técnica e profissionalizante
+
+Objetivos:
+
+Divulgar seus próprios cursos e eventos.
+Aumentar a captação de novos alunos.
+
+Frustrações:
+
+Dificuldade em se destacar entre tantas instituições no meio digital.
+Baixa taxa de engajamento em campanhas de divulgação tradicionais.
+
+Como o sistema ajuda:
+
+Funciona como um espaço orgânico de recomendação e visibilidade.
+Aproxima a instituição de alunos realmente interessados em capacitação.
+
+5. Ana Beatriz – Usuária da Internet
+
+Idade: 26 anos
+
+Profissão: Freelancer de design
+
+Objetivos:
+
+Compartilhar cursos que encontrou úteis em sua carreira.
+Ajudar outras pessoas a não perderem tempo com formações ruins.
+
+Frustrações:
+
+Falta de plataformas centralizadas para recomendações de cursos de diferentes áreas.
+Redes sociais acabam misturando conteúdo de estudo com distrações.
+
+Como o sistema ajuda:
+
+Dá um espaço próprio e organizado para compartilhar recomendações.
+Permite receber feedback sobre seus próprios cursos recomendados.
+
 
 ## Histórias de Usuários
 
