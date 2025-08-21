@@ -61,9 +61,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| A aplicação deve permitir que o usuário avalie uma agência de intercâmbio com base na sua experiência| ALTA | 
-|RF-002| A aplicação deve permitir que o usuário inclua comentários ao fazer uma avaliação de uma agência de intercâmbio    | ALTA |
-|RF-003| A aplicação deve permitir que o usuário consulte todas as agências de intercâmbio cadastradas ordenando-as com base em suas notas | ALTA |
+|RF-001| A aplicação deve permitir que o usuário avalie uma agência de intercâmbio com base na sua experiência. | ALTA | 
+|RF-002| A aplicação deve permitir que o usuário inclua comentários ao fazer uma avaliação de uma agência de intercâmbio. | ALTA |
+|RF-003| A aplicação deve permitir que o usuário consulte todas as agências de intercâmbio cadastradas ordenando-as com base em suas notas.| ALTA |
+|RF-004| O sistema deve permitir que o usuário crie uma conta utilizando e-mail e senha. | ALTA |
+|RF-005| O sistema deve enviar um e-mail de confirmação para ativação da conta após o cadastro. | ALTA |
+|RF-006| O sistema deve permitir que o usuário visualize e edite seus dados cadastrais, incluindo nome, foto de perfil e localização aproximada. | MÉDIA |
+|RF-007| O sistema deve permitir que um usuário cadastre um item, informando nome, descrição, categoria, localização e imagens. | ALTA |
+|RF-008| O sistema deve permitir que edite ou exclua um item previamente cadastrado. | ALTA |
+|RF-009| O sistema deve permitir que um usuário busque itens disponíveis por categoria, localização, palavra-chave, faixa de preço e data de publicação. | ALTA |
+|RF-010| O sistema deve exibir uma lista de itens disponíveis na página inicial, organizados por categorias. | ALTA |
+|RF-011| O sistema deve permitir escolher cursos presencias ou online. | ALTA |
+|RF-012| O sistema deve confirmar o envio de documento seja em Ebook, PDF, ou de forma presencial. | ALTA |
+|RF-013| O sistema deve permitir que o usuário siga outros usuários para acompanhar suas recomendações e avaliações. | ALTA |
+|RF-014| A aplicação deve permitir que os usuários troquem mensagens entre si. | ALTA |
+|RF-015| O sistema deve permitir que o receptor marque o item como "Recebido" após a entrega ou venda efetuada. | MÉDIA |
+|RF-016| O sistema deve permitir que os usuários avaliem cursos e empresas com notas e comentários. | MÉDIA |
+|RF-017| O sistema deve permitir que administradores revisem denúncias de itens ou usuários e tomem ações como remoção de conteúdo ou suspensão de contas.| MÉDIA |
+|RF-018| O sistema deve impedir que um usuário banido crie uma nova conta com o mesmo e-mail e CPF. | MÉDIA |
+|RF-019| Acessar relatórios de engajamento das minhas recomendações para entender quais cursos têm maior interesse. | MÉDIA |
+
+
+
 
 ### Requisitos não Funcionais
 
