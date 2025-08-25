@@ -14,6 +14,7 @@ Nossa página web funciona como uma vitrine de cursos, reunindo indicações de 
 * Eduardo Moreira Ribeiro
 * Gener Antonio Almeida de Melo
 * Marco Vinicius Oliveira Castro Silva
+* Kaique Gabriel Fernandes
 
 
 ## Orientador
