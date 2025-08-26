@@ -6,15 +6,16 @@
 
 `Segundo semestre`
 
-Nossa página web funciona como uma vitrine de cursos, reunindo indicações de diversas fontes confiáveis. Na plataforma, alunos, profissionais da área e instituições de ensino podem adicionar recomendações de cursos, permitindo que outros usuários descubram formações de qualidade de maneira rápida e organizada. O sistema foi desenvolvido para facilitar a troca de conhecimento, ampliar o acesso a oportunidades de aprendizado e ajudar qualquer pessoa a encontrar cursos relevantes, sejam eles presenciais ou online.
+Nossa aplicação web funciona como uma vitrine de cursos, reunindo indicações de diversas fontes confiáveis. Na plataforma, alunos, profissionais da área e instituições de ensino podem adicionar recomendações de cursos, permitindo que outros usuários descubram formações de qualidade de maneira rápida e organizada. O sistema foi desenvolvido para facilitar a troca de conhecimento, ampliar o acesso a oportunidades de aprendizado e ajudar qualquer pessoa a encontrar cursos relevantes, sejam eles presenciais ou online.
 
 ## Integrantes
 
 * Anna Clara Miguel Leocádio
 * Eduardo Moreira Ribeiro
 * Gener Antonio Almeida de Melo
-* Marco Vinicius Oliveira Castro Silva
 * Kaique Gabriel Fernandes
+* Marco Vinicius Oliveira Castro Silva
+
 
 
 ## Orientador
