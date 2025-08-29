@@ -187,4 +187,22 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 ## Diagrama de Casos de Uso
 ![442520690-fe012f9e-3a33-4ac5-8643-a7d1578a85a4](https://github.com/user-attachments/assets/2560f71a-2820-4b90-b8fb-200bab5bcde9)
 
+| Ator | Descrição                                               |
+| ---- | ------------------------------------------------------- |
+| Usuário | O usuário se cadastra na plataforma para poder acessar suas funcionalidades. |
+| Usuário | O usuário faz login ou recupera a senha se necessário. |
+| Professor e Instituição | O doador cadastra um item disponível para doação. |
+| Usuário  | O doador pode editar ou excluir um item que já cadastrou. |
+| Receptor | O usuário busca itens disponíveis para doação. |
+| Receptor | O usuário solicita um item a um doador. |
+| Instituição e Receptor | Os usuários podem conversar para combinar a doação. |
+| Usuário | O sistema notifica o usuário sobre atividades relevantes. |
+| Usuário  e Receptor | O doador pode indicar como prefere entregar o item. |
+| Receptor | O receptor confirma que recebeu um item. |
+| Usuário | Após uma doação, o usuário pode avaliar a experiência. |
+| Usuário | O usuário pode denunciar problemas na plataforma. |
+| Administrador | O administrador verifica e gerencia anúncios na plataforma. |
+| Administrador | O administrador pode suspender ou banir usuários problemáticos. |
+
+As referências abaixo irão auxiliá-lo na geração do artefato "Diagrama de Casos de Uso".
 
