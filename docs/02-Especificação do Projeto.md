@@ -204,5 +204,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 | Administrador | O administrador verifica e gerencia anúncios na plataforma. |
 | Administrador | O administrador pode suspender ou banir usuários problemáticos. |
 
-As referências abaixo irão auxiliá-lo na geração do artefato "Diagrama de Casos de Uso".
 
