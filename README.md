@@ -1,4 +1,4 @@
-# Saber+ (nome provisório)
+# Saber+
 
 `Análise e Desenvolvimento de Sistemas (ADS)`
 
@@ -6,7 +6,7 @@
 
 `Segundo semestre`
 
-Nossa aplicação web funciona como uma vitrine de cursos, reunindo indicações de diversas fontes confiáveis. Na plataforma, alunos, profissionais da área e instituições de ensino podem adicionar recomendações de cursos, permitindo que outros usuários descubram formações de qualidade de maneira rápida e organizada. O sistema foi desenvolvido para facilitar a troca de conhecimento, ampliar o acesso a oportunidades de aprendizado e ajudar qualquer pessoa a encontrar cursos relevantes, sejam eles presenciais ou online.
+Nossa aplicação interativa funciona como uma vitrine de cursos, reunindo indicações de diversas fontes confiáveis. Na plataforma, alunos, profissionais da área e instituições de ensino podem adicionar recomendações de cursos, permitindo que outros usuários descubram formações de qualidade de maneira rápida e organizada. O sistema foi desenvolvido para facilitar a troca de conhecimento, ampliar o acesso a oportunidades de aprendizado e ajudar qualquer pessoa a encontrar cursos relevantes, sejam eles presenciais ou online.
 
 ## Integrantes
 
@@ -15,8 +15,6 @@ Nossa aplicação web funciona como uma vitrine de cursos, reunindo indicações
 * Gener Antonio Almeida de Melo
 * Kaique Gabriel Fernandes
 * Marco Vinicius Oliveira Castro Silva
-
-
 
 ## Orientador
 
@@ -28,10 +26,6 @@ Nossa aplicação web funciona como uma vitrine de cursos, reunindo indicações
 * URL da aplicação: https://seu-dominio.com/caminho
 * Status: online / instável / em manutenção (atualize conforme o caso)
 * Ambiente: produção / homologação
-
-**Usuário(s) de teste (se houver):**
-* Login: usuario_teste
-* Senha: senha_teste
 
 # Documentação
 
