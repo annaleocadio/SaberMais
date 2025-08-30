@@ -8,7 +8,7 @@ Neste documento apresentamos uma visão geral das Personas, Histórias de Usuár
 
 ## Personas
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/IntApplicationProject-Template/blob/main/docs/img/1JoaoHenrique.png" alt="Persona1"/>
+<img src="/docs/img/1JoaoHenrique.png" alt="Persona1"/>
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/IntApplicationProject-Template/blob/main/docs/img/2MariaClara.png" alt="Persona2"/>
 
