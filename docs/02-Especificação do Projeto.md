@@ -10,13 +10,13 @@ Neste documento apresentamos uma visão geral das Personas, Histórias de Usuár
 
 <img src="/docs/img/1JoaoHenrique.png" alt="Persona1"/>
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/IntApplicationProject-Template/blob/main/docs/img/2MariaClara.png" alt="Persona2"/>
+<img src="/docs/img/2MariaClara.png" alt="Persona2"/>
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/IntApplicationProject-Template/blob/main/docs/img/3CarlosAlberto.png" alt="Persona3"/>
+<img src="/docs/img/3CarlosAlberto.png" alt="Persona3"/>
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/IntApplicationProject-Template/blob/main/docs/img/4EducarMais.png" alt="Persona4"/>
+<img src="/docs/img/4EducarMais.png" alt="Persona4"/>
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/IntApplicationProject-Template/blob/main/docs/img/5AnaBeatriz.png" alt="Persona5"/>
+<img src="/docs/img/5AnaBeatriz.png" alt="Persona5"/>
 
 ## Histórias de Usuários
 
