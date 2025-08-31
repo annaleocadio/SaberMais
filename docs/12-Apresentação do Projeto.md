@@ -2,7 +2,7 @@
 
 ## Vídeo de apresentação - Etapa 01
 
-[Apresentação Slide PDF]([presentation/apresentacaoSlidesEtapa1.pdf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e2-proj-int-t1-educacaoqualidade/blob/main/presentation/apresentacaoSlidesEtapa1.pdf))
+[Apresentação Slide PDF](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e2-proj-int-t1-educacaoqualidade/blob/main/presentation/apresentacaoSlidesEtapa1.pdf)
 
 [Vídeo de Apresentação da ETAPA 01](https://vimeo.com/1114707006?share=copy)
 
