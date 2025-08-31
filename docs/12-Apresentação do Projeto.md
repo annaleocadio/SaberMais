@@ -2,6 +2,8 @@
 
 ## Vídeo de apresentação - Etapa 01
 
+[Apresentação Slide PDF](presentation/apresentacaoSlidesEtapa1.pdf)
+
 [Vídeo de Apresentação da ETAPA 01](https://vimeo.com/1114707006?share=copy)
 
 ## Vídeo de apresentação - Etapa 05
