@@ -85,11 +85,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-|03| Exibir claramente as avaliações e comentários dos usuários |
-|04| Implementar um sistema de verificação de cursos, com fotos e descrições detalhadas. |
-|05| Implementar um sistema de verificação de produtos (curso), com fotos, documentos e descrições detalhadas. |
+|01| Todo curso exibido deve conter ao menos título, descrição e uma imagem. |
+|02| As avaliações e comentários dos usuários devem ser exibidos de forma clara junto ao curso. |
+|03| O sistema recomendará apenas cursos de plataformas parceiras previamente definidas (ex.: Udemy, Coursera, Alura). |
+|04| O projeto deve ser finalizado até o fim do semestre letivo. |
+|05| O desenvolvimento será realizado apenas pelos integrantes do grupo, sem contratação de terceiros. |
+|06| O projeto deverá priorizar tecnologias gratuitas ou já disponíveis para os desenvolvedores. |
 
 
 
