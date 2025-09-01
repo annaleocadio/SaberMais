@@ -1,16 +1,22 @@
 # Introdução
 
-Com tantas opções de cursos online disponíveis, escolher o ideal pode ser um verdadeiro desafio. Cada pessoa aprende de um jeito, tem objetivos diferentes e busca conteúdos que realmente façam sentido para sua jornada. Pensando nisso, este projeto propõe uma aplicação interativa que recomenda cursos com base no perfil de cada usuário e nas experiências de uma comunidade colaborativa. A ideia é tornar essa escolha mais simples, personalizada e eficiente, ajudando cada pessoa a encontrar o curso certo para aprender com mais prazer e propósito.
+O avanço das tecnologias digitais transformou profundamente a forma como o conhecimento é produzido, distribuído e consumido. Nesse contexto, os cursos online se consolidaram como uma alternativa prática, acessível e democrática para o aprendizado contínuo, permitindo que milhões de pessoas possam estudar em diferentes lugares e horários. De acordo com pesquisas recentes, o mercado global de Educação a Distância (EAD) movimenta bilhões de dólares por ano e apresenta crescimento constante — estimativas apontam que o setor deve atingir valores entre US$ 248,84 bilhões em 2025 e US$ 419,31 bilhões em 2030, com crescimento médio anual de 11,01% (MORDOR INTELLIGENCE, 2024), podendo alcançar até US$ 279,30 bilhões em 2029 (STATISTA; ELEARNINGSTATS, 2025).
+
+Apesar desses avanços, escolher um curso online adequado ainda representa um desafio. A imensa variedade de opções disponíveis em plataformas como Udemy, Coursera, Alura e similares pode confundir os estudantes, especialmente aqueles que estão iniciando sua jornada educacional ou buscam conteúdos muito específicos. Cada pessoa possui um estilo de aprendizado próprio, objetivos distintos e diferentes níveis de conhecimento prévio. Nesse cenário, surgem desafios típicos dos sistemas de recomendação, como o problema do cold start (dificuldade em sugerir opções para usuários ou cursos novos sem histórico de dados), além da necessidade de lidar com esparsidade, escalabilidade e excesso de popularidade em algumas recomendações (RECOMMENDER SYSTEMS, 2024). Assim, sem uma ferramenta de orientação eficaz, a tomada de decisão pode se tornar cansativa e pouco assertiva.
+
+Com base nisso, este projeto propõe o desenvolvimento de uma aplicação interativa de recomendação de cursos online, baseada em perfis de usuários e no compartilhamento colaborativo de experiências. A proposta busca oferecer uma experiência personalizada, confiável e simplificada, ajudando os usuários a encontrar cursos que estejam alinhados às suas necessidades e preferências individuais. Modelos semelhantes já vêm sendo explorados em pesquisas: sistemas híbridos que combinam filtragem colaborativa e análise de conteúdo com algoritmos genéticos demonstraram ganhos de confiabilidade nas recomendações (ESTEBAN et al., 2024); plataformas adaptativas como o RiPPLE mostraram resultados positivos em termos de engajamento e aprendizagem (KHOSRAVI et al., 2019); e abordagens context-aware (sensíveis ao contexto) têm se mostrado eficazes na recomendação de cursos em MOOCs de larga escala (HOU et al., 2016).
 
 ## Problema
 
-Com o crescimento das plataformas digitais, os cursos online se tornaram uma alternativa prática e acessível para quem quer aprender algo novo ou se especializar. A flexibilidade de horários e a variedade de temas disponíveis são grandes atrativos. Mas, na prática, muita gente ainda se sente perdida diante de tantas opções. Encontrar um curso que realmente faça sentido para o seu perfil pode ser difícil — seja pela forma como o conteúdo é apresentado, pela didática do instrutor ou pela organização dos temas.
+O crescimento acelerado das plataformas digitais ampliou a oferta de cursos online nos mais variados temas e formatos. Essa expansão trouxe benefícios, como flexibilidade de horários, acessibilidade geográfica e custos reduzidos. No entanto, também gerou um problema: a dificuldade de selecionar cursos de qualidade e adequados ao perfil do estudante.
 
-Sem uma orientação clara, muitas pessoas acabam escolhendo cursos que não atendem às suas expectativas. Isso pode gerar frustração, perda de tempo e até desmotivação para continuar aprendendo. Além disso, quem está começando ou tem um estilo de aprendizado mais específico pode se sentir ainda mais prejudicado. Falta uma ferramenta que ajude a transformar essa busca em algo mais simples, personalizado e confiável.
+Dados do Censo EAD Brasil (ABED, 2023) apontam que uma parte significativa dos alunos abandona cursos online antes da conclusão, muitas vezes por insatisfação com a didática, falta de clareza nos objetivos ou inadequação do conteúdo ao seu nível de conhecimento. Além disso, plataformas atuais ainda apresentam limitações no processo de recomendação, privilegiando algoritmos baseados em popularidade ou marketing, sem considerar a diversidade de estilos de aprendizagem e contextos individuais.
+
+A ausência de um sistema de recomendação mais personalizado pode gerar frustração, desperdício de tempo e recursos, além de desmotivar os estudantes a continuar investindo em sua formação. Surge, portanto, a necessidade de uma solução capaz de facilitar a escolha de cursos, oferecendo recomendações baseadas não apenas em algoritmos, mas também em experiências colaborativas e no perfil específico de cada usuário.
 
 ## Objetivos
 
-O objetivo geral deste projeto é desenvolver uma aplicação interativa capaz de recomendar cursos de aprendizado online, considerando diferentes perfis de usuários, com o intuito de melhorar a experiência de escolha e aumentar a satisfação com os conteúdos consumidos. 
+O objetivo geral deste projeto é desenvolver uma aplicação interativa de recomendação de cursos online, capaz de considerar diferentes perfis de usuários e avaliações colaborativas, com o intuito de melhorar a experiência de escolha e aumentar a satisfação com os conteúdos consumidos.
 
 Como objetivos específicos, destacam-se:
 
@@ -26,9 +32,11 @@ Como objetivos específicos, destacam-se:
 
 ## Justificativa
 
-Com tantos cursos disponíveis online, escolher o mais adequado pode ser uma tarefa frustrante. A variedade de plataformas, estilos de ensino e formas de organizar o conteúdo nem sempre facilita a vida de quem quer aprender — especialmente para quem está começando ou tem um perfil de aprendizado específico. 
+A educação online desempenha papel cada vez mais relevante na formação de profissionais e estudantes, mas a abundância de opções pode tornar a escolha de cursos uma tarefa complexa e, muitas vezes, frustrante. Plataformas atuais oferecem mecanismos de busca e categorização, porém raramente consideram as características individuais do aprendiz ou integram experiências colaborativas de forma significativa.
 
-Pensando nisso, este projeto propõe uma aplicação interativa que recomenda cursos com base nas recomendações de uma comunidade de diferentes usuários. A ideia é tornar essa escolha mais simples, personalizada e eficiente, ajudando as pessoas a encontrarem conteúdos que realmente façam sentido para elas. 
+Este projeto justifica-se pela necessidade de oferecer uma solução que vá além da simples busca por popularidade, proporcionando personalização, orientação e confiabilidade no processo de decisão. A aplicação proposta poderá contribuir tanto para usuários individuais — ao otimizar tempo e recursos investidos — quanto para instituições educacionais, que terão uma ferramenta adicional para divulgar cursos de forma mais direcionada.
+
+Do ponto de vista acadêmico, a proposta contribui para pesquisas em sistemas de recomendação, usabilidade e interação humano-computador (IHC), além de dialogar com tendências de aprendizagem personalizada e colaborativa. Do ponto de vista social, busca democratizar o acesso ao conhecimento de qualidade, tornando o aprendizado online mais significativo e prazeroso.
 
 ## Público-Alvo
 
