@@ -5,10 +5,6 @@ backlog: https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/2180
 Nosso grupo vai trabalhar seguindo a metodologia ágil Scrum, organizando o projeto em sprints semanais e fazendo reuniões rápidas para alinhar o que já foi feito e o que ainda precisa ser desenvolvido. Para programar, vamos usar o Visual Studio Code como IDE principal e versionar o código pelo GitHub, criando branches separadas para cada funcionalidade.
 A organização das tarefas será feita no Backlog, em um quadro Kanban dividido em backlog, ready, in progress, in review e done, o que facilita a visualização do andamento do projeto. A comunicação entre a equipe acontecerá principalmente pelo Whatsapp.
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
-
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
