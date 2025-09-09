@@ -95,23 +95,31 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 
 ## Diagrama de Casos de Uso
-![442520690-fe012f9e-3a33-4ac5-8643-a7d1578a85a4](https://github.com/user-attachments/assets/2560f71a-2820-4b90-b8fb-200bab5bcde9)
+<img width="660" height="960" alt="diagrama_caso_uso_corrigido" src="https://github.com/user-attachments/assets/610826e3-31ae-4cf9-a64f-5f4db013ee7b" />
+
 
 | Ator | Descrição                                               |
 | ---- | ------------------------------------------------------- |
-| Usuário | O usuário se cadastra na plataforma para poder acessar suas funcionalidades. |
+| Usuário | O usuário se cadastra na plataforma para poder acessar suas funcionalidades.. |
 | Usuário | O usuário faz login ou recupera a senha se necessário. |
-| Professor e Instituição | O doador cadastra um item disponível para doação. |
-| Usuário  | O doador pode editar ou excluir um item que já cadastrou. |
-| Receptor | O usuário busca itens disponíveis para doação. |
-| Receptor | O usuário solicita um item a um doador. |
-| Instituição e Receptor | Os usuários podem conversar para combinar a doação. |
+| Usuário | O usuário gerencia seu perfil e configurações pessoais. |
 | Usuário | O sistema notifica o usuário sobre atividades relevantes. |
-| Usuário  e Receptor | O doador pode indicar como prefere entregar o item. |
+| Usuário | O usuário pode denunciar problemas ou outros usuários na plataforma. |
+| Usuário | O usuário pode enviar e receber mensagens. |
+| Usuário | O usuário pode avaliar outro usuário. |
+| Professor | O professor pode editar ou excluir um item que já cadastrou. |
+| Professor | O professor pode indicar como prefere entregar o item. |
+| Professor | O professor pode enviar e receber mensagens. |
+| Professor | O professor cadastra itens disponíveis. |
+| Instituição | A instituição cadastra itens disponíveis. |
+| Instituição | A instituição pode editar ou excluir um item que já cadastrou. |
+| Instituição | A instituição pode indicar como prefere entregar o item. |
+| Instituição | A instituição pode enviar e receber mensagens. |
+| Instituição | A instituição fornece dicas de cursos para alunos e outras instituições. |
+| Receptor | O receptor solicita um item (professor ou instituição). |
 | Receptor | O receptor confirma que recebeu um item. |
-| Usuário | Após uma doação, o usuário pode avaliar a experiência. |
-| Usuário | O usuário pode denunciar problemas na plataforma. |
+| Receptor | O receptor pode enviar e receber mensagens. |
+| Receptor | O usuário busca itens disponíveis. |
+| Receptor | O usuário solicita um item. |
 | Administrador | O administrador verifica e gerencia anúncios na plataforma. |
 | Administrador | O administrador pode suspender ou banir usuários problemáticos. |
-
-
