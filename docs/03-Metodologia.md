@@ -3,6 +3,7 @@ backlog: https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/2180
 # Metodologia
 
 Nosso grupo vai trabalhar seguindo a metodologia ágil Scrum, organizando o projeto em sprints semanais e fazendo reuniões rápidas para alinhar o que já foi feito e o que ainda precisa ser desenvolvido. Para programar, vamos usar o Visual Studio Code como IDE principal e versionar o código pelo GitHub, criando branches separadas para cada funcionalidade.
+
 A organização das tarefas será feita no Backlog, em um quadro Kanban dividido em backlog, ready, in progress, in review e done, o que facilita a visualização do andamento do projeto. A comunicação entre a equipe acontecerá principalmente pelo Whatsapp.
 
 ## Controle de Versão
