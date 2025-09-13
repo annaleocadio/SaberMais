@@ -6,6 +6,10 @@ Nosso grupo vai trabalhar seguindo a metodologia ágil Scrum, organizando o proj
 
 A organização das tarefas será feita no Backlog, em um quadro Kanban dividido em backlog, ready, in progress, in review e done, o que facilita a visualização do andamento do projeto. A comunicação entre a equipe acontecerá principalmente pelo Whatsapp.
 
+Pré-requisitos: Documentação de Especificação 
+
+A metodologia de trabalho adotada pelo grupo para o desenvolvimento do projeto Educação Qualidade contempla tanto aspectos da gestão do projeto quanto das ferramentas utilizadas para organização do código e documentação. Esta seção apresenta os ambientes de trabalho utilizados, a estrutura de gestão do código fonte e os processos pelos quais a equipe se organiza. 
+
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
