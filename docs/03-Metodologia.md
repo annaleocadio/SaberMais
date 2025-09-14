@@ -44,26 +44,29 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Divisão de Papéis
 
-Product Owner (PO):(nome)
+- Product Owner (PO):(nome)
 
-Scrum Master (SM): (nome) 
+- Scrum Master (SM): (nome) 
 
-Equipe de Desenvolvimento:
+- Equipe de Desenvolvimento:
 
-(nome)
+- (nome)
 
-(nome)
+- (nome)
 
-(nome)
+- (nome)
+  
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+O grupo seguirá a metodologia ágil Scrum, dividindo o trabalho em sprints semanais.
  
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+- Planejamento de Sprint: realizado a cada semana para definir as tarefas que entrarão no sprint.
+
+- Backlog do Produto: será organizado no GitHub Projects, com colunas ready, in progress, in Review e done.
+
+- Comunicação: feita principalmente via Teams/whatsapp, permitindo troca de mensagens rápidas e chamadas de voz/vídeo quando necessário.
+
+- Daily Meetings: reuniões rápidas de 10 minutos para acompanhamento do progresso.
 
 ### Ferramentas
 
