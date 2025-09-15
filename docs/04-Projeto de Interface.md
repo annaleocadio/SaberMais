@@ -48,5 +48,3 @@ RF-05
 ![Wireframe Outros Usuários](img/wireframes/perfilUsuario.png)
 RF-010
 
-## Diagrama de Classe
-<img width="960" height="503" alt="Image" src="https://github.com/user-attachments/assets/6c5aaf79-4105-43df-a140-59744c9daad8" />
