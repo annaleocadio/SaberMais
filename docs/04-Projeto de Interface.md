@@ -9,17 +9,43 @@ O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamen
 
 ![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
-
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+### Página de Login
+![Wireframe Login](img/wireframes/login.png)
 
-Os wireframes são protótipos utilizados no design de interfaces para representar a estrutura de um site e o relacionamento entre suas páginas. Eles funcionam como ilustrações do layout e da disposição dos elementos essenciais da interface.
 
-Nesta seção, é FUNDAMENTAL indicar, para cada tela/wireframe proposto, quais requisitos do projeto estão sendo contemplados por aquela tela.
- 
+### Página de Cadastro
+![Wireframe Cadastro](img/wireframes/cadastro.png)
+RF-01, RF-02	
 
+### Página de Esquecimento de Senha
+![Wireframe Esquecimento de Senha](img/wireframes/recdesenha.png)
+
+### Página Home
+![Wireframe Esquecimento de Senha](img/wireframes/home.png)
+RF-06, RF-07	
+
+### Página de Detalhes da Publicação
+![Wireframe Detalhes de Publicação](img/wireframes/detalhesdocurso.png)
+RF-011	
+
+### Página de Publicação (Curso Virtual)
+![Wireframe Publicação Curso Virtual](img/wireframes/detalhesdepublicacaoArquivo.png)
+RF-04, RF-08, RF-09	
+
+### Página de Publicação (Curso Presencial)
+![Wireframe Publicação Curso Presencial](img/wireframes/detalhesdepublicacaoPresencial.png)
+RF-04, RF-08, RF-09	
+
+### Página do Perfil do Usuário
+![Wireframe Perfil](img/wireframes/perfil.png)
+RF-03, RF-011, RF-015	
+
+### Página de Editar Publicação
+![Wireframe Editar Publicação](img/wireframes/editarPublicacao.png)
+RF-05
+
+### Página de Visualização de Perfil de Outros Usuários
+![Wireframe Outros Usuários](img/wireframes/perfilUsuario.png)
+RF-010
