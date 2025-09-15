@@ -1,7 +1,7 @@
 
 # Metodologia
 
-A metodologia de trabalho adotada pelo grupo para o desenvolvimento do projeto Educação Qualidade contempla tanto aspectos da gestão do projeto quanto das ferramentas utilizadas para organização do código e documentação. Esta seção apresenta os ambientes de trabalho utilizados, a estrutura de gestão do código fonte e os processos pelos quais a equipe se organiza, seguindo a metodologia ágil Scrum, organizando o projeto em sprints semanais e fazendo reuniões rápidas para alinhar o que já foi feito e o que ainda precisa ser desenvolvido. Para programar, vamos usar o Visual Studio Code como IDE principal e versionar o código pelo GitHub, criando branches separadas para cada funcionalidade. A organização das tarefas será feita no Backlog, em um quadro Kanban dividido em backlog, ready, in progress, in review e done, o que facilita a visualização do andamento do projeto. A comunicação entre a equipe acontecerá principalmente pelo Whatsapp.
+A metodologia de trabalho adotada pelo grupo para o desenvolvimento do projeto Saber+ contempla tanto aspectos da gestão do projeto quanto das ferramentas utilizadas para organização do código e documentação. Esta seção apresenta os ambientes de trabalho utilizados, a estrutura de gestão do código fonte e os processos pelos quais a equipe se organiza, seguindo a metodologia ágil Scrum, organizando o projeto em sprints semanais e fazendo reuniões rápidas para alinhar o que já foi feito e o que ainda precisa ser desenvolvido. Para programar, vamos usar o Visual Studio Code como IDE principal e versionar o código pelo GitHub, criando branches separadas para cada funcionalidade. A organização das tarefas será feita no Backlog, em um quadro Kanban dividido em backlog, ready, in progress, in review e done, o que facilita a visualização do andamento do projeto. A comunicação entre a equipe acontecerá principalmente pelo Whatsapp.
 
 ## Controle de Versão
 
@@ -13,7 +13,7 @@ Para este projeto, optamos por uma abordagem simplificada utilizando apenas a br
 
 ### Processo de Contribuição
 
-Dada a natureza acadêmica do projeto e o tamanho da equipe, adotamos um processo simplificado de contribuição. Cada membro é responsável por adicionar suas contribuições diretamente à branch principal, mantendo a comunicação com a equipe para evitar conflitos. Não utilizamos um sistema formal de issues e pull requests, mas mantemos o controle das contribuições através da comunicação direta e das reuniões periódicas da equipe.
+Dada a natureza acadêmica do projeto e o tamanho da equipe, adotamos um processo simplificado de contribuição. Cada membro é responsável por adicionar suas contribuições diretamente à branch principal, mantendo a comunicação com a equipe para evitar conflitos. Utilizamos um sistema formal de issues e pull requests, e  mantemos o controle das contribuições através da comunicação direta e das reuniões periódicas da equipe.
 
 ## Gerenciamento de Projeto
 
