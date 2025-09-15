@@ -1,4 +1,3 @@
-backlog: https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/2180
 
 # Metodologia
 
