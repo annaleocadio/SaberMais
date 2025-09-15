@@ -6,8 +6,6 @@ Nosso grupo vai trabalhar seguindo a metodologia ágil Scrum, organizando o proj
 
 A organização das tarefas será feita no Backlog, em um quadro Kanban dividido em backlog, ready, in progress, in review e done, o que facilita a visualização do andamento do projeto. A comunicação entre a equipe acontecerá principalmente pelo Whatsapp.
 
-Pré-requisitos: Documentação de Especificação 
-
 A metodologia de trabalho adotada pelo grupo para o desenvolvimento do projeto Educação Qualidade contempla tanto aspectos da gestão do projeto quanto das ferramentas utilizadas para organização do código e documentação. Esta seção apresenta os ambientes de trabalho utilizados, a estrutura de gestão do código fonte e os processos pelos quais a equipe se organiza. 
 
 ## Controle de Versão
@@ -19,8 +17,7 @@ foi utilizado para hospedagem do repositório.
 O projeto segue a seguinte convenção para o nome de branches:
 
 - `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
+- `homol`: versão de teste do software
 - `dev`: versão de desenvolvimento do software
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para
@@ -30,15 +27,6 @@ etiquetas:
 - `bug`: uma funcionalidade encontra-se com problemas
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
-
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
 
 ## Gerenciamento de Projeto
 
@@ -64,7 +52,7 @@ O grupo seguirá a metodologia ágil Scrum, dividindo o trabalho em sprints sema
 
 - Backlog do Produto: será organizado no GitHub Projects, com colunas ready, in progress, in Review e done.
 
-- Comunicação: feita principalmente via Teams/whatsapp, permitindo troca de mensagens rápidas e chamadas de voz/vídeo quando necessário.
+- Comunicação: feita principalmente via Teams/Whatsapp, permitindo troca de mensagens rápidas e chamadas de voz/vídeo quando necessário.
 
 - Daily Meetings: reuniões rápidas de 10 minutos para acompanhamento do progresso.
 
@@ -82,8 +70,8 @@ integração semelhante e por isso foram selecionadas. Por fim, para criar
 diagramas utilizamos essa ferramenta por melhor captar as
 necessidades da nossa solução.
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
+As ferramentas de desenvolvimento que foram empregadas no projeto são:
  
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+- [Teams](https://www.microsoft.com/pt-br/microsoft-teams/log-in)(Para reuniões e encontros síncronos).
+- [Whatsapp](https://www.whatsapp.com/?lang=pt_BR) (Para comunicação assíncrona).
+- [Figma](https://www.figma.com/pt-br/)(Para protótipos e wireframes).
