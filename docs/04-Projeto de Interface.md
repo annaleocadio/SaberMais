@@ -7,17 +7,6 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 ![Diagrama de Fluxo](img/diagramaDeFluxo.jpg)
 
-## Diagrama de Classe
-Um diagrama de classes é um tipo de diagrama UML (Unified Modeling Language) que mostra a estrutura estática de um sistema, ou seja:
-
-- Quais classes (entidades/objetos) existem;
-
-- Quais atributos (dados/variáveis) e métodos (funções/comportamentos) cada classe possui;
-
-- Como as classes se relacionam entre si (herança, associação, composição, etc.)
-  
-<img width="960" height="503" alt="Image" src="https://github.com/user-attachments/assets/6c5aaf79-4105-43df-a140-59744c9daad8" />
-
 ## Wireframes
 
 ### Página de Login
