@@ -71,7 +71,7 @@ O Visual Studio Code foi escolhido como editor de código principal devido à su
 
 #### Ferramentas de Design e Prototipação
 
-O Figma foi selecionado para a criação dos wireframes e protótipos interativos devido à sua capacidade de colaboração em tempo real, bibliotecas de componentes e facilidade de compartilhamento. Já o Draw.io foi escolhido para a criação de diagramas pela sua interface intuitiva e recursos específicos para diversos tipos de diagramações técnicas.
+O Figma foi selecionado para a criação dos wireframes e protótipos interativos devido à sua capacidade de colaboração em tempo real, bibliotecas de componentes e facilidade de compartilhamento. Já o Draw.io foi escolhido para a criação de diagramas pela seus recursos específicos para diversos tipos de diagramações técnicas.
 
 #### Ferramentas de Comunicação e Colaboração
 
