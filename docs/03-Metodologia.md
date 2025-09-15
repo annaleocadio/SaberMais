@@ -25,9 +25,9 @@ A equipe é composta pelos seguintes membros:
 
 - **Anna Clara Miguel Leocádio**
 - **Eduardo Moreira Ribeiro**
+- **Marco Vinicius Oliveira Castro Silva**
 - **Gener Antonio Almeida de Melo**
 - **Kaique Gabriel Fernandes**
-- **Marco Vinicius Oliveira Castro Silva**
 
 Para este projeto, optamos por uma abordagem colaborativa onde a divisão de trabalho foi realizada com base nos artefatos necessários para cada etapa de entrega, considerando as habilidades e disponibilidade de cada membro da equipe.
 
