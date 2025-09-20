@@ -18,6 +18,8 @@ Um diagrama de classes é um tipo de diagrama UML (Unified Modeling Language) qu
 
 ## Modelo ER (Projeto Conceitual)
 
+<img width="1657" height="744" alt="Image" src="https://github.com/user-attachments/assets/64f63030-ddf0-47c7-9ecb-5ffb90b4465e" />
+
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
 Sugestão de ferramentas para geração deste artefato: LucidChart e Draw.io.
