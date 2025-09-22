@@ -5,14 +5,6 @@
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
 ## Diagrama de Classes
-
-Um diagrama de classes é um tipo de diagrama UML (Unified Modeling Language) que mostra a estrutura estática de um sistema, ou seja:
-
-- Quais classes (entidades/objetos) existem;
-
-- Quais atributos (dados/variáveis) e métodos (funções/comportamentos) cada classe possui;
-
-- Como as classes se relacionam entre si (herança, associação, composição, etc.)
   
 <img width="1285" height="737" alt="Image" src="https://github.com/user-attachments/assets/e15ee020-1803-4a83-94ac-3d0c73120088" />
 
