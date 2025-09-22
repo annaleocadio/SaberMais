@@ -23,10 +23,10 @@ O projeto Saber+ adota uma abordagem ágil para o gerenciamento do desenvolvimen
 
 A equipe é composta pelos seguintes membros:
 
-Scrum Master:
-Product Owner:
-Equipe de Desenvolvimento: Anna Clara Miguel Leocádio, Eduardo Moreira Ribeiro e Marco Vinicius Oliveira Castro Silva
-Equipe de Design: Anna Clara Miguel Leocádio, Eduardo Moreira Ribeiro e Marco Vinicius Oliveira Castro Silva
+-Scrum Master:
+-Product Owner:
+-Equipe de Desenvolvimento: Anna Clara Miguel Leocádio, Eduardo Moreira Ribeiro e Marco Vinicius Oliveira Castro Silva
+-Equipe de Design: Anna Clara Miguel Leocádio, Eduardo Moreira Ribeiro e Marco Vinicius Oliveira Castro Silva
 
 - **Anna Clara Miguel Leocádio**
 - **Eduardo Moreira Ribeiro**
