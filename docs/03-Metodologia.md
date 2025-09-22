@@ -9,7 +9,13 @@ A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-s
 
 ### Estrutura de Branches
 
-Para este projeto, optamos por uma abordagem simplificada utilizando apenas a branch `main`. Todos os membros da equipe têm permissão para fazer commits diretamente nessa branch, sendo cada um responsável pela qualidade e integridade de suas contribuições.
+Para este projeto, adotamos uma estratégia de versionamento baseada em três branches principais:
+
+- `main`: branch principal, que concentra a versão estável e pronta para produção do projeto.
+
+- `homol`: branch destinada a homologação e testes antes da liberação para produção.
+
+- `dev`: branch utilizada para desenvolvimento e integração contínua de novas funcionalidades.
 
 ### Processo de Contribuição
 
