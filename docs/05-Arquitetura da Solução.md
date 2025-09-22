@@ -14,7 +14,7 @@ Um diagrama de classes é um tipo de diagrama UML (Unified Modeling Language) qu
 
 - Como as classes se relacionam entre si (herança, associação, composição, etc.)
   
-<img width="960" height="503" alt="Image" src="https://github.com/user-attachments/assets/6c5aaf79-4105-43df-a140-59744c9daad8" />
+<img width="1285" height="737" alt="Image" src="https://github.com/user-attachments/assets/e15ee020-1803-4a83-94ac-3d0c73120088" />
 
 ## Modelo ER (Projeto Conceitual)
 
