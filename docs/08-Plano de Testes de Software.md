@@ -17,29 +17,20 @@ Por exemplo:
 |  	|  	|
 | **Caso de Teste** 	| **CT02 – email de confirmação** 	|
 |Requisito Associado | RF-02	- A aplicação deve enviar um email de confirmação para a ativação da conta apos o cadastro |
-| Objetivo do Teste 	| certificar a validação  da conta do usuário |
+| Objetivo do Teste 	| Certificar a validação  da conta do usuário |
 | Passos 	| - Acessar o email <br> -Clicar na confirmação 
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
 
 | **Caso de Teste** 	| **CT03– visualização e edição de dados** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-03- O sistema deve permitir que o usuário visualize e edite seu dados como nome ,foto. |
+|	Requisito Associado 	| RF-03- O sistema deve permitir que o usuário visualize e edite seus dados como nome ,foto. |
 | Objetivo do Teste 	| Verificar se o usuário consegue se visualizar e editar os dados. |
-| Passos 	| - fazer login <br> - ir para a pagina perfil do usuário<br> - realizar as alterações <br> 
-|Critério de Êxito | -as alterações foi realizado com sucesso. |
-| **Caso de Teste** 	| **CT04– envio do material de estudo** 	|
+| Passos 	| - Fazer login <br> - Ir para a pagina perfil do usuário<br> - Realizar as alterações <br> 
+|Critério de Êxito | - As alterações foram realizadas com sucesso. |
+
+| **Caso de Teste** 	| **CT04– Envio do material de estudo** 	|
 ||
 |	Requisito Associado 	| RF-09- O sistema deve permitir que o usuário tenha acesso ao meterial de estudo |
-| Objetivo do Teste 	| Verificar se o usuário consegue acessar o material apos a comprar. |
-| Passos 	| -fazer login <br> - Ir para a pagina publicar <br> --Escolher o curso" <br> - Pagar <br> - Ter acesso ao material<br> 
-|Critério de Êxito | - ter acesso ao meterial adquirido
-
- 
-
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+| Objetivo do Teste 	| Verificar se o usuário consegue acessar o material de estudo. |
+| Passos 	| - Fazer login <br> - Ir para a pagina publicar <br> - Escolher o curso <br>- Ter acesso ao material<br> 
+|Critério de Êxito | - Ter acesso ao meterial desejado.
