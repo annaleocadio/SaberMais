@@ -29,16 +29,10 @@ O projeto Saber+ adota uma abordagem ágil para o gerenciamento do desenvolvimen
 
 A equipe é composta pelos seguintes membros:
 
-- Scrum Master:
-- Product Owner:
-- Equipe de Desenvolvimento: Anna Clara Miguel Leocádio, Eduardo Moreira Ribeiro e Marco Vinicius Oliveira Castro Silva
+- Scrum Master: Eduardo Moreira Ribeiro
+- Product Owner: Anna Clara Miguel Leocádio
+- Equipe de Desenvolvimento: Anna Clara Miguel Leocádio, Eduardo Moreira Ribeiro, Kaique Gabriel Fernandes, Gener Antonio Almeida de Melo.
 - Equipe de Design: Anna Clara Miguel Leocádio, Eduardo Moreira Ribeiro e Marco Vinicius Oliveira Castro Silva
-
-- **Anna Clara Miguel Leocádio**
-- **Eduardo Moreira Ribeiro**
-- **Marco Vinicius Oliveira Castro Silva**
-- **Gener Antonio Almeida de Melo**
-- **Kaique Gabriel Fernandes**
 
 Para este projeto, optamos por uma abordagem colaborativa onde a divisão de trabalho foi realizada com base nos artefatos necessários para cada etapa de entrega, considerando as habilidades e disponibilidade de cada membro da equipe.
 
