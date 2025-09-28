@@ -27,10 +27,24 @@ Por exemplo:
 | Objetivo do Teste 	| Verificar se o usuário consegue se visualizar e editar os dados. |
 | Passos 	| - Fazer login <br> - Ir para a pagina perfil do usuário<br> - Realizar as alterações <br> 
 |Critério de Êxito | - As alterações foram realizadas com sucesso. |
-
 | **Caso de Teste** 	| **CT04– Envio do material de estudo** 	|
+|	||
+|	Requisito Associado 	| RF-09- O sistema deve permitir que o usuário tenha acesso ao meterial de estudo  |
+| Objetivo do Teste 	| Verificar se o usuário consegue acessar o material de estudo.  |
+| Passos 	| - Fazer login <br> - Ir para a pagina publicar <br> 
+|Critério de Êxito | - Ter acesso ao meterial desejado. |
+| **Caso de Teste** 	| **CT05 – Permitir aviliações com notas e comentarios** 	|
+|	|
+|	Requisito Associado 	| RF-12- O sistema deve permitir que os usuários avaliem curso e empresas com notas e comentarios. |
+| Objetivo do Teste 	| verificar  feedback e notas avaliativas. |
+| Passos 	| - Fazer login <br> - Ir para a pagina visualização do perfil do outro usuário <br> - fazer um comentario<br> 
+|Critério de Êxito | - verificar se o comentario recebido. |
+| **Caso de Teste** 	| **CT06– Permitir que administradores revisem itens e usuários** 	|
 ||
-|	Requisito Associado 	| RF-09- O sistema deve permitir que o usuário tenha acesso ao meterial de estudo |
-| Objetivo do Teste 	| Verificar se o usuário consegue acessar o material de estudo. |
-| Passos 	| - Fazer login <br> - Ir para a pagina publicar <br> - Escolher o curso <br>- Ter acesso ao material<br> 
-|Critério de Êxito | - Ter acesso ao meterial desejado.
+|	Requisito Associado 	| RF-013-O sistema deve permitir que os administradores revisem denúncias de itens ou usuários e tomem ações como remoção de conteúdo ou suspensão de contas.  |
+| Objetivo do Teste 	| Verificar se o login de administradores podem fazer algumas ações que os logins comuns não fazer. |
+| Passos 	| -  Fazer login <br> - Ir para a pagina visualização do usuário <br> - 
+|Critério de Êxito | - Conseguir ações como revisão de contas e suspenção de contas. |
+
+
+
