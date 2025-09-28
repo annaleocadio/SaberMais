@@ -7,6 +7,7 @@
 | Passos 	| - Acessar a tela de cadastro. <br> - Inserir e-mail válido.  - Inserir senha válida. <br> - Confirmar senha. <br> - Clicar em “Cadastrar”. |
 | Critério de Êxito | - O sistema cria a conta e exibe uma mensagem de sucesso ou redireciona para a tela de confirmação de e-mail. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT02 – Confirmação de e-mail** 	|
 |:---:	|:---:	|
 | Requisito Associado | RF-02 – O sistema deve enviar um e-mail de confirmação para ativação da conta após o cadastro. |
