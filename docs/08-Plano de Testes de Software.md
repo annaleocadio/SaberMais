@@ -15,6 +15,7 @@
 | Passos 	| - Realizar o cadastro de um novo usuário. <br> - Acessar o e-mail cadastrado. <br> - Abrir o e-mail de confirmação. <br> - Clicar no link de ativação. |
 | Critério de Êxito | - A conta é ativada e o usuário é redirecionado para a tela de login ou página inicial. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT03 – Visualização e edição de dados** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-03 – Visualização e edição de dados |
@@ -22,6 +23,7 @@
 | Passos 	| - Efetuar login. <br> - Acessar perfil. <br> - Alterar nome, foto e localização. <br> - Salvar alterações. <br> - Reabrir perfil para conferir. |
 | Critério de Êxito | - Alterações são salvas e exibidas corretamente. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT04 – Cadastro de item** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-04 – Visualização e edição de dados |
@@ -29,6 +31,7 @@
 | Passos 	| - Efetuar login. <br> - Acessar seção “Cadastrar Item”. <br> - Inserir nome, descrição, categoria, localização e imagens. <br> - Salvar cadastro. |
 | Critério de Êxito | - Item é salvo corretamente e aparece na lista de itens. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT05 – Edição/Exclusão de item** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-05 – Edição/Exclusão de item |
@@ -36,6 +39,7 @@
 | Passos 	| - Efetuar login. <br> - Acessar lista de itens. <br> - Selecionar item. <br> - Editar ou excluir item. <br> - Confirmar ação. |
 | Critério de Êxito | - Item é atualizado ou removido com sucesso. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT06 – Busca de itens** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-06 – Busca de itens |
@@ -43,6 +47,7 @@
 | Passos 	| - Efetuar login. <br> - Acessar tela de busca. <br> - Inserir filtros (categoria, localização, etc.). <br> - Iniciar busca. |
 | Critério de Êxito | - Resultados exibidos correspondem aos filtros aplicados. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT07 – Listagem de Itens** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-07 – Lista de itens na página inicial |
@@ -50,6 +55,7 @@
 | Passos 	| - Acessar página inicial. <br> - Observar listagem de itens. |
 | Critério de Êxito | - Itens aparecem agrupados por categoria corretamente. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT08 – Escolha de cursos** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-08 – Escolha de cursos |
@@ -57,6 +63,7 @@
 | Passos 	| - Acessar tela de cursos. <br> - Selecionar modalidade (presencial ou online). <br> - Confirmar escolha. |
 | Critério de Êxito | - Curso selecionado é exibido com a modalidade correta. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT09 – Confirmação de envio** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-09 – Confirmação de envio de documento |
@@ -64,6 +71,7 @@
 | Passos 	| - Enviar documento via sistema. <br> - Confirmar tipo de envio. <br> - Aguardar confirmação. |
 | Critério de Êxito | - Sistema confirma envio corretamente de acordo com o tipo de documento. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT10 – Seguir usuários** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-010 – Seguir usuários |
@@ -71,6 +79,7 @@
 | Passos 	| - Acessar perfil de outro usuário. <br> - Clicar em “Seguir”. |
 | Critério de Êxito | - Sistema atualiza lista de usuários seguidos e exibe confirmação. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT11 – Marcar recebimento** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-011 – Marcar item como “Recebido” |
@@ -78,6 +87,7 @@
 | Passos 	| - Efetuar login. <br> - Acessar lista de itens recebidos. <br> - Marcar item como “Recebido”. |
 | Critério de Êxito | - Status do item é atualizado corretamente para “Recebido”. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT12 – Avaliar cursos e empresas** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-012 – Avaliação de cursos e empresas |
@@ -85,6 +95,7 @@
 | Passos 	| - Acessar curso ou empresa. <br> - Inserir nota e comentário. <br> - Salvar avaliação. |
 | Critério de Êxito | - Avaliação é registrada e exibida para outros usuários. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT13 – Revisão de denúncias** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-013 – Revisão de denúncias |
@@ -92,6 +103,7 @@
 | Passos 	| - Efetuar login como administrador. <br> - Acessar lista de denúncias. <br> - Revisar denúncia. <br> - Aplicar ação (remoção ou suspensão). |
 | Critério de Êxito | - Ação é aplicada corretamente e registro da denúncia é atualizado. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT14 – Bloqueio de usuários** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-014 – Bloqueio de usuários banidos |
@@ -99,6 +111,7 @@
 | Passos 	| - Tentar cadastrar conta usando e-mail e CPF de usuário banido. |
 | Critério de Êxito | - Sistema impede cadastro e exibe mensagem de erro adequada. |
 |  	|  	|
+
 | **Caso de Teste** 	| **CT15 – Acessar relatórios de engajamento** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-015 – Acessar relatórios de engajamento |
