@@ -1,0 +1,141 @@
+/* === Tema Saber+ (dark mode elegante) === */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #0f141a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+/* ===== Navbar ===== */
+.saber-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background-color: #151d25;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Formulários (Login e Cadastro) ===== */
+.container-form {
+    background-color: #1a2730;
+    border-radius: 12px;
+    padding: 40px;
+    width: 400px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    color: #b0cee2;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.form-label {
+    color: #e0e0e0;
+}
+
+.form-control {
+    background-color: #242f3a;
+    border: 1px solid #3b4a56;
+    color: #fff;
+}
+
+    .form-control:focus {
+        background-color: #2e3d4b;
+        color: #fff;
+        border-color: #00bfa6;
+        box-shadow: 0 0 5px #00bfa6;
+    }
+
+.btn-primary {
+    background-color: #00bfa6;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #00dcb8;
+        transform: scale(1.03);
+    }
+
+/* ===== Links ===== */
+.text-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+    .text-link a {
+        color: #b0cee2;
+        text-decoration: none;
+    }
+
+        .text-link a:hover {
+            color: #00dcb8;
+            text-decoration: underline;
+        }
+
+/* ===== Footer Saber+ ===== */
+footer {
+    margin-top: auto;
+}
+
+.saber-footer {
+    background-color: #151d25;
+    color: #b0cee2;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+    .saber-footer strong {
+        color: #00bfa6;
+    }
+
+    /* Linha luminosa animada no topo do footer */
+    .saber-footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #00bfa6, #00dcb8, #00bfa6);
+        background-size: 200% 100%;
+        animation: glowline 3s linear infinite;
+    }
+
+@keyframes glowline {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(0, 191, 166, 0.3);
+    }

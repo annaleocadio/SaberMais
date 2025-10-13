@@ -1,0 +1,56 @@
+﻿@model SaberMais.Models.Usuario
+
+@{
+    ViewData["Title"] = "Cadastro - Saber+";
+}
+
+<div class="container-form">
+    <h2>Criar Conta</h2>
+
+    <form asp-action="Cadastro" method="post">
+        <div class="mb-3">
+            <label asp-for="NomeCompleto" class="form-label"></label>
+            <input asp-for="NomeCompleto" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="TipoPessoa" class="form-label"></label>
+            <select asp-for="TipoPessoa" class="form-select" required>
+                <option value="">Selecione...</option>
+                <option value="Física">Pessoa Física</option>
+                <option value="Jurídica">Pessoa Jurídica</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Documento" class="form-label">CPF ou CNPJ</label>
+            <input asp-for="Documento" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DataNascimento" class="form-label"></label>
+            <input asp-for="DataNascimento" type="date" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" type="email" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Senha" class="form-label"></label>
+            <input asp-for="Senha" type="password" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ConfirmarSenha" class="form-label"></label>
+            <input asp-for="ConfirmarSenha" type="password" class="form-control" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+        <div class="text-link">
+            <p>Já tem conta? <a asp-controller="Usuario" asp-action="Login">Faça login</a></p>
+        </div>
+    </form>
+</div>

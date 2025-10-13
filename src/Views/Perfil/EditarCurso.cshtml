@@ -1,0 +1,28 @@
+﻿@model SaberMais.Models.Curso
+@{
+    ViewData["Title"] = "Editar Curso";
+}
+
+<div class="container mt-4">
+    <h2>Editar Curso</h2>
+    <hr />
+
+    <form asp-action="EditarCurso" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input asp-for="Titulo" class="form-control" required />
+            <span asp-validation-for="Titulo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Descrição</label>
+            <textarea asp-for="Descricao" class="form-control" rows="4" required></textarea>
+            <span asp-validation-for="Descricao" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancelar</a>
+    </form>
+</div>
