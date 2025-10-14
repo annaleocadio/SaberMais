@@ -1,0 +1,87 @@
+﻿@model SaberMais.Models.CursoViewModel
+@{
+    ViewData["Title"] = "Cadastrar Curso";
+}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background: linear-gradient(180deg, #0f141a, #1a2730);">
+    <div class="p-5 rounded-4 shadow-lg" style="background-color: #1a2730; width: 600px;">
+        <h2 class="text-center mb-4" style="color: #b0cee2;">Cadastrar Curso</h2>
+
+        @if (TempData["Sucesso"] != null)
+        {
+            <div class="alert alert-success text-center">@TempData["Sucesso"]</div>
+        }
+
+        <form asp-action="Criar" asp-controller="Curso" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="Titulo" class="form-label fw-semibold">Título</label>
+                <input asp-for="Titulo" class="form-control bg-dark text-white border-0" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Descricao" class="form-label fw-semibold">Sobre o Curso</label>
+                <textarea asp-for="Descricao" class="form-control bg-dark text-white border-0" rows="5"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Valor" class="form-label fw-semibold">Valor (R$)</label>
+                <input asp-for="Valor" class="form-control bg-dark text-white border-0" />
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-semibold">Tipo de Curso</label>
+                <div class="d-flex gap-3">
+                    <div>
+                        <input type="radio" asp-for="Presencial" value="false" checked class="form-check-input" />
+                        <label class="text-white">EAD</label>
+                    </div>
+                    <div>
+                        <input type="radio" asp-for="Presencial" value="true" class="form-check-input" />
+                        <label class="text-white">Presencial</label>
+                    </div>
+                </div>
+            </div>
+
+            @if (Model != null && Model.Presencial)
+            {
+                <div class="border rounded p-3 mb-4 bg-dark">
+                    <h6 class="text-info mb-3">Endereço (Presencial)</h6>
+                    <div class="row g-2">
+                        <div class="col-md-4">
+                            <input asp-for="Cep" class="form-control bg-dark text-white border-0" placeholder="CEP" />
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="Logradouro" class="form-control bg-dark text-white border-0" placeholder="Logradouro" />
+                        </div>
+                        <div class="col-md-3">
+                            <input asp-for="Numero" class="form-control bg-dark text-white border-0" placeholder="Número" />
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <input asp-for="Bairro" class="form-control bg-dark text-white border-0" placeholder="Bairro" />
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <input asp-for="Complemento" class="form-control bg-dark text-white border-0" placeholder="Complemento" />
+                        </div>
+                        <div class="col-md-2 mt-2">
+                            <input asp-for="Uf" class="form-control bg-dark text-white border-0" placeholder="UF" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div class="mb-3">
+                <label asp-for="Imagem" class="form-label fw-semibold">Imagem do Curso</label>
+                <input asp-for="Imagem" type="file" class="form-control bg-dark text-white border-0" />
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Arquivo" class="form-label fw-semibold">Arquivo do Curso</label>
+                <input asp-for="Arquivo" type="file" class="form-control bg-dark text-white border-0" />
+            </div>
+
+            <button type="submit" class="btn w-100 fw-semibold text-white" style="background-color:#00bfa6; border:none; border-radius:8px; transition:0.3s;">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+</div>

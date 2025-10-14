@@ -1,0 +1,17 @@
+﻿@model SaberMais.Models.Administrador
+
+@{
+    ViewData["Title"] = "Excluir Administrador";
+}
+
+<h2 class="text-danger mt-3 text-center">Excluir Administrador</h2>
+
+<div class="alert alert-warning text-center">
+    Tem certeza que deseja excluir <strong>@Model.Nome</strong>?
+</div>
+
+<form asp-action="Excluir" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Sim, excluir</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
