@@ -23,12 +23,11 @@ namespace SaberMais
 
             // Ativa e configura o sistema de autenticação via cookies
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/Usuario/Login";
-        options.LogoutPath = "/Usuario/Logout";
-    });
-
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Usuario/Login";
+                    options.LogoutPath = "/Usuario/Logout";
+                });
 
             var app = builder.Build();
 
@@ -54,7 +53,6 @@ namespace SaberMais
                 }
             }
 
-
             // Configuração do pipeline de requisição
             if (!app.Environment.IsDevelopment())
             {
@@ -63,9 +61,17 @@ namespace SaberMais
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+
+            // IMPORTANTE: UseDefaultFiles ANTES de UseStaticFiles
+            app.UseDefaultFiles(new DefaultFilesOptions
+            {
+                DefaultFileNames = new List<string> { "index.html" }
+            });
+
+            app.UseStaticFiles(); // Serve arquivos estáticos da pasta wwwroot
 
             app.UseRouting();
+
             app.UseAuthentication();
             app.UseAuthorization();
 
