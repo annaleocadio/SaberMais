@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net 8 app to Azure Web App - sabermais
+name: Build and deploy ASP.Net 8 app to Azure Web App - sabermaiscursos
 
 on:
   push:
@@ -63,7 +63,8 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'sabermais'
+          app-name: 'sabermaiscursos'
           slot-name: 'Production'
           package: ./publish
+
 
