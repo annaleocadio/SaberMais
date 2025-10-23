@@ -1,3 +1,6 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy ASP.Net Core app to Azure Web App - sabermais
 
 on:
@@ -10,7 +13,7 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read # necessário para actions/checkout
+      contents: read #This is required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
@@ -18,16 +21,13 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
-
-      - name: Restore dependencies
-        run: dotnet restore ./src/SaberMais.csproj
+          dotnet-version: '3.1'
 
       - name: Build with dotnet
-        run: dotnet build ./src/SaberMais.csproj --configuration Release --no-restore
+        run: dotnet build --configuration Release
 
-      - name: Publish project
-        run: dotnet publish ./src/SaberMais.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp --no-build
+      - name: dotnet publish
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -39,8 +39,8 @@ jobs:
     runs-on: windows-latest
     needs: build
     permissions:
-      id-token: write
-      contents: read
+      id-token: write #This is required for requesting the JWT
+      contents: read #This is required for actions/checkout
 
     steps:
       - name: Download artifact from build job
@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_78CDB6F8A6C84303ABD368A05D80015D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_7304B44415F54BA69BA747C0BECD7893 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_312BD793DFED423E9A8B541CA578235F }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3895E4C666F14128AD55ED0376F7CE3E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_132455DE710948FD8DD8A97922747BB4 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_449FE213802E4D04A6520FA97273981D }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -62,3 +62,4 @@ jobs:
           app-name: 'sabermais'
           slot-name: 'Production'
           package: .
+          
