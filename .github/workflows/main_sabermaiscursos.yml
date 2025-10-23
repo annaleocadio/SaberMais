@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - sabermaiscursos
+name: Build and deploy ASP.Net 8 app to Azure Web App - sabermais
 
 on:
   push:
@@ -13,53 +13,56 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read #This is required for actions/checkout
+      contents: read # Required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up .NET Core
+      - name: Set up .NET 8 SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x'
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore ./src/SaberMais.csproj
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build ./src/SaberMais.csproj --configuration Release --no-restore
 
-      - name: dotnet publish
-        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+      - name: Publish project
+        run: dotnet publish ./src/SaberMais.csproj --configuration Release --output "${{ github.workspace }}/publish"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ${{ github.workspace }}/publish
 
   deploy:
     runs-on: windows-latest
     needs: build
     permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
+      id-token: write # Required for Azure login
+      contents: read
 
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: .net-app
-      
+          path: ./publish
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_60C0199B00534946903CF36803A5C58A }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_244C43137A3647A0A6CEECD31129CFA9 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FF34F626C8ED4578B914FC22D322A73F }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3895E4C666F14128AD55ED0376F7CE3E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_132455DE710948FD8DD8A97922747BB4 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_449FE213802E4D04A6520FA97273981D }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'sabermaiscursos'
+          app-name: 'sabermais'
           slot-name: 'Production'
-          package: .
-          
+          package: ./publish
