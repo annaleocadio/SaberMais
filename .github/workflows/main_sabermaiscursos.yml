@@ -29,11 +29,22 @@ jobs:
       - name: Build project
         run: dotnet build ./src/SaberMais.csproj --configuration Release --no-restore
 
-      # 👇 Aqui está o ajuste importante
-      - name: Publish project (x86)
-        run: dotnet publish ./src/SaberMais.csproj --configuration Release --runtime win-x86 --self-contained false --output "${{ github.workspace }}/publish"
+      - name: Publish project (x86) with web.config and stdoutLog
+        run: |
+          dotnet publish ./src/SaberMais.csproj `
+            --configuration Release `
+            --runtime win-x86 `
+            --self-contained false `
+            --output "${{ github.workspace }}/publish" `
+            /p:AspNetCoreHostingModel=InProcess `
+            /p:GenerateWebConfig=true `
+            /p:EnableDefaultItems=true
 
-      - name: Upload artifact for deployment job
+          # Adiciona stdoutLogEnabled no web.config gerado
+          $webConfig = "${{ github.workspace }}/publish/web.config"
+          (Get-Content $webConfig) -replace 'stdoutLogEnabled="false"', 'stdoutLogEnabled="true"' | Set-Content $webConfig
+
+      - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
@@ -56,7 +67,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_60C0199B00534946903CF36803A5C58A }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_60C0199B00534946903CF36803CF36803A5C58A }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_244C43137A3647A0A6CEECD31129CFA9 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FF34F626C8ED4578B914FC22D322A73F }}
 
