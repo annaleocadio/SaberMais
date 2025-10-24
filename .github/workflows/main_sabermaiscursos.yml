@@ -23,8 +23,12 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      # 🔹 Remove qualquer cache antigo de pacotes (evita erro NU1301)
+      - name: Clear NuGet cache
+        run: dotnet nuget locals all --clear
+
       - name: Restore dependencies
-        run: dotnet restore ./src/SaberMais.csproj
+        run: dotnet restore ./src/SaberMais.csproj --no-cache
 
       - name: Build with dotnet
         run: dotnet build ./src/SaberMais.csproj --configuration Release --no-restore
@@ -66,5 +70,3 @@ jobs:
           app-name: 'sabermaiscursos'
           slot-name: 'Production'
           package: ./publish
-
-
