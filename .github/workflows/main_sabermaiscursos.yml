@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy ASP.Net 8 app to Azure Web App - sabermaiscursos
 
 on:
@@ -13,7 +10,7 @@ jobs:
   build:
     runs-on: windows-latest
     permissions:
-      contents: read # Required for actions/checkout
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -23,18 +20,18 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      # 🔹 Remove qualquer cache antigo de pacotes (evita erro NU1301)
       - name: Clear NuGet cache
         run: dotnet nuget locals all --clear
 
       - name: Restore dependencies
         run: dotnet restore ./src/SaberMais.csproj --no-cache
 
-      - name: Build with dotnet
+      - name: Build project
         run: dotnet build ./src/SaberMais.csproj --configuration Release --no-restore
 
-      - name: Publish project
-        run: dotnet publish ./src/SaberMais.csproj --configuration Release --output "${{ github.workspace }}/publish"
+      # 👇 Aqui está o ajuste importante
+      - name: Publish project (x86)
+        run: dotnet publish ./src/SaberMais.csproj --configuration Release --runtime win-x86 --self-contained false --output "${{ github.workspace }}/publish"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -46,7 +43,7 @@ jobs:
     runs-on: windows-latest
     needs: build
     permissions:
-      id-token: write # Required for Azure login
+      id-token: write
       contents: read
 
     steps:
@@ -64,7 +61,6 @@ jobs:
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FF34F626C8ED4578B914FC22D322A73F }}
 
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'sabermaiscursos'
