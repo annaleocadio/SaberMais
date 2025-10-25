@@ -1,0 +1,227 @@
+﻿@model SaberMais.Models.Curso
+
+@{
+    ViewData["Title"] = Model.Titulo;
+}
+
+<div class="course-details-page">
+    <div class="container py-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item"><a asp-action="Index" class="text-info">Cursos</a></li>
+                <li class="breadcrumb-item active text-light" aria-current="page">@Model.Titulo</li>
+            </ol>
+        </nav>
+
+        <div class="row g-4">
+            <!-- Sidebar - Imagem e Informações -->
+            <div class="col-lg-4">
+                <div class="course-sidebar">
+                    <!-- Imagem do curso -->
+                    @if (!string.IsNullOrEmpty(Model.ImagemPath))
+                    {
+                        <img src="@Model.ImagemPath" alt="@Model.Titulo" class="course-image img-fluid rounded mb-4">
+                    }
+                    else
+                    {
+                        <img src="~/images/default-course.jpg" alt="Curso" class="course-image img-fluid rounded mb-4">
+                    }
+
+                    <!-- Box de preço -->
+                    <div class="price-box bg-dark p-4 rounded text-center mb-3">
+                        <h3 class="text-success mb-3">R$ @Model.Valor.ToString("F2")</h3>
+                        <a href="#" class="btn btn-success w-100 mb-2">Inscrever-se agora</a>
+                        @if (!string.IsNullOrEmpty(Model.ArquivoPath))
+                        {
+                            <a href="@Model.ArquivoPath" class="btn btn-outline-info w-100" download>
+                                <i class="bi bi-download me-2"></i>Download do Material
+                            </a>
+                        }
+                    </div>
+
+                    <!-- Informações do curso -->
+                    <div class="course-info-box bg-dark p-4 rounded">
+                        <h5 class="text-info mb-3">Informações</h5>
+
+                        <div class="info-item mb-3">
+                            <strong class="text-light">Modalidade:</strong>
+                            <p class="text-muted mb-0">
+                                @if (Model.Presencial)
+                                {
+                                    <span class="badge bg-warning text-dark">Presencial</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-primary">EAD</span>
+                                }
+                            </p>
+                        </div>
+
+                        @if (Model.Presencial && !string.IsNullOrEmpty(Model.Logradouro))
+                        {
+                            <div class="info-item mb-3">
+                                <strong class="text-light">Localização:</strong>
+                                <p class="text-muted mb-0">
+                                    @Model.Logradouro, @Model.Numero
+                                    @if (!string.IsNullOrEmpty(Model.Complemento))
+                                    {
+                                        <br />
+                                        @Model.Complemento
+                                    }
+                                    <br />@Model.Bairro - @Model.Uf
+                                    @if (!string.IsNullOrEmpty(Model.Cep))
+                                    {
+                                        <br />
+                                        <text>CEP: @Model.Cep</text>
+                                    }
+                                </p>
+                            </div>
+                        }
+
+                        @if (Model.CreatedAt != default(DateTime))
+                        {
+                            <div class="info-item">
+                                <strong class="text-light d-block mb-2">Publicado em:</strong>
+                                <p class="text-light mb-0" style="color: #94a3b8 !important;">
+                                    @Model.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy 'às' HH:mm")
+                                </p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo principal -->
+            <div class="col-lg-8">
+                <div class="course-content">
+                    <h1 class="text-light mb-4">@Model.Titulo</h1>
+
+                    <div class="card bg-dark border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="text-info h4 mb-3">
+                                <i class="bi bi-book me-2"></i>Sobre o curso
+                            </h2>
+                            <div class="text-light" style="line-height: 1.8;">
+                                @if (!string.IsNullOrEmpty(Model.Descricao))
+                                {
+                                    @Html.Raw(Model.Descricao.Replace("\n", "<br/>"))
+                                }
+                                else
+                                {
+                                    <p class="text-muted">Descrição não disponível.</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benéficios -->
+                    <div class="card bg-dark border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="text-info h4 mb-3">
+                                <i class="bi bi-check-circle me-2"></i>Benefícios
+                            </h2>
+                            <ul class="learning-list list-unstyled">
+                                <li class="text-light mb-2">
+                                    <i class="bi bi-check2 text-success me-2"></i>
+                                    Conteúdo completo e atualizado
+                                </li>
+                                <li class="text-light mb-2">
+                                    <i class="bi bi-check2 text-success me-2"></i>
+                                    Material de apoio incluso
+                                </li>
+                                <li class="text-light mb-2">
+                                    <i class="bi bi-check2 text-success me-2"></i>
+                                    Certificado ao final do curso
+                                </li>
+                                @if (Model.Presencial)
+                                {
+                                    <li class="text-light mb-2">
+                                        <i class="bi bi-check2 text-success me-2"></i>
+                                        Aulas presenciais com instrutores qualificados
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="text-light mb-2">
+                                        <i class="bi bi-check2 text-success me-2"></i>
+                                        Acesso vitalício ao conteúdo
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .course-details-page {
+        background-color: #1a1d2e;
+        min-height: 100vh;
+    }
+
+    .breadcrumb-item a {
+        text-decoration: none;
+    }
+
+    .breadcrumb-item.active {
+        color: #cbd5e1;
+    }
+
+    .course-sidebar {
+        position: sticky;
+        top: 20px;
+    }
+
+    .course-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .price-box {
+        border: 2px solid #10b981;
+    }
+
+        .price-box h3 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+    .course-info-box .info-item strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    .course-info-box .info-item p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .learning-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid #334155;
+    }
+
+        .learning-list li:last-child {
+            border-bottom: none;
+        }
+
+    .card {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    @@media (max-width: 991px) {
+        .course-sidebar
+
+    {
+        position: static;
+    }
+
+    }
+</style>

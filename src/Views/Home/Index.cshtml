@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<SaberMais.Models.Curso>
-
 <div class="container mt-5 pt-4">
     <div class="text-center mb-4">
         <h2 class="text-light fw-bold">Cursos em alta</h2>
     </div>
-
     @if (Model != null && Model.Any())
     {
         <div class="row g-4 justify-content-center">
@@ -25,7 +23,7 @@
                             <p class="text-secondary small flex-grow-1">
                                 @curso.Descricao?.Substring(0, Math.Min(100, curso.Descricao.Length))...
                             </p>
-                            <a href="#" class="btn btn-outline-info mt-auto w-100">Ver Detalhes</a>
+                            <a asp-action="Detalhes" asp-route-id="@curso.Id" class="btn btn-outline-info mt-auto w-100">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
