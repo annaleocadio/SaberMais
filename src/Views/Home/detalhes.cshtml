@@ -6,7 +6,6 @@
 
 <div class="course-details-page">
     <div class="container py-5">
-        <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb bg-transparent">
                 <li class="breadcrumb-item"><a asp-action="Index" class="text-info">Cursos</a></li>
@@ -15,10 +14,8 @@
         </nav>
 
         <div class="row g-4">
-            <!-- Sidebar - Imagem e Informações -->
             <div class="col-lg-4">
                 <div class="course-sidebar">
-                    <!-- Imagem do curso -->
                     @if (!string.IsNullOrEmpty(Model.ImagemPath))
                     {
                         <img src="@Model.ImagemPath" alt="@Model.Titulo" class="course-image img-fluid rounded mb-4">
@@ -28,7 +25,6 @@
                         <img src="~/images/default-course.jpg" alt="Curso" class="course-image img-fluid rounded mb-4">
                     }
 
-                    <!-- Box de preço -->
                     <div class="price-box bg-dark p-4 rounded text-center mb-3">
                         <h3 class="text-success mb-3">R$ @Model.Valor.ToString("F2")</h3>
                         <a href="#" class="btn btn-success w-100 mb-2">Inscrever-se agora</a>
@@ -40,7 +36,6 @@
                         }
                     </div>
 
-                    <!-- Informações do curso -->
                     <div class="course-info-box bg-dark p-4 rounded">
                         <h5 class="text-info mb-3">Informações</h5>
 
@@ -62,7 +57,7 @@
                         {
                             <div class="info-item mb-3">
                                 <strong class="text-light">Localização:</strong>
-                                <p class="text-muted mb-0">
+                                <p class="text-light mb-0" style="color: #94a3b8 !important;">
                                     @Model.Logradouro, @Model.Numero
                                     @if (!string.IsNullOrEmpty(Model.Complemento))
                                     {
@@ -92,7 +87,6 @@
                 </div>
             </div>
 
-            <!-- Conteúdo principal -->
             <div class="col-lg-8">
                 <div class="course-content">
                     <h1 class="text-light mb-4">@Model.Titulo</h1>
@@ -115,7 +109,6 @@
                         </div>
                     </div>
 
-                    <!-- Benéficios -->
                     <div class="card bg-dark border-0 mb-4">
                         <div class="card-body">
                             <h2 class="text-info h4 mb-3">
@@ -217,11 +210,8 @@
     }
 
     @@media (max-width: 991px) {
-        .course-sidebar
-
-    {
-        position: static;
-    }
-
+        .course-sidebar {
+            position: static;
+        }
     }
 </style>
