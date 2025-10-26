@@ -23,9 +23,9 @@ Nossa aplicação interativa funciona como uma vitrine de cursos, reunindo indic
 ## Instruções de Instalação, Execução e Acesso
 
 **Acesso rápido (produção)**
-* URL da aplicação: https://seu-dominio.com/caminho
-* Status: online / instável / em manutenção (atualize conforme o caso)
-* Ambiente: produção / homologação
+* URL da aplicação: [https://sabermaiscursos-crcxgah3fjcdg5c9.southafricanorth-01.azurewebsites.net/](https://sabermaiscursos-crcxgah3fjcdg5c9.southafricanorth-01.azurewebsites.net/)
+* Status: instável
+* Ambiente: produção
 
 # Documentação
 
