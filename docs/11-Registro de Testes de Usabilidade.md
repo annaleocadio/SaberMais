@@ -23,8 +23,8 @@ Para registrar os indicadores de cada cenário, é preciso manter a coerência c
 **Cenário 1**: O usuário deseja se cadastrar na aplicação.         
 | **Usuário**   | **Navegador utilizado** | **Dispositivo utilizado** | **Tarefa foi concluída?** (Sim/Não) | **Aspectos de responsividade** | **Tempo Total (seg)** | **Feedback do Usuário** |
 |-------------|--------------------|---------------------------------|-----------------|------------------------|------------------------------|
-| Perfil 1    |Google Chrome       |Computador Windows               |Sim              |Aplicação se manteve responsiva| 130seg |O cadastro ser interrompido por outra tela de cadastro incomodou|      
-| Perfil 2    |Internet (Samsung)  |Smartphone Android               |Sim              |Aplicação se manteve responsiva| 120seg |O cadastro ser interrompido por outra tela de cadastro incomodou|      
+| Perfil 1    |Google Chrome       |Computador Windows               |Sim              |Aplicação se manteve responsiva| 130seg |O cadastro ser interrompido por outra tela de cadastro incomodou|   
+| Perfil 2    |Internet (Samsung)  |Smartphone Android               |Sim              |Aplicação se manteve responsiva| 120seg |O cadastro ser interrompido por outra tela de cadastro incomodou|   
 | Perfil 3    |Microsoft Edge      |Notebook Windows                 |Sim              |Aplicação se manteve responsiva| 63seg  |-|  
 | Perfil 4    |Opera GX            |Computador Windows               |Sim              |Aplicação se manteve responsiva| 67seg  |-| 
 | Perfil 5    |Google Chrome       |Computador Windows               |Sim              |Aplicação se manteve responsiva| 70seg  |-| 
