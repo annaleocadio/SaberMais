@@ -20,14 +20,15 @@ O registro de testes de usabilidade é um documento ou planilha onde são coleta
 
 Para registrar os indicadores de cada cenário, é preciso manter a coerência com os critérios quantitativos e qualitativos que foram definidos no plano de testes de usabilidade.
 
-**Cenário 1**: O usuário deseja se cadastrar na aplicação.         
-| **Usuário**   | **Navegador utilizado** | **Dispositivo utilizado** | **Tarefa foi concluída?** (Sim/Não) | **Aspectos de responsividade** | **Tempo Total (seg)** | **Feedback do Usuário** |
-|-------------|--------------------|---------------------------------|-----------------|------------------------|------------------------------|
-| Perfil 1    |Google Chrome       |Computador Windows               |Sim              |Aplicação se manteve responsiva| 130seg |O cadastro ser interrompido por outra tela de cadastro incomodou|   
-| Perfil 2    |Internet (Samsung)  |Smartphone Android               |Sim              |Aplicação se manteve responsiva| 120seg |O cadastro ser interrompido por outra tela de cadastro incomodou|   
-| Perfil 3    |Microsoft Edge      |Notebook Windows                 |Sim              |Aplicação se manteve responsiva| 63seg  |-|  
-| Perfil 4    |Opera GX            |Computador Windows               |Sim              |Aplicação se manteve responsiva| 67seg  |-| 
-| Perfil 5    |Google Chrome       |Computador Windows               |Sim              |Aplicação se manteve responsiva| 70seg  |-| 
+**Cenário 1**: O usuário deseja se cadastrar na aplicação.
+| **Usuário**  | **Navegador Utilizado** | **Dispositivo Utilizado** | **Tarefa Concluída?** | **Aspectos de Responsividade**    | **Tempo Total (s)** | **Feedback do Usuário**                                                    |
+| :----------- | :---------------------- | :------------------------ | :-------------------- | :-------------------------------- | :-----------------: | :------------------------------------------------------------------------- |
+| **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         130         | O fato de o cadastro ser interrompido por outra tela de cadastro incomodou |
+| **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         120         | O fato de o cadastro ser interrompido por outra tela de cadastro incomodou |
+| **Perfil 3** | Microsoft Edge          | Notebook Windows          | Sim                   | A aplicação se manteve responsiva |          63         | —                                                                          |
+| **Perfil 4** | Opera GX                | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          67         | —                                                                          |
+| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          70         | —                                                                          |
+
 
 **Cenário 2**:         
 | **Usuário**  | **Tempo Total (seg)** | **Quantidade de cliques** | **Tarefa foi concluída?** (Sim/Não) | **Erros Cometidos** | **Feedback do Usuário** |
