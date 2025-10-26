@@ -3,24 +3,31 @@
 O registro de testes de usabilidade é um documento ou planilha onde são coletadas e organizadas as informações sobre a experiência dos usuários ao interagir com um sistema. Ele inclui dados como tempo de execução de tarefas, taxa de sucesso, dificuldades encontradas, erros cometidos e _feedback_ dos usuários. Esse registro permite identificar padrões de uso, obstáculos/dificuldades encontrados na interface e oportunidades de melhoria, fornecendo _insights_ quantitativos e qualitativos para otimizar a experiência do usuário. Além disso, serve como base para análises, correções e futuras iterações do sistema, garantindo que ele atenda às necessidades do público-alvo de forma eficiente.
 
 ## Perfil dos usuários que participaram do teste
-- Usuário 1: 45 anos, nível básico incompleto, conhecimento básico tecnologia
-- Usuário 2: 18 anos, nível superior incompleto, conhecimento avançado tecnologia
-- Usuário 1: 70 anos, nível básico incompleto, conhecimento básico tecnologia
-- Usuário 2: 25 anos, nível superior completo, conhecimento avançado tecnologia
-- Usuário 2: 28 anos, nível superior completo, conhecimento avançado tecnologia
+- Perfil 1: 50 anos, nível básico incompleto, conhecimento básico tecnologia
+- Perfil 2: 53 anos, nível superior incompleto, conhecimento básico tecnologia
+- Perfil 3: 23 anos, nível superior completo, conhecimento avançado tecnologia
+- Perfil 4: 19 anos, nível superior incompleto, conhecimento avançado tecnologia
+- Perfil 5: 27 anos, nível superior completo, conhecimento avançado tecnologia
+
+## Facilidade de uso avaliada pelos usuários (Escala de 1 a 5)
+- Perfil 1: 
+- Perfil 2: 
+- Perfil 3: 
+- Perfil 4:
+- Perfil 5:
 
 ## Exemplo de tabela de registro dos testes de usabilidade  
 
 Para registrar os indicadores de cada cenário, é preciso manter a coerência com os critérios quantitativos e qualitativos que foram definidos no plano de testes de usabilidade.
 
-**Cenário 1**: O usuário deseja comprar um notebook para uso pessoal. Para isso, ele deverá entrar no site www.compras.com.br para buscar opções disponíveis, comparar preços, adicionar o produto ao carrinho e finalizar a compra com pagamento via cartão de crédito.         
-| **Usuário**   | **Tempo Total (seg)** | **Quantidade de cliques** | **Tarefa foi concluída?** (Sim/Não) | **Erros Cometidos** | **Feedback do Usuário** |
+**Cenário 1**: O usuário deseja se cadastrar na aplicação.         
+| **Usuário**   | **Navegador utilizado** | **Dispositivo utilizado** | **Tarefa foi concluída?** (Sim/Não) | **Aspectos de responsividade** | **Tempo Total (seg)** | **Feedback do Usuário** |
 |-------------|--------------------|---------------------------------|-----------------|------------------------|------------------------------|
-| Usuário 1    |                    |                                 |                 |                        |                              |                     |      
-| Usuário 2    |                    |                                 |                 |                        |                              |                     |      
-| Usuário 3    |                    |                                 |                 |                        |                              |                     |  
-| Usuário 4    |                    |                                 |                 |                        |                              |                     | 
-| Usuário 5    |                    |                                 |                 |                        |                              |                     | 
+| Perfil 1    |Google Chrome       |Computador Windows               |Sim              |Aplicação se manteve responsiva| 130seg |O cadastro ser interrompido por outra tela de cadastro incomodou|      
+| Perfil 2    |Internet (Samsung)  |Smartphone Android               |Sim              |Aplicação se manteve responsiva| 120seg |O cadastro ser interrompido por outra tela de cadastro incomodou|      
+| Perfil 3    |Microsoft Edge      |Notebook Windows                 |Sim              |Aplicação se manteve responsiva| 63seg  |-|  
+| Perfil 4    |Opera GX            |Computador Windows               |Sim              |Aplicação se manteve responsiva| 67seg  |-| 
+| Perfil 5    |Google Chrome       |Computador Windows               |Sim              |Aplicação se manteve responsiva| 70seg  |-| 
 
 **Cenário 2**:         
 | **Usuário**  | **Tempo Total (seg)** | **Quantidade de cliques** | **Tarefa foi concluída?** (Sim/Não) | **Erros Cometidos** | **Feedback do Usuário** |
