@@ -35,7 +35,6 @@ Para registrar os indicadores de cada cenário, é preciso manter a coerência c
 | :----------- | :---------------------- | :------------------------ | :-------------------- | :-------------------------------- | :-----------------: | :------------------------------------------------------------------------- |
 | **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         35         | —                                                                          |
 | **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         37         | —                                                                          |
-
 | **Perfil 3** | Microsoft Edge          | Notebook Windows          | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
 | **Perfil 4** | Opera GX                | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
 | **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
