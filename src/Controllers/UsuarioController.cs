@@ -32,6 +32,7 @@ namespace SaberMais.Controllers
             {
                 _context.Usuarios.Add(usuario);
                 _context.SaveChanges();
+                TempData["MensagemSucesso"] = "Cadastro realizado com sucesso! Faça login para continuar.";
                 return RedirectToAction("Login");
             }
 
@@ -49,36 +50,27 @@ namespace SaberMais.Controllers
         [HttpPost]
         public IActionResult Login(string email, string senha)
         {
-            // 🔹 Verifica se é um usuário comum
-            var usuario = _context.Usuarios
-                .FirstOrDefault(u => u.Email == email && u.Senha == senha);
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
+            var administrador = _context.Administradores.FirstOrDefault(a => a.Email == email && a.Senha == senha);
 
-            // 🔹 Verifica se é um administrador
-            var administrador = _context.Administradores
-                .FirstOrDefault(a => a.Email == email && a.Senha == senha);
-
-            // Nenhum encontrado
             if (usuario == null && administrador == null)
             {
                 ViewBag.Erro = "Usuário ou senha incorretos.";
                 return View();
             }
 
-            // 🔹 Se for administrador
+            // Administrador
             if (administrador != null)
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, administrador.Nome), // nome do admin
+                    new Claim(ClaimTypes.Name, administrador.Nome),
                     new Claim(ClaimTypes.Email, administrador.Email),
                     new Claim(ClaimTypes.Role, "Administrador")
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var authProperties = new AuthenticationProperties
-                {
-                    IsPersistent = true // mantém login
-                };
+                var authProperties = new AuthenticationProperties { IsPersistent = true };
 
                 HttpContext.SignInAsync(
                     CookieAuthenticationDefaults.AuthenticationScheme,
@@ -86,11 +78,10 @@ namespace SaberMais.Controllers
                     authProperties
                 );
 
-                // ✅ Redireciona para a aba Perfil
                 return RedirectToAction("Index", "Perfil");
             }
 
-            // 🔹 Se for usuário comum
+            // Usuário comum
             var userClaims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, usuario.NomeCompleto),
@@ -99,10 +90,7 @@ namespace SaberMais.Controllers
             };
 
             var userIdentity = new ClaimsIdentity(userClaims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var userAuthProperties = new AuthenticationProperties
-            {
-                IsPersistent = true
-            };
+            var userAuthProperties = new AuthenticationProperties { IsPersistent = true };
 
             HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
@@ -110,7 +98,6 @@ namespace SaberMais.Controllers
                 userAuthProperties
             );
 
-            // ✅ Redireciona para a aba Perfil também
             return RedirectToAction("Index", "Perfil");
         }
 
@@ -121,5 +108,35 @@ namespace SaberMais.Controllers
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "Usuario");
         }
+
+        // GET: /Usuario/RedefinirSenha
+        [HttpGet]
+        public IActionResult RedefinirSenha()
+        {
+            return View();
+        }
+
+        // POST: /Usuario/RedefinirSenha
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult RedefinirSenha(RedefinirSenhaViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.Email == model.Email);
+            if (usuario == null)
+            {
+                TempData["MensagemErro"] = "E-mail não encontrado.";
+                return View(model);
+            }
+
+            usuario.Senha = model.NovaSenha;
+            _context.SaveChanges();
+
+            TempData["MensagemSucesso"] = "Senha redefinida com sucesso! Faça login novamente.";
+            return RedirectToAction("Login", "Usuario");
+        }
     }
 }
+

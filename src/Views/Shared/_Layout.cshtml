@@ -123,7 +123,6 @@
             @RenderBody()
         </main>
     </div>
-
     <!-- MODAL LOGIN -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -142,16 +141,28 @@
                             <label for="senha" class="form-label">Senha</label>
                             <input type="password" name="senha" class="form-control bg-dark border-secondary text-light" required />
                         </div>
+
+                        <!-- Botão Entrar -->
                         <button type="submit" class="btn btn-primary w-100">Entrar</button>
+
+                        <!-- 🔹 Link Esqueci minha senha -->
+                        <div class="text-center mt-3">
+                            <a href="/Usuario/RedefinirSenha" class="text-warning text-decoration-none">
+                                Esqueci minha senha
+                            </a>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer border-secondary">
                     <span class="text-muted me-auto">Não tem conta?</span>
-                    <button type="button" class="btn btn-outline-info" data-bs-target="#cadastroModal" data-bs-toggle="modal" data-bs-dismiss="modal">Cadastrar-se</button>
+                    <button type="button" class="btn btn-outline-info" data-bs-target="#cadastroModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        Cadastrar-se
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- MODAL CADASTRO -->
     <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">

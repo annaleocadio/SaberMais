@@ -2,7 +2,71 @@
     ViewData["Title"] = "Login";
 }
 
-<script>
-    // Redireciona automaticamente para a home (ou perfil) se acessar diretamente
-    window.location.href = "/";
-</script>
+<div class="container mt-5">
+    <div class="card p-4 mx-auto shadow-lg"
+         style="max-width: 420px; background-color: #1c1f26; border-radius: 10px; border: 1px solid #242830;">
+        <h2 class="text-center mb-4 fw-bold" style="color: #00c7b7;">Entrar no Saber+</h2>
+
+        @if (TempData["MensagemSucesso"] != null)
+        {
+            <div class="alert text-center mb-3"
+                 style="background-color: #c6f6d5; color: #0a3d2f; border: none; border-radius: 6px;">
+                @TempData["MensagemSucesso"]
+            </div>
+        }
+
+        @if (ViewBag.Erro != null)
+        {
+            <div class="alert text-center mb-3"
+                 style="background-color: #f8d7da; color: #842029; border: none; border-radius: 6px;">
+                @ViewBag.Erro
+            </div>
+        }
+
+        <form asp-action="Login" method="post">
+            <div class="mb-3">
+                <label for="email" class="form-label" style="color: #c9d1d9;">E-mail</label>
+                <input type="email" name="email"
+                       class="form-control"
+                       style="background-color: #0d1117; color: #e6edf3; border: 1px solid #30363d;"
+                       required />
+            </div>
+
+            <div class="mb-3">
+                <label for="senha" class="form-label" style="color: #c9d1d9;">Senha</label>
+                <input type="password" name="senha"
+                       class="form-control"
+                       style="background-color: #0d1117; color: #e6edf3; border: 1px solid #30363d;"
+                       required />
+            </div>
+
+            <button type="submit"
+                    class="btn w-100 fw-semibold mt-2"
+                    style="background-color: #00c7b7; color: #ffffff; border: none; border-radius: 6px;">
+                Entrar
+            </button>
+
+            <div class="text-center mt-3">
+                <a asp-controller="Usuario" asp-action="RedefinirSenha"
+                   style="color: #f1c40f; text-decoration: none;">
+                    Esqueci minha senha
+                </a>
+            </div>
+        </form>
+
+        <div class="text-center mt-4" style="color: #c9d1d9;">
+            <p>
+                Não tem conta?
+                <a asp-controller="Usuario" asp-action="Cadastro"
+                   style="color: #00c7b7; text-decoration: none; font-weight: 500;">
+                    Cadastre-se
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
