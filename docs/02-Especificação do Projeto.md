@@ -96,8 +96,11 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-<img width="812" height="672" alt="Diagrama de caso de uso" src="https://github.com/user-attachments/assets/4f038e44-803f-4503-8078-550d730c788b" />
+<img width="812" height="672" alt="Diagrama de caso de uso" src="/docs/img/diagramaCasosdeUso.png" />
+* Amarelo 3ª Etapa
+* Vermelho 4ª Etapa
 
+<img width="812" height="672" alt="Diagrama de caso de uso" src="https://github.com/user-attachments/assets/4f038e44-803f-4503-8078-550d730c788b" />
 
 | Ator | Descrição                                               |
 | ---- | ------------------------------------------------------- |
