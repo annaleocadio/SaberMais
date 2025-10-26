@@ -8,7 +8,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |--------------------|---------------------------------------|
 |	Requisito Associado 	| RF-01 – O sistema deve permitir que o usuário crie uma conta utilizando e-mail e senha. |
 |Registro de evidência | [Evidência CT01](https://youtu.be/OrNtsWZ2sZw) |
-|Objetivo do Teste | Conseguir realizar o cadastro do usuário, informand os daos para cadastro. |
+|Objetivo do Teste | Conseguir realizar o cadastro do usuário, informando os dados para cadastro. |
 
 | **Caso de Teste** 	| **CT02 – Confirmação de e-mail** 	|
 |--------------------|---------------------------------------|
