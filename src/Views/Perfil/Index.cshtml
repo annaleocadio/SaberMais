@@ -3,154 +3,201 @@
 }
 
 <div class="container mt-4">
-    <h2 class="text-center">Meu Perfil</h2>
+    @if (TempData["Sucesso"] != null)
+    {
+        <div class="alert alert-success">@TempData["Sucesso"]</div>
+    }
+    @if (TempData["Erro"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Erro"]</div>
+    }
 
-    <div class="card shadow-sm mt-3 p-4">
-        <h4>Bem-vindo, @ViewBag.Nome!</h4>
-        <p><strong>Tipo de conta:</strong> @ViewBag.Tipo</p>
-
-        @if (TempData["Sucesso"] != null)
-        {
-            <div class="alert alert-success mt-3">@TempData["Sucesso"]</div>
-        }
-        @if (TempData["Erro"] != null)
-        {
-            <div class="alert alert-danger mt-3">@TempData["Erro"]</div>
-        }
-
-        @if (ViewBag.Tipo == "Usuario")
-        {
-            <hr />
-            <p>Esta é sua área pessoal. Aqui futuramente você poderá editar suas informações, visualizar cursos e acompanhar seu progresso.</p>
-        }
+    <div class="card bg-dark text-light mb-4">
+        <div class="card-body">
+            <h4>Bem-vindo, @ViewBag.Nome!</h4>
+            <p><strong>Tipo de conta:</strong> @ViewBag.Tipo</p>
+        </div>
     </div>
-
-    @* ====================================================== *@
-    @* SEÇÃO PARA ADMINISTRADORES *@
-    @* ====================================================== *@
 
     @if (ViewBag.Tipo == "Administrador")
     {
-        <hr />
-        <h3 class="mt-5">Painel de Controle</h3>
+        <h2 class="mb-4 text-light">Painel de Controle</h2>
 
-        <!-- ==================== USUÁRIOS ==================== -->
-        <h4 class="mt-3">Usuários Cadastrados</h4>
-        <table class="table table-bordered table-striped">
-            <thead class="table-dark">
-                <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var u in ViewBag.Usuarios)
-                {
-                    <tr>
-                        <td>@u.NomeCompleto</td>
-                        <td>@u.Email</td>
-                        <td>
-                            <form asp-action="ApagarUsuario" method="post" style="display:inline">
-                                <input type="hidden" name="id" value="@u.Id" />
-                                <button class="btn btn-danger btn-sm">Excluir</button>
-                            </form>
-                            <form asp-action="BloquearUsuario" method="post" style="display:inline">
-                                <input type="hidden" name="id" value="@u.Id" />
-                                <button class="btn btn-warning btn-sm">Bloquear</button>
-                            </form>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+        <!-- USUÁRIOS CADASTRADOS -->
+        <div class="card bg-dark text-light mb-4">
+            <div class="card-header bg-secondary">
+                <h3>Usuários Cadastrados</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var usuario in ViewBag.Usuarios)
+                        {
+                            <tr>
+                                <td>@usuario.NomeCompleto</td>
+                                <td>@usuario.Email</td>
+                                <td>
+                                    <form asp-action="ApagarUsuario" method="post" style="display:inline;">
+                                        <input type="hidden" name="id" value="@usuario.Id" />
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Excluir este usuário?')">Excluir</button>
+                                    </form>
+                                    <form asp-action="BloquearUsuario" method="post" style="display:inline;">
+                                        <input type="hidden" name="id" value="@usuario.Id" />
+                                        <button type="submit" class="btn btn-warning btn-sm">Bloquear</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-        <!-- ==================== CURSOS ==================== -->
-        <h4 class="mt-5">Cursos Cadastrados</h4>
-        <table class="table table-bordered table-striped">
-            <thead class="table-dark">
-                <tr>
-                    <th>Título</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var c in ViewBag.Cursos)
-                {
-                    <tr>
-                        <td>@c.Titulo</td>
-                        <td>
-                            <a asp-action="EditarCurso" asp-route-id="@c.Id" class="btn btn-warning btn-sm">Editar</a>
+        <!-- CURSOS CADASTRADOS -->
+        <div class="card bg-dark text-light mb-4">
+            <div class="card-header bg-secondary">
+                <h3>Cursos Cadastrados</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Valor</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var curso in ViewBag.Cursos)
+                        {
+                            <tr>
+                                <td>@curso.Titulo</td>
+                                <td>R$ @curso.Valor.ToString("N2")</td>
+                                <td>
+                                    <a asp-controller="Curso" asp-action="Editar" asp-route-id="@curso.Id" class="btn btn-warning btn-sm">Editar</a>
+                                    <form asp-action="ApagarCurso" method="post" style="display:inline;">
+                                        <input type="hidden" name="id" value="@curso.Id" />
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Excluir este curso?')">Excluir</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-                            <form asp-action="ApagarCurso" method="post" style="display:inline">
-                                <input type="hidden" name="id" value="@c.Id" />
-                                <button class="btn btn-danger btn-sm">Excluir</button>
-                            </form>
-                        </td>
-
-                    </tr>
-                }
-            </tbody>
-        </table>
-
-        <!-- ==================== SUPER ADMIN ==================== -->
+        <!-- GERENCIAMENTO DE ADMINISTRADORES (só para Super Admin) -->
         @if (ViewBag.IsSuperAdmin == true)
         {
-            <hr />
-            <h3 class="mt-5 text-success">Gerenciamento de Administradores</h3>
+            <div class="card bg-dark text-light mb-4">
+                <div class="card-header bg-success">
+                    <h3>Gerenciamento de Administradores</h3>
+                </div>
+                <div class="card-body">
+                    <h4>Cadastrar novo administrador</h4>
+                    <form asp-action="CriarAdministrador" method="post" class="row g-3 mb-4">
+                        @Html.AntiForgeryToken()
+                        <div class="col-md-4">
+                            <input type="text" name="nome" class="form-control" placeholder="Nome" required />
+                        </div>
+                        <div class="col-md-4">
+                            <input type="email" name="email" class="form-control" placeholder="E-mail" required />
+                        </div>
+                        <div class="col-md-2">
+                            <input type="password" name="senha" class="form-control" placeholder="Senha" required />
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-success w-100">Cadastrar</button>
+                        </div>
+                    </form>
 
-            <h5 class="mt-4">Cadastrar novo administrador</h5>
-            <form asp-action="CriarAdministrador" method="post" class="mb-4">
-                <div class="row g-2">
-                    <div class="col-md-3">
-                        <input type="text" name="nome" placeholder="Nome" class="form-control" required />
-                    </div>
-                    <div class="col-md-3">
-                        <input type="email" name="email" placeholder="E-mail" class="form-control" required />
-                    </div>
-                    <div class="col-md-3">
-                        <input type="password" name="senha" placeholder="Senha" class="form-control" required />
-                    </div>
-                    <div class="col-md-3">
-                        <button type="submit" class="btn btn-success w-100">Cadastrar</button>
+                    <h4>Administradores existentes</h4>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Super Admin</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var admin in ViewBag.Administradores)
+                            {
+                                <tr>
+                                    <td>@admin.Nome</td>
+                                    <td>@admin.Email</td>
+                                    <td>@(admin.IsSuperAdmin ? "Sim" : "Não")</td>
+                                    <td>
+                                        @if (!admin.IsSuperAdmin)
+                                        {
+                                            <form asp-action="BloquearAdministrador" method="post" style="display:inline;">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="id" value="@admin.Id" />
+                                                <button type="submit" class="btn btn-warning btn-sm">Bloquear</button>
+                                            </form>
+                                            <form asp-action="ExcluirAdministrador" method="post" style="display:inline;">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="id" value="@admin.Id" />
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Excluir este administrador?')">Excluir</button>
+                                            </form>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+    else if (ViewBag.Tipo == "Usuario")
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                        <h2 class="mb-4">Meu Perfil</h2>
+
+                        <!-- FOTO DE PERFIL -->
+                        @{
+                            var usuario = ViewBag.Usuario as SaberMais.Models.Usuario;
+                            if (usuario != null)
+                            {
+                                @if (!string.IsNullOrEmpty(usuario.FotoPerfil))
+                                {
+                                    <img src="/uploads/@usuario.FotoPerfil" alt="Foto de Perfil"
+                                         class="rounded-circle mb-4"
+                                         style="width: 150px; height: 150px; object-fit: cover; border: 3px solid #00bfa6;" />
+                                }
+                                else
+                                {
+                                    <img src="/images/default-user.png" alt="Foto de Perfil"
+                                         class="rounded-circle mb-4"
+                                         style="width: 150px; height: 150px; object-fit: cover; border: 3px solid #00bfa6;" />
+                                }
+
+                                <h4>@usuario.NomeCompleto</h4>
+                                <p class="text-muted">@usuario.Email</p>
+                                <p><strong>Tipo:</strong> @usuario.TipoPessoa</p>
+                                <p><strong>Documento:</strong> @usuario.Documento</p>
+                            }
+                        }
+
+                        <div class="mt-4">
+                            <a asp-action="Editar" class="btn btn-primary btn-lg">Editar Perfil</a>
+                        </div>
                     </div>
                 </div>
-            </form>
-
-            <h5 class="mt-4">Administradores existentes</h5>
-            <table class="table table-bordered table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Super Admin</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var a in ViewBag.Administradores)
-                    {
-                        <tr>
-                            <td>@a.Nome</td>
-                            <td>@a.Email</td>
-                            <td>@(a.IsSuperAdmin ? "Sim" : "Não")</td>
-                            <td>
-                                @if (a.IsSuperAdmin == false)
-                                {
-                                    <form asp-action="ExcluirAdministrador" method="post" style="display:inline">
-                                        <input type="hidden" name="id" value="@a.Id" />
-                                        <button class="btn btn-danger btn-sm">Excluir</button>
-                                    </form>
-                                    <form asp-action="BloquearAdministrador" method="post" style="display:inline">
-                                        <input type="hidden" name="id" value="@a.Id" />
-                                        <button class="btn btn-warning btn-sm">Bloquear</button>
-                                    </form>
-                                }
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        }
+            </div>
+        </div>
     }
 </div>

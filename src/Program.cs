@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
+Ôªøusing Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using SaberMais.Data;
 using SaberMais.Models;
@@ -14,14 +14,24 @@ namespace SaberMais
             // Adiciona suporte a Controllers e Views
             builder.Services.AddControllersWithViews();
 
-            // Habilita recarregamento autom·tico das Views
+            // Habilita recarregamento autom√°tico das Views
             builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
-            // Configura a conex„o com o banco de dados LOCAL (SQL Server LocalDB)
+            // Configura a conex√£o com o banco de dados (Azure SQL ou Local)
             builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DefaultConnection"),
+                    sqlOptions =>
+                    {
+                        // üîπ Resili√™ncia contra falhas transit√≥rias (Azure)
+                        sqlOptions.EnableRetryOnFailure(
+                            maxRetryCount: 5,
+                            maxRetryDelay: TimeSpan.FromSeconds(10),
+                            errorNumbersToAdd: null
+                        );
+                    }));
 
-            // Ativa e configura o sistema de autenticaÁ„o via cookies
+            // Ativa e configura o sistema de autentica√ß√£o via cookies
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
@@ -31,29 +41,36 @@ namespace SaberMais
 
             var app = builder.Build();
 
-            // Criar Admin padr„o automaticamente
+            // Criar Admin padr√£o automaticamente
             using (var scope = app.Services.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-                // Cria o banco, se n„o existir
-                context.Database.EnsureCreated();
-
-                // Verifica se j· existe um admin
-                if (!context.Administradores.Any())
+                try
                 {
-                    context.Administradores.Add(new Administrador
+                    // üîπ Aplica as migra√ß√µes ‚Äî cria/atualiza o banco se necess√°rio
+                    context.Database.Migrate();
+
+                    // Verifica se j√° existe um admin
+                    if (!context.Administradores.Any())
                     {
-                        Nome = "Administrador Geral",
-                        Email = "leocadio@sabermais.com",
-                        Senha = "leocadio",
-                        IsSuperAdmin = true
-                    });
-                    context.SaveChanges();
+                        context.Administradores.Add(new Administrador
+                        {
+                            Nome = "Administrador Geral",
+                            Email = "leocadio@sabermais.com",
+                            Senha = "leocadio",
+                            IsSuperAdmin = true
+                        });
+                        context.SaveChanges();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"‚ö†Ô∏è Erro ao inicializar o banco: {ex.Message}");
                 }
             }
 
-            // ConfiguraÁ„o do pipeline de requisiÁ„o
+            // Configura√ß√£o do pipeline de requisi√ß√£o
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -68,14 +85,14 @@ namespace SaberMais
                 DefaultFileNames = new List<string> { "index.html" }
             });
 
-            app.UseStaticFiles(); // Serve arquivos est·ticos da pasta wwwroot
+            app.UseStaticFiles(); // Serve arquivos est√°ticos da pasta wwwroot
 
             app.UseRouting();
 
             app.UseAuthentication();
             app.UseAuthorization();
 
-            // Define a rota padr„o do sistema
+            // Define a rota padr√£o do sistema
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
