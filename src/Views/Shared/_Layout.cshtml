@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Saber+</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/custom.css" rel="stylesheet" />
+
     <style>
         /* ==== EFEITO VIDRO + AJUSTES DE MODAL ==== */
         .modal-content {
@@ -75,13 +76,18 @@
         <nav class="navbar navbar-expand-lg navbar-dark saber-navbar shadow-sm fixed-top">
             <div class="container">
                 <a class="navbar-brand fw-semibold" asp-controller="Home" asp-action="Index">Saber+</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
                     </ul>
 
                     <ul class="navbar-nav">
@@ -93,11 +99,10 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Perfil" asp-action="Index">Perfil</a>
+                                <a class="nav-link" asp-controller="Perfil" asp-action="Index">Perfil</a>
                             </li>
-
                             <li class="nav-item ms-2">
-                                <form asp-controller="Usuario" asp-action="Logout" method="post">
+                                <form asp-controller="Usuario" asp-action="Logout" method="post" class="d-inline">
                                     <button type="submit" class="btn btn-outline-light fw-semibold">Sair</button>
                                 </form>
                             </li>
@@ -123,6 +128,7 @@
             @RenderBody()
         </main>
     </div>
+
     <!-- MODAL LOGIN -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -145,9 +151,9 @@
                         <!-- Botão Entrar -->
                         <button type="submit" class="btn btn-primary w-100">Entrar</button>
 
-                        <!-- 🔹 Link Esqueci minha senha -->
+                        <!-- Link Esqueci minha senha -->
                         <div class="text-center mt-3">
-                            <a href="/Usuario/RedefinirSenha" class="text-warning text-decoration-none">
+                            <a asp-controller="Usuario" asp-action="RedefinirSenha" class="text-warning text-decoration-none">
                                 Esqueci minha senha
                             </a>
                         </div>
@@ -162,7 +168,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- MODAL CADASTRO -->
     <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">

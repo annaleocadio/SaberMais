@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SaberMais.Models
@@ -39,5 +40,10 @@ namespace SaberMais.Models
         [Compare("Senha", ErrorMessage = "As senhas não coincidem.")]
         [Display(Name = "Confirmar Senha")]
         public string ConfirmarSenha { get; set; }
+
+        // Foto padrão quando usuário ainda não enviou imagem
+        [Display(Name = "Foto de Perfil")]
+        [Column(TypeName = "nvarchar(255)")]
+        public string FotoPerfil { get; set; } = "default-user.png";
     }
 }
