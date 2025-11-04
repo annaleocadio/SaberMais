@@ -12,7 +12,6 @@ Nossa aplicação interativa funciona como uma vitrine de cursos, reunindo indic
 
 * Anna Clara Miguel Leocádio
 * Eduardo Moreira Ribeiro
-* Gener Antonio Almeida de Melo
 * Kaique Gabriel Fernandes
 * Marco Vinicius Oliveira Castro Silva
 
