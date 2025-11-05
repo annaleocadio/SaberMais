@@ -6,6 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
 		<GenerateWebConfig>true</GenerateWebConfig>
+		<UserSecretsId>6fbf80e3-84f1-436d-b193-896abc53dd9d</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -17,19 +17,11 @@ namespace SaberMais
             // Habilita recarregamento automático das Views
             builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
-            // Configura a conexão com o banco de dados (Azure SQL ou Local)
+            // 🔹 Configura a conexão com o banco de dados LOCAL (LocalDB)
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(
-                    builder.Configuration.GetConnectionString("DefaultConnection"),
-                    sqlOptions =>
-                    {
-                        // 🔹 Resiliência contra falhas transitórias (Azure)
-                        sqlOptions.EnableRetryOnFailure(
-                            maxRetryCount: 5,
-                            maxRetryDelay: TimeSpan.FromSeconds(10),
-                            errorNumbersToAdd: null
-                        );
-                    }));
+                    builder.Configuration.GetConnectionString("DefaultConnection")
+                ));
 
             // Ativa e configura o sistema de autenticação via cookies
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -41,17 +33,17 @@ namespace SaberMais
 
             var app = builder.Build();
 
-            // Criar Admin padrão automaticamente
+            // 🔹 Aplica migrations e cria admin padrão
             using (var scope = app.Services.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
                 try
                 {
-                    // 🔹 Aplica as migrações — cria/atualiza o banco se necessário
+                    // Cria/atualiza o banco automaticamente com base nas migrations
                     context.Database.Migrate();
 
-                    // Verifica se já existe um admin
+                    // Cria um administrador padrão se ainda não existir
                     if (!context.Administradores.Any())
                     {
                         context.Administradores.Add(new Administrador
@@ -66,7 +58,7 @@ namespace SaberMais
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"⚠️ Erro ao inicializar o banco: {ex.Message}");
+                    Console.WriteLine($"⚠ Erro ao inicializar o banco: {ex.Message}");
                 }
             }
 
@@ -79,7 +71,7 @@ namespace SaberMais
 
             app.UseHttpsRedirection();
 
-            // IMPORTANTE: UseDefaultFiles ANTES de UseStaticFiles
+            // Serve a página inicial automaticamente (index.html, se existir)
             app.UseDefaultFiles(new DefaultFilesOptions
             {
                 DefaultFileNames = new List<string> { "index.html" }
@@ -92,7 +84,7 @@ namespace SaberMais
             app.UseAuthentication();
             app.UseAuthorization();
 
-            // Define a rota padrão do sistema
+            // Define a rota padrão
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
