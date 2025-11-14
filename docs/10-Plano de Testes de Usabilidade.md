@@ -37,96 +37,64 @@ Os cenários representam tarefas reais que os usuários executam no sistema. Cad
 - Critério de sucesso: Como determinar se a tarefa foi concluída corretamente.
 
 **Cenário 1**
+|    **Caso de Teste**    |                                                                                                                               **Cenário 1 – Criação de senha segura**                                                                                                                               |
+| :---------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Requisito Associado** |                                                                                                 RNF-01 – Senhas devem ter no mínimo 8 caracteres, incluindo letras, números e caracteres especiais.                                                                                                 |
+|  **Objetivo do Teste**  |                                                                                                                              Avaliar a segurança na criação de senhas.                                                                                                                              |
+|        **Passos**       | - Inserir senha com menos de 8 caracteres. <br> - Inserir senha sem caracteres especiais. <br> - Pesquisar por “notebook” e aplicar filtros (marca, preço, processador). <br> - Selecionar um notebook e acessar a página do produto. <br> - Tentar novamente até conseguir criar uma senha válida. |
+|  **Critério de Êxito**  |                                                                                                                  O sistema aceita apenas senhas que atendem aos requisitos mínimos.                                                                                                                 |
+|                         |                                                                                                                                                                                                                                                                                                     |
 
-**Objetivo:**
-- Avaliar a segurança na criação de senhas.
-
-**Contexto:**
-- O usuário deseja criar uma conta no sistema.
-
-**Tarefa(s):** 
-- Inserir senha com menos de 8 caracteres.
-- Pesquisar por "notebook" e utilizar os filtros para refinar a busca (exemplo: marca, preço, processador).
-- Escolher um dos notebooks listados e acessar a página do produto.
-- Depois senha sem caracteres especiais , até conseguir criar uma senha válida.
-
-**Critério(s) de Sucesso(s):**
-- O sistema só aceita senhas que tenham no mínimo 8 caracteres, incluindo letras, números e caracteres especiais (RNF-01).
 
 **Cenário 2**
+|    **Caso de Teste**    |            **Cenário 2 – Tempo de carregamento**           |
+| :---------------------: | :--------------------------------------------------------: |
+| **Requisito Associado** |  RNF-02 – Página inicial deve carregar em até 3 segundos.  |
+|  **Objetivo do Teste**  |     Avaliar o tempo de carregamento da página inicial.     |
+|        **Passos**       | - Acessar o site.<br> - Abrir a página inicial do sistema. |
+|  **Critério de Êxito**  |   A página deve carregar completamente em até 3 segundos.  |
+|                         |                                                            |
 
-**Objetivo:**
-- Avaliar o tempo de carregamento da página inicial.
-
-**Contexto:**
-- O usuário acessa o site pela primeira vez em uma conexão comum de internet.
-
-**Tarefa(s):** 
-- Abrir a página inicial do sistema.
-
-**Critério(s) de Sucesso(s):**
-- Página carregada em até 3 segundos (RNF-02).
 
 **Cenário 3**
+|    **Caso de Teste**    |                                                           **Cenário 3 – Compatibilidade entre navegadores e dispositivos**                                                          |
+| :---------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Requisito Associado** |                                                     RNF-04 e RNF-05 – Compatibilidade e responsividade em múltiplas plataformas.                                                    |
+|  **Objetivo do Teste**  |                                                                Testar compatibilidade em navegadores e dispositivos.                                                                |
+|        **Passos**       | - Acessar o sistema em Chrome, Firefox, Edge e Safari.<br> - Acessar via desktop, tablet e smartphone.<br> - Navegar e executar funções básicas como cadastro e navegação em menus. |
+|  **Critério de Êxito**  |                                        O layout permanece consistente e todas as funcionalidades operam corretamente em todas as plataformas.                                       |
+|                         |                                                                                                                                                                                     |
 
-**Objetivo:**
-- Testar compatibilidade entre navegadores e dispositivos.
-
-**Contexto:**
-- Diferentes usuários acessam o site em navegadores (Chrome, Firefox, Edge, Safari) e dispositivos (desktop, tablet e smartphone).
-
-**Tarefa(s):** 
-- Navegar pelo sistema e executar funções básicas (cadastro, navegação de menus).
-  
-**Critério(s) de Sucesso(s):**
-- O sistema mantém funcionamento correto e layout consistente em todas as plataformas (RNF-04 e RNF-05).
 
 **Cenário 4**
+|    **Caso de Teste**    |                   **Cenário 4 – Consistência visual**                   |
+| :---------------------: | :---------------------------------------------------------------------: |
+| **Requisito Associado** |                RNF-07 – Consistência visual da interface.               |
+|  **Objetivo do Teste**  |          Avaliar consistência visual e identidade das páginas.          |
+|        **Passos**       | - Acessar pelo menos três páginas (inicial, cadastro, área do usuário). |
+|  **Critério de Êxito**  | Cores, tipografia e layout permanecem consistentes em todas as páginas. |
+|                         |                                                                         |
 
-**Objetivo:**
-- Avaliar consistência visual e identidade da interface.
-
-**Contexto:**
-- O usuário navega entre diferentes páginas do sistema.
-
-**Tarefa(s):** 
-- Acessar pelo menos três páginas distintas (ex.: inicial, cadastro, área de usuário).
-  
-**Critério(s) de Sucesso(s):**
-- Paleta de cores, tipografia e layout permanecem consistentes em todas as telas (RNF-07).
 
 **Cenário 5**
+|    **Caso de Teste**    |                              **Cenário 5 – Confiabilidade durante atualização**                              |
+| :---------------------: | :----------------------------------------------------------------------------------------------------------: |
+| **Requisito Associado** |                         RNF-09 – O sistema não deve perder dados durante atualização.                        |
+|  **Objetivo do Teste**  |                    Avaliar confiabilidade do sistema durante e após atualização de versão.                   |
+|        **Passos**       | - Simular atualização do sistema.<br> - Verificar se dados cadastrados permanecem íntegros após atualização. |
+|  **Critério de Êxito**  |                                     Nenhum dado é perdido ou corrompido.                                     |
+|                         |                                                                                                              |
 
-**Objetivo:**
-- Avaliar a confiabilidade do sistema durante o processo de atualização.
-
-**Contexto:**
-- O administrador precisa atualizar o sistema para uma nova versão sem perder dados já cadastrados.
-
-**Tarefa(s):** 
-- Simular uma atualização de versão do sistema.
-- Após a atualização, verificar se os dados previamente armazenados continuam disponíveis e íntegros.
-  
-**Critério(s) de Sucesso(s):**
-- Nenhum dado é perdido ou corrompido durante/apos a atualização (RNF-09).
 
 **Cenário 6**
+|    **Caso de Teste**    |                                                    **Cenário 6 – Acessibilidade via teclado**                                                    |
+| :---------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Requisito Associado** |                                                RNF-011 – Acessibilidade por navegação via teclado.                                               |
+|  **Objetivo do Teste**  |                                         Avaliar acessibilidade e navegabilidade usando apenas o teclado.                                         |
+|        **Passos**       | - Realizar login usando apenas o teclado.<br> - Navegar por menus, formulários e botões usando TAB, Setas e ENTER.<br> - Acessar área de perfil. |
+|  **Critério de Êxito**  |                   Todos os elementos são acessíveis por teclado; ordem lógica de navegação; tarefa concluída sem uso do mouse.                   |
+|                         |                                                                                                                                                  |
 
-**Objetivo:**
-- Avaliar a acessibilidade do sistema por meio de navegação apenas com teclado.
-
-**Contexto:**
-- Um usuário que não utiliza mouse deseja navegar pelo sistema utilizando somente o teclado.
-
-**Tarefa(s):** 
-- Realizar login utilizando apenas teclado.
-- Navegar entre menus, formulários e botões por meio de TAB, setas e ENTER.
-- Finalizar uma ação simples, como acessar a área de perfil.
-  
-**Critério(s) de Sucesso(s):**
-- Todos os elementos interativos são acessíveis via teclado.
-- A ordem de navegação segue um fluxo lógico.
-- O usuário consegue concluir a tarefa sem necessidade do mouse (RNF-011).
 
 ## Métodos de coleta de dados
 
