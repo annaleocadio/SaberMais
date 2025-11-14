@@ -54,6 +54,8 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Objetivo do Teste | Permitir que o usuário busque cursos por palavras-chave na tela de Inicio. |
 |Resultado do Teste | Falhou, o sistema não tinha função de busca e filtragem de cursos por palavras-chave. |
 
+- Necessário desenvolver método que permita ao usuário buscar cursos por palavras-chave.
+
 | **Caso de Teste** 	| **CT07 – Listagem de Itens** 	|
 |--------------------|---------------------------------------|
 |	Requisito Associado 	| RF-07 – Lista de itens na página inicial. |
