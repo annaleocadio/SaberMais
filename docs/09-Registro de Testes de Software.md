@@ -20,6 +20,8 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Objetivo do Teste | Enviar para o usuário, um E-mail para validar e confirmar o cadastro e a identidade do usuário. |
 |Resultado do Teste | Falhou, o sistema ainda não encaminha um E-mail vinculado pelo usuário. |
 
+- Necessário revisar se será possível realizar esta feature.
+
 | **Caso de Teste** 	| **CT03 – Visualização e edição de dados** 	|
 |--------------------|---------------------------------------|
 |	Requisito Associado 	| RF-03 – Visualização e edição de dados. |
@@ -27,19 +29,23 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Objetivo do Teste | Permitir que o usuário Edite e visualize os dados de seu perfil. |
 |Resultado do Teste | Falhou, o sistema não permitia o acesso e edição de dados do usuário. |
 
+- Foi desenvolvido uma página própria do usuário onde ele pode acessar suas informações e também edita-las.
+
 | **Caso de Teste** 	| **CT04 – Cadastro de item** 	|
 |--------------------|---------------------------------------|
 |	Requisito Associado 	| RF-04 – Visualização e edição de dados. |
 |Registro de evidência | [Evidência CT04](https://youtu.be/A9rNs5yIhaU) |
 |Objetivo do Teste | Permitir que o usuário cadastre seus cursos no sistema. |
-|Resultado do Teste | Falhou, o sistema não permitia o acesso e edição de dados do usuário. |
+|Resultado do Teste | Sucesso, o sistema cadastrou curso normalmente,  retornando uma mensagem de sucesso |
 
 | **Caso de Teste** 	| **CT05 – Edição/Exclusão de item** 	|
 |--------------------|---------------------------------------|
 |	Requisito Associado 	| RF-05 – Edição/Exclusão de item. |
 |Registro de evidência | [Evidência CT05](https://youtu.be/epev3X_lr_U) |
 |Objetivo do Teste | Permitir que o usuário faça a edição e exclusão dos itens posteriormente postados. |
-|Resultado do Teste | Sucesso, o sistema cadastrou curso normalmente,  retornando uma mensagem de sucesso. |
+|Resultado do Teste | Falhou, o não disponibilizou uma página própria do usuário para Editar e Cadastrar item. |
+
+- Necessário desenvolver uma página de gerenciamento, listando os cursos publicados pelo usuário, permitindo edição e exclusão dos mesmos.
 
 | **Caso de Teste** 	| **CT06 – Busca de itens** 	|
 |--------------------|---------------------------------------|
@@ -55,12 +61,16 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Objetivo do Teste | Listar os itens de forma classificada e filtrada por categorias para o usuário. |
 |Resultado do Teste | Parcialmente sucesso, o sistema lista os cursos cadastrados porém não os filtra por categorias. |
 
+- Necessário desenvolver um método que filtre cursos similares na listagem da página inicial.
+
 | **Caso de Teste** 	| **CT08 – Escolha de cursos** 	|
 |--------------------|---------------------------------------|
 |	Requisito Associado 	| RF-08 – Escolha de cursos. |
 |Registro de evidência | [Evidência CT08](https://youtu.be/pTAzZE_zhy8) |
 |Objetivo do Teste | Permitir que o usuário filtre os tipos de curso de seu interesse. |
 |Resultado do Teste | Falha, o sistema não permitia filtro dos tipos de curso por interesse do usuário. |
+
+- Necessário desenvolver métodos que permitam ao usuário filtrar cursos por categorias, tipo e palavras-chave.
 
 | **Caso de Teste** 	| **CT09 – Confirmação de envio** 	|
 |--------------------|---------------------------------------|
@@ -69,12 +79,16 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Objetivo do Teste | Retornar uma mensagem informativa para o usuário sobre o envio de um documento na aplicação. |
 |Resultado do Teste | Parcialmente sucesso, o sistema retorno apenas o conjunto inteiro do curso, mas não faz validação da imagem e documento enviado. |
 
+- Adicionar um retorno após realizar o Upload do Banner do Curso e o Documento.
+
 | **Caso de Teste** 	| **CT11 – Confirmação de recebimento** 	|
 |--------------------|---------------------------------------|
 |	Requisito Associado 	| RF-011 – Marcar item como “Recebido” |
 |Registro de evidência | [Evidência CT11](https://youtu.be/dHLkptJCZZg) |
 |Objetivo do Teste | Permitir que o usuário marque como "Recebido" o curso comprado na plataforma. |
 |Resultado do Teste | Falhou, a plataforma ainda não permitia ao usuário marcar um curso como "Recebido". |
+
+- Desenvolver uma página que liste todos os Cursos cujo o usuário adquiriu, permitindo que o mesmo os marque como "Recebido".
 
 ## Relatório de testes de software
 
