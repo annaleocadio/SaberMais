@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SaberMais.Data;
 using SaberMais.Models;
+using SaberMais.Services;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -10,12 +11,15 @@ namespace SaberMais.Controllers
     public class CursoController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly INotificacaoService _notificacaoService;
         private readonly IWebHostEnvironment _env;
 
-        public CursoController(AppDbContext context, IWebHostEnvironment env)
+        public CursoController(AppDbContext context, IWebHostEnvironment env, INotificacaoService notificacaoService)
         {
             _context = context;
             _env = env;
+            _context = context;
+            _notificacaoService = notificacaoService;
         }
 
         [HttpGet]
@@ -91,6 +95,12 @@ namespace SaberMais.Controllers
 
             _context.Cursos.Add(curso);
             await _context.SaveChangesAsync();
+            // Criar notificação
+            _notificacaoService.CriarNotificacao(
+                $"Novo curso disponível: {curso.Titulo}",
+                curso.Id,
+                "NovoCurso"
+            );
 
             TempData["Sucesso"] = "Curso cadastrado com sucesso!";
             return RedirectToAction("Criar");

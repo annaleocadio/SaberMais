@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using SaberMais.Services;
 using Microsoft.AspNetCore.Mvc;
 using SaberMais.Models;
 using SaberMais.Data;
@@ -6,12 +7,14 @@ using System.Linq;
 
 namespace SaberMais.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController // Controller para BaseController
     {
         private readonly ILogger<HomeController> _logger;
         private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        // Construtor modificado para passar o notificacaoService para o BaseController
+        public HomeController(ILogger<HomeController> logger, AppDbContext context, INotificacaoService notificacaoService)
+            : base(notificacaoService) // ← ADICIONEI esta linha para passar para o BaseController
         {
             _logger = logger;
             _context = context;
@@ -20,18 +23,18 @@ namespace SaberMais.Controllers
         public IActionResult Index()
         {
             var cursos = _context.Cursos.ToList();
+            
+
             return View(cursos);
         }
 
         public IActionResult Detalhes(int id)
         {
             var curso = _context.Cursos.FirstOrDefault(c => c.Id == id);
-
             if (curso == null)
             {
                 return NotFound();
             }
-
             return View(curso);
         }
 

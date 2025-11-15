@@ -11,6 +11,7 @@ namespace SaberMais.Data
 
         // DbSets
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Notificacao> Notificacoes { get; set; }
         public DbSet<Curso> Cursos { get; set; }
         public DbSet<Administrador> Administradores { get; set; }
 

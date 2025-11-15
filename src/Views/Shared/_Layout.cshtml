@@ -7,6 +7,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/custom.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <style>
         /* ==== EFEITO VIDRO + AJUSTES DE MODAL ==== */
@@ -67,6 +69,126 @@
             text-align: center;
             padding: 10px 0;
         }
+
+        /* ==== ESTILO NOTIFICAÇÕES ==== */
+        .notification-dropdown {
+            position: relative;
+        }
+
+        .notification-trigger {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+
+        .notification-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            margin-top: 0.5rem;
+            background-color: white;
+            min-width: 380px;
+            max-height: 500px;
+            overflow-y: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            z-index: 1050;
+        }
+
+        /* Mantém aberto quando mouse está sobre o trigger ou sobre o conteúdo */
+        .notification-dropdown:hover .notification-content {
+            display: block;
+        }
+
+        /* Adiciona uma "ponte invisível" entre o sino e o dropdown */
+        .notification-dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 100%;
+            height: 0.5rem;
+            background: transparent;
+        }
+
+        .notification-item {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+            transition: background-color 0.2s;
+        }
+
+            .notification-item:hover {
+                background-color: #f8f9fa;
+            }
+
+        .notification-header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .notification-empty {
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .notification-footer {
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+
+            .notification-footer a {
+                color: #0d6efd;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .notification-footer a:hover {
+                    text-decoration: underline;
+                }
+
+        .badge-notification {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: #dc3545;
+            color: white;
+            border-radius: 50%;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .bell-icon {
+            font-size: 1.5rem;
+            color: #b0cee2;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+
+            .bell-icon:hover {
+                color: #00bfa6;
+            }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #6c757d;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 0.5rem;
+        }
+
+            .close-btn:hover {
+                color: #dc3545;
+            }
     </style>
 </head>
 
@@ -95,12 +217,77 @@
                         {
                             <li class="nav-item">
                                 <a class="btn btn-success fw-semibold ms-lg-2" asp-controller="Curso" asp-action="Criar">
-                                    <i class="bi bi-plus-circle me-1"></i> Cadastrar Curso
+                                   Cadastrar Curso
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="Perfil" asp-action="Index">Perfil</a>
                             </li>
+
+                            <!-- ÍCONE DE NOTIFICAÇÕES -->
+                            <li class="nav-item notification-dropdown">
+                                <div class="notification-trigger">
+                                    <i class="bi bi-bell-fill bell-icon"></i>
+                                    @if (ViewBag.TotalNotificacoes != null && ViewBag.TotalNotificacoes > 0)
+                                    {
+                                        <span class="badge-notification">@ViewBag.TotalNotificacoes</span>
+                                    }
+                                </div>
+
+                                <!-- Dropdown de Notificações -->
+                                <div class="notification-content">
+                                    <!-- Cabeçalho -->
+                                    <div class="notification-header">
+                                        <i class="bi bi-bell-fill me-2"></i>Notificações
+                                    </div>
+
+                                    @if (ViewBag.Notificacoes != null && ((List<SaberMais.Models.Notificacao>)ViewBag.Notificacoes).Any())
+                                    {
+                                        @foreach (var notificacao in (List<SaberMais.Models.Notificacao>)ViewBag.Notificacoes)
+                                        {
+                                            <div class="notification-item">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <strong class="text-primary">
+                                                        @if (notificacao.TipoNotificacao == "NovoCurso")
+                                                        {
+                                                            <span>🎓 Novo Curso</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span>🔄 Atualização</span>
+                                                        }
+                                                    </strong>
+                                                    <form asp-controller="Notificacoes" asp-action="MarcarLida" asp-route-id="@notificacao.Id" method="post" class="d-inline">
+                                                        <button type="submit" class="close-btn" title="Marcar como lida">
+                                                            <i class="bi bi-x-lg"></i>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                                <p class="mb-2 text-dark" style="font-size: 0.9rem;">@notificacao.Mensagem</p>
+                                                <small class="text-muted">
+                                                    <i class="bi bi-clock me-1"></i>@notificacao.DataCriacao.ToString("dd/MM/yyyy HH:mm")
+                                                </small>
+                                            </div>
+                                        }
+
+                                        <!-- Rodapé - Marcar todas como lidas -->
+                                        <div class="notification-footer">
+                                            <a asp-controller="Notificacoes" asp-action="MarcarTodasLidas">
+                                                <i class="bi bi-check2-all me-2"></i>Marcar todas como lidas
+                                            </a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <!-- Mensagem quando não há notificações -->
+                                        <div class="notification-empty">
+                                            <i class="bi bi-bell-slash fs-2 d-block mb-2 text-secondary"></i>
+                                            <p class="mb-0">Nenhuma notificação no momento</p>
+                                        </div>
+                                    }
+                                </div>
+                            </li>
+
                             <li class="nav-item ms-2">
                                 <form asp-controller="Usuario" asp-action="Logout" method="post" class="d-inline">
                                     <button type="submit" class="btn btn-outline-light fw-semibold">Sair</button>

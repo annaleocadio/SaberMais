@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using SaberMais.Data;
+using SaberMais.Services;
 using SaberMais.Models;
 
 namespace SaberMais
@@ -22,6 +23,7 @@ namespace SaberMais
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("DefaultConnection")
                 ));
+            builder.Services.AddScoped<INotificacaoService, NotificacaoService>();
 
             // Ativa e configura o sistema de autenticação via cookies
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

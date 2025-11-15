@@ -1,0 +1,33 @@
+﻿@using SaberMais.Models
+
+@if (ViewBag.Notificacoes != null && ((List<Notificacao>)ViewBag.Notificacoes).Any())
+{
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1050; margin-top: 80px;">
+        @foreach (var notificacao in (List<Notificacao>)ViewBag.Notificacoes)
+        {
+            <div class="alert alert-info alert-dismissible fade show shadow-lg mb-3" role="alert" style="min-width: 320px; max-width: 400px;">
+                <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                        <strong class="d-block mb-2">
+                            @if (notificacao.TipoNotificacao == "NovoCurso")
+                            {
+                                <span class="text-primary">🎓 Novo Curso Disponível!</span>
+                            }
+                            else
+                            {
+                                <span class="text-warning">🔄 Curso Atualizado!</span>
+                            }
+                        </strong>
+                        <p class="mb-2">@notificacao.Mensagem</p>
+                        <small class="text-muted">
+                            <i class="bi bi-clock"></i> @notificacao.DataCriacao.ToString("dd/MM/yyyy HH:mm")
+                        </small>
+                    </div>
+                    <form asp-controller="Notificacoes" asp-action="MarcarLida" asp-route-id="@notificacao.Id" method="post" class="ms-2">
+                        <button type="submit" class="btn-close" aria-label="Fechar"></button>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -2,6 +2,12 @@
 <div class="container mt-5 pt-4">
     <div class="text-center mb-4">
         <h2 class="text-light fw-bold">Cursos em alta</h2>
+        @if (ViewBag.TotalNotificacoes != null && ViewBag.TotalNotificacoes > 0)
+        {
+            <span class="badge bg-danger rounded-pill fs-6 mt-2">
+                @ViewBag.TotalNotificacoes @(ViewBag.TotalNotificacoes == 1 ? "nova notificação" : "novas notificações")
+            </span>
+        }
     </div>
     @if (Model != null && Model.Any())
     {
