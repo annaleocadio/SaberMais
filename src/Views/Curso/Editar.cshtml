@@ -1,0 +1,26 @@
+﻿@model SaberMais.Models.CursoViewModel
+
+@{
+    ViewData["Title"] = "Editar curso";
+}
+
+<h2>Editar curso</h2>
+
+<form asp-action="Editar" asp-controller="Curso" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Titulo" class="form-label"></label>
+        <input asp-for="Titulo" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Descricao" class="form-label"></label>
+        <textarea asp-for="Descricao" class="form-control"></textarea>
+    </div>
+
+    <!-- coloca aqui os outros campos que já existem no Criar -->
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

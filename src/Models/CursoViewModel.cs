@@ -6,6 +6,9 @@ namespace SaberMais.Models
 {
     public class CursoViewModel
     {
+        // ✅ Id do curso (necessário para edição)
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "O título do curso é obrigatório.")]
         [StringLength(100, ErrorMessage = "O título deve ter no máximo 100 caracteres.")]
         public string Titulo { get; set; }

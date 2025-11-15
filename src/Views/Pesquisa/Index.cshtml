@@ -1,0 +1,55 @@
+﻿@model SaberMais.Features.Pesquisa.PesquisaViewModel
+
+@{
+    ViewData["Title"] = "Pesquisa";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-light">Pesquisar cursos</h2>
+
+    <form method="get" asp-action="Index" asp-controller="Pesquisa" class="row g-2 mb-4">
+        <div class="col-md-8">
+            <input type="text"
+                   name="termo"
+                   value="@Model?.Termo"
+                   class="form-control"
+                   placeholder="Digite o nome ou tema do curso" />
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success w-100">
+                Buscar
+            </button>
+        </div>
+    </form>
+
+    @if (Model != null && !string.IsNullOrWhiteSpace(Model.Termo))
+    {
+        if (Model.Resultados.Any())
+        {
+            <p class="text-light mb-2">
+                Resultados para: <strong>@Model.Termo</strong>
+            </p>
+
+            <div class="list-group">
+                @foreach (var curso in Model.Resultados)
+                {
+                    <div class="list-group-item bg-dark text-light border-secondary mb-2">
+                        <h5 class="mb-1">@curso.Titulo</h5>
+                        @if (!string.IsNullOrWhiteSpace(curso.Descricao))
+                        {
+                            <p class="mb-1">@curso.Descricao</p>
+                        }
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="text-light">Nenhum curso encontrado para <strong>@Model.Termo</strong>.</p>
+        }
+    }
+    else
+    {
+        <p class="text-light">Digite um termo acima para pesquisar cursos.</p>
+    }
+</div>
