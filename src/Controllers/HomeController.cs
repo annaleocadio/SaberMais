@@ -4,17 +4,17 @@ using Microsoft.AspNetCore.Mvc;
 using SaberMais.Models;
 using SaberMais.Data;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace SaberMais.Controllers
 {
-    public class HomeController : BaseController // Controller para BaseController
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
         private readonly AppDbContext _context;
 
-        // Construtor modificado para passar o notificacaoService para o BaseController
         public HomeController(ILogger<HomeController> logger, AppDbContext context, INotificacaoService notificacaoService)
-            : base(notificacaoService) // ← ADICIONEI esta linha para passar para o BaseController
+            : base(notificacaoService)
         {
             _logger = logger;
             _context = context;
@@ -23,18 +23,28 @@ namespace SaberMais.Controllers
         public IActionResult Index()
         {
             var cursos = _context.Cursos.ToList();
-            
-
             return View(cursos);
         }
 
         public IActionResult Detalhes(int id)
         {
-            var curso = _context.Cursos.FirstOrDefault(c => c.Id == id);
+            var curso = _context.Cursos
+                .Include(c => c.Usuario)
+                .FirstOrDefault(c => c.Id == id);
+
             if (curso == null)
             {
                 return NotFound();
             }
+
+            if (curso.Usuario != null)
+            {
+                var avaliacoes = _context.Avaliacoes
+                    .Where(a => a.UsuarioAvaliadoId == curso.UsuarioId)
+                    .ToList();
+                ViewBag.AvaliacoesCriador = avaliacoes;
+            }
+
             return View(curso);
         }
 

@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Avaliar Usuário";
+    var usuarioAvaliado = ViewBag.UsuarioAvaliado as SaberMais.Models.Usuario;
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-dark text-light">
+                <div class="card-header bg-secondary">
+                    <h4 class="mb-0">
+                        <i class="bi bi-star-fill me-2"></i>Avaliar @usuarioAvaliado.NomeCompleto
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Avaliar" asp-route-usuarioId="@usuarioAvaliado.Id" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <!-- SISTEMA DE ESTRELAS -->
+                        <div class="mb-4">
+                            <label class="form-label">Nota (1 a 5 estrelas) *</label>
+                            <div class="rating-stars">
+                                <input type="radio" name="nota" id="star5" value="5" required />
+                                <label for="star5" class="star">★</label>
+
+                                <input type="radio" name="nota" id="star4" value="4" />
+                                <label for="star4" class="star">★</label>
+
+                                <input type="radio" name="nota" id="star3" value="3" />
+                                <label for="star3" class="star">★</label>
+
+                                <input type="radio" name="nota" id="star2" value="2" />
+                                <label for="star2" class="star">★</label>
+
+                                <input type="radio" name="nota" id="star1" value="1" />
+                                <label for="star1" class="star">★</label>
+                            </div>
+                        </div>
+
+                        <!-- COMENTÁRIO -->
+                        <div class="mb-4">
+                            <label for="comentario" class="form-label">Comentário (opcional)</label>
+                            <textarea name="comentario" id="comentario" class="form-control bg-dark text-light border-secondary" rows="5" maxlength="1000" placeholder="Deixe um comentário sobre sua experiência..."></textarea>
+                            <small class="text-muted">Máximo 1000 caracteres</small>
+                        </div>
+
+                        <!-- BOTÕES -->
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="VerPerfil" asp-route-id="@usuarioAvaliado.Id" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left me-2"></i>Voltar
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-send-fill me-2"></i>Enviar Avaliação
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Sistema de estrelas interativo */
+    .rating-stars {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 10px;
+        font-size: 3rem;
+    }
+
+        .rating-stars input[type="radio"] {
+            display: none;
+        }
+
+        .rating-stars .star {
+            cursor: pointer;
+            color: #444;
+            transition: color 0.2s;
+        }
+
+            .rating-stars input[type="radio"]:checked ~ .star,
+            .rating-stars .star:hover,
+            .rating-stars .star:hover ~ .star {
+                color: #ffc107;
+            }
+</style>

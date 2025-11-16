@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SaberMais.Models
 {
@@ -21,7 +22,6 @@ namespace SaberMais.Models
         [Display(Name = "Presencial")]
         public bool Presencial { get; set; }
 
-        // Endereço (só preenchido se Presencial == true)
         [Display(Name = "CEP")]
         public string Cep { get; set; }
 
@@ -40,7 +40,6 @@ namespace SaberMais.Models
         [Display(Name = "UF")]
         public string Uf { get; set; }
 
-        // Arquivos (caminhos para wwwroot/uploads)
         [Display(Name = "Imagem de divulgação")]
         public string ImagemPath { get; set; }
 
@@ -49,6 +48,12 @@ namespace SaberMais.Models
 
         [Display(Name = "Criado em")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        [Required]
+        [Display(Name = "Criador")]
+        public int UsuarioId { get; set; }
+
+        [ForeignKey("UsuarioId")]
+        public virtual Usuario Usuario { get; set; }
     }
 }
-

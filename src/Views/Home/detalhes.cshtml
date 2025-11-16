@@ -2,6 +2,11 @@
 
 @{
     ViewData["Title"] = Model.Titulo;
+    var criador = Model.Usuario;
+
+    var avaliacoes = ViewBag.AvaliacoesCriador as List<SaberMais.Models.Avaliacao>;
+    var mediaNotas = avaliacoes != null && avaliacoes.Any() ? avaliacoes.Average(a => a.Nota) : 0;
+    var totalAvaliacoes = avaliacoes?.Count ?? 0;
 }
 
 <div class="course-details-page">
@@ -35,6 +40,69 @@
                             </a>
                         }
                     </div>
+
+                    @if (criador != null)
+                    {
+                        <div class="creator-box bg-dark p-4 rounded mb-3">
+                            <h5 class="text-info mb-3">
+                                <i class="bi bi-person-circle me-2"></i>Criado por
+                            </h5>
+
+                            <div class="text-center mb-3">
+                                @if (!string.IsNullOrEmpty(criador.FotoPerfil))
+                                {
+                                    <img src="/uploads/@criador.FotoPerfil" alt="@criador.NomeCompleto"
+                                         class="rounded-circle mb-2"
+                                         style="width: 80px; height: 80px; object-fit: cover; border: 3px solid #00bfa6;">
+                                }
+                                else
+                                {
+                                    <img src="/images/default-user.png" alt="@criador.NomeCompleto"
+                                         class="rounded-circle mb-2"
+                                         style="width: 80px; height: 80px; object-fit: cover; border: 3px solid #00bfa6;">
+                                }
+                                <h6 class="text-light mb-1">@criador.NomeCompleto</h6>
+
+                                <div class="creator-rating mb-2">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (i <= Math.Round(mediaNotas))
+                                        {
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="bi bi-star text-warning"></i>
+                                        }
+                                    }
+                                    <small class="text-muted ms-2">@mediaNotas.ToString("0.0") (@totalAvaliacoes)</small>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <a asp-controller="Avaliacao" asp-action="VerPerfil" asp-route-id="@criador.Id"
+                                   class="btn btn-outline-info btn-sm">
+                                    <i class="bi bi-person-circle me-2"></i>Ver Perfil
+                                </a>
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    var emailLogado = User.FindFirst(System.Security.Claims.ClaimTypes.Email)?.Value;
+                                    if (criador.Email != emailLogado)
+                                    {
+                                        <a asp-controller="Avaliacao" asp-action="Avaliar" asp-route-usuarioId="@criador.Id"
+                                           class="btn btn-warning btn-sm">
+                                            <i class="bi bi-star-fill me-2"></i>Avaliar
+                                        </a>
+                                        <a asp-controller="Mensagem" asp-action="Enviar" asp-route-destinatarioId="@criador.Id"
+                                           class="btn btn-success btn-sm">
+                                            <i class="bi bi-envelope-fill me-2"></i>Enviar Mensagem
+                                        </a>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
 
                     <div class="course-info-box bg-dark p-4 rounded">
                         <h5 class="text-info mb-3">Informações</h5>
@@ -184,6 +252,15 @@
             font-size: 2rem;
             font-weight: bold;
         }
+
+    .creator-box {
+        border: 1px solid #334155;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .creator-rating {
+        font-size: 0.9rem;
+    }
 
     .course-info-box .info-item strong {
         display: block;

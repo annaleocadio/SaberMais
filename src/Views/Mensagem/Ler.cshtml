@@ -1,0 +1,60 @@
+﻿@model SaberMais.Models.Mensagem
+@{
+    ViewData["Title"] = "Ler Mensagem";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card bg-dark text-light">
+                <div class="card-header bg-secondary d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">
+                        <i class="bi bi-envelope-open-fill me-2"></i>@Model.Assunto
+                    </h4>
+                    <a asp-action="Index" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-arrow-left me-1"></i>Voltar
+                    </a>
+                </div>
+                <div class="card-body">
+                    <!-- INFORMAÇÕES DO REMETENTE/DESTINATÁRIO -->
+                    <div class="border-bottom border-secondary pb-3 mb-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong class="text-info">De:</strong> @Model.Remetente.NomeCompleto<br />
+                                <small class="text-muted">@Model.Remetente.Email</small>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <strong class="text-success">Para:</strong> @Model.Destinatario.NomeCompleto<br />
+                                <small class="text-muted">@Model.Destinatario.Email</small>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <small class="text-muted">
+                                <i class="bi bi-clock-fill me-1"></i>@Model.DataEnvio.ToString("dd/MM/yyyy HH:mm")
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- CONTEÚDO DA MENSAGEM -->
+                    <div class="mensagem-conteudo" style="min-height: 200px; white-space: pre-wrap;">
+                        @Model.Conteudo
+                    </div>
+
+                    <!-- BOTÕES DE AÇÃO -->
+                    <div class="mt-4 d-flex justify-content-between">
+                        <form asp-action="Excluir" asp-route-id="@Model.Id" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Excluir esta mensagem?')">
+                                <i class="bi bi-trash-fill me-2"></i>Excluir
+                            </button>
+                        </form>
+
+                        <a asp-action="Enviar" asp-route-destinatarioId="@Model.RemetenteId" class="btn btn-primary">
+                            <i class="bi bi-reply-fill me-2"></i>Responder
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
