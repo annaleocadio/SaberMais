@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\Models"
   ],
-  "SelectedNode": "\\SaberMais.sln",
+  "SelectedNode": "\\src\\SaberMais.sln",
   "PreviewInSolutionExplorer": false
 }

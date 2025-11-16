@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using SaberMais.Data;
 using SaberMais.Models;
 using SaberMais.Services;
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace SaberMais.Controllers
 {
@@ -16,14 +20,13 @@ namespace SaberMais.Controllers
 
         public CursoController(AppDbContext context, IWebHostEnvironment env, INotificacaoService notificacaoService)
         {
-            _context = context;                     // ✅ corrigido (só uma vez)
+            _context = context;
             _env = env;
             _notificacaoService = notificacaoService;
         }
 
-        // ===================== CRIAR =====================
-
         [HttpGet]
+        [Authorize]
         public IActionResult Criar()
         {
             var model = new CursoViewModel
@@ -34,12 +37,22 @@ namespace SaberMais.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [RequestSizeLimit(50_000_000)]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Criar(CursoViewModel model)
         {
             if (!ModelState.IsValid)
                 return View(model);
+
+            var emailLogado = User.FindFirstValue(ClaimTypes.Email);
+            var usuarioLogado = _context.Usuarios.FirstOrDefault(u => u.Email == emailLogado);
+
+            if (usuarioLogado == null)
+            {
+                TempData["Erro"] = "Você precisa estar logado para criar um curso.";
+                return RedirectToAction("Login", "Usuario");
+            }
 
             if (model.Presencial)
             {
@@ -64,14 +77,14 @@ namespace SaberMais.Controllers
                 Complemento = model.Complemento,
                 Bairro = model.Bairro,
                 Uf = model.Uf,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = DateTime.UtcNow,
+                UsuarioId = usuarioLogado.Id
             };
 
             var uploadRoot = Path.Combine(_env.WebRootPath, "uploads");
             if (!Directory.Exists(uploadRoot))
                 Directory.CreateDirectory(uploadRoot);
 
-            // Imagem
             if (model.Imagem != null && model.Imagem.Length > 0)
             {
                 var ext = Path.GetExtension(model.Imagem.FileName);
@@ -86,7 +99,6 @@ namespace SaberMais.Controllers
                 curso.ImagemPath = $"/uploads/{fileName}";
             }
 
-            // Arquivo principal do curso
             if (model.Arquivo != null && model.Arquivo.Length > 0)
             {
                 var ext = Path.GetExtension(model.Arquivo.FileName);
@@ -104,7 +116,6 @@ namespace SaberMais.Controllers
             _context.Cursos.Add(curso);
             await _context.SaveChangesAsync();
 
-            // Criar notificação
             _notificacaoService.CriarNotificacao(
                 $"Novo curso disponível: {curso.Titulo}",
                 curso.Id,
@@ -115,10 +126,8 @@ namespace SaberMais.Controllers
             return RedirectToAction("Criar");
         }
 
-        // ===================== EDITAR =====================
-
-        // GET: /Curso/Editar/3
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Editar(int id)
         {
             var curso = await _context.Cursos.FindAsync(id);
@@ -137,15 +146,13 @@ namespace SaberMais.Controllers
                 Complemento = curso.Complemento,
                 Bairro = curso.Bairro,
                 Uf = curso.Uf
-                // Se o seu CursoViewModel tiver campos para mostrar paths,
-                // dá pra preencher aqui também.
             };
 
-            return View(model); // vai procurar Views/Curso/Editar.cshtml
+            return View(model);
         }
 
-        // POST: /Curso/Editar/3
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         [RequestSizeLimit(50_000_000)]
         public async Task<IActionResult> Editar(int id, CursoViewModel model)
@@ -157,7 +164,6 @@ namespace SaberMais.Controllers
             if (curso == null)
                 return NotFound();
 
-            // Validação de endereço se for presencial
             if (model.Presencial)
             {
                 if (string.IsNullOrWhiteSpace(model.Cep) ||
@@ -169,7 +175,6 @@ namespace SaberMais.Controllers
                 }
             }
 
-            // Atualiza dados básicos
             curso.Titulo = model.Titulo;
             curso.Descricao = model.Descricao;
             curso.Valor = model.Valor;
@@ -185,7 +190,6 @@ namespace SaberMais.Controllers
             if (!Directory.Exists(uploadRoot))
                 Directory.CreateDirectory(uploadRoot);
 
-            // Se o usuário enviar nova imagem, substitui
             if (model.Imagem != null && model.Imagem.Length > 0)
             {
                 var ext = Path.GetExtension(model.Imagem.FileName);
@@ -200,7 +204,6 @@ namespace SaberMais.Controllers
                 curso.ImagemPath = $"/uploads/{fileName}";
             }
 
-            // Se enviar novo arquivo do curso, substitui
             if (model.Arquivo != null && model.Arquivo.Length > 0)
             {
                 var ext = Path.GetExtension(model.Arquivo.FileName);
@@ -218,7 +221,6 @@ namespace SaberMais.Controllers
             await _context.SaveChangesAsync();
 
             TempData["Sucesso"] = "Curso atualizado com sucesso!";
-            // Redireciona pra alguma página segura que já existe
             return RedirectToAction("Index", "Home");
         }
     }

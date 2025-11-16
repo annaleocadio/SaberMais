@@ -1,0 +1,156 @@
+﻿@{
+    ViewData["Title"] = "Mensagens";
+    var mensagensRecebidas = ViewBag.MensagensRecebidas as List<SaberMais.Models.Mensagem>;
+    var mensagensEnviadas = ViewBag.MensagensEnviadas as List<SaberMais.Models.Mensagem>;
+    var naoLidas = ViewBag.NaoLidas;
+}
+
+<div class="container mt-4">
+    @if (TempData["Sucesso"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            @TempData["Sucesso"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["Erro"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            @TempData["Erro"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <!-- CABEÇALHO -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-light">
+            <i class="bi bi-envelope-fill me-2"></i>Minhas Mensagens
+            @if (naoLidas > 0)
+            {
+                <span class="badge bg-danger ms-2">@naoLidas não lidas</span>
+            }
+        </h2>
+        <a asp-action="Enviar" class="btn btn-success">
+            <i class="bi bi-plus-circle-fill me-2"></i>Nova Mensagem
+        </a>
+    </div>
+
+    <!-- ABAS -->
+    <ul class="nav nav-tabs mb-3" id="mensagensTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="recebidas-tab" data-bs-toggle="tab" data-bs-target="#recebidas" type="button" role="tab">
+                <i class="bi bi-inbox-fill me-2"></i>Recebidas (@mensagensRecebidas.Count)
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="enviadas-tab" data-bs-toggle="tab" data-bs-target="#enviadas" type="button" role="tab">
+                <i class="bi bi-send-fill me-2"></i>Enviadas (@mensagensEnviadas.Count)
+            </button>
+        </li>
+    </ul>
+
+    <!-- CONTEÚDO DAS ABAS -->
+    <div class="tab-content" id="mensagensTabsContent">
+        <!-- ABA: MENSAGENS RECEBIDAS -->
+        <div class="tab-pane fade show active" id="recebidas" role="tabpanel">
+            <div class="card bg-dark text-light">
+                <div class="card-body">
+                    @if (mensagensRecebidas != null && mensagensRecebidas.Any())
+                    {
+                        <div class="list-group list-group-flush">
+                            @foreach (var msg in mensagensRecebidas)
+                            {
+                                <div class="list-group-item bg-dark text-light border-secondary d-flex justify-content-between align-items-center @(msg.Lida ? "" : "fw-bold")">
+                                    <div class="flex-grow-1">
+                                        <a asp-action="Ler" asp-route-id="@msg.Id" class="text-decoration-none text-light">
+                                            @if (!msg.Lida)
+                                            {
+                                                <span class="badge bg-primary me-2">Nova</span>
+                                            }
+                                            <strong class="text-info">@msg.Remetente.NomeCompleto</strong><br />
+                                            <small>@msg.Assunto</small><br />
+                                            <small class="text-muted">@msg.DataEnvio.ToString("dd/MM/yyyy HH:mm")</small>
+                                        </a>
+                                    </div>
+                                    <form asp-action="Excluir" asp-route-id="@msg.Id" method="post" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Excluir esta mensagem?')">
+                                            <i class="bi bi-trash-fill"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-4 text-muted">
+                            <i class="bi bi-inbox fs-2 d-block mb-2"></i>
+                            <p>Nenhuma mensagem recebida.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- ABA: MENSAGENS ENVIADAS -->
+        <div class="tab-pane fade" id="enviadas" role="tabpanel">
+            <div class="card bg-dark text-light">
+                <div class="card-body">
+                    @if (mensagensEnviadas != null && mensagensEnviadas.Any())
+                    {
+                        <div class="list-group list-group-flush">
+                            @foreach (var msg in mensagensEnviadas)
+                            {
+                                <div class="list-group-item bg-dark text-light border-secondary d-flex justify-content-between align-items-center">
+                                    <div class="flex-grow-1">
+                                        <a asp-action="Ler" asp-route-id="@msg.Id" class="text-decoration-none text-light">
+                                            <strong class="text-success">Para: @msg.Destinatario.NomeCompleto</strong><br />
+                                            <small>@msg.Assunto</small><br />
+                                            <small class="text-muted">@msg.DataEnvio.ToString("dd/MM/yyyy HH:mm")</small>
+                                            @if (msg.Lida)
+                                            {
+                                                <small class="text-success ms-2"><i class="bi bi-check2-all"></i> Lida</small>
+                                            }
+                                        </a>
+                                    </div>
+                                    <form asp-action="Excluir" asp-route-id="@msg.Id" method="post" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Excluir esta mensagem?')">
+                                            <i class="bi bi-trash-fill"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-4 text-muted">
+                            <i class="bi bi-send fs-2 d-block mb-2"></i>
+                            <p>Nenhuma mensagem enviada.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .nav-tabs .nav-link {
+        color: #b0cee2;
+        background-color: #1a2730;
+        border-color: #3b4a56;
+    }
+
+        .nav-tabs .nav-link:hover {
+            color: #00bfa6;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #00bfa6;
+            background-color: #0f141a;
+            border-bottom-color: transparent;
+        }
+</style>

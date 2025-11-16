@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Enviar Mensagem";
+    var usuarios = ViewBag.Usuarios as List<SaberMais.Models.Usuario>;
+    var destinatarioId = ViewBag.DestinatarioId;
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card bg-dark text-light">
+                <div class="card-header bg-secondary">
+                    <h4 class="mb-0">
+                        <i class="bi bi-send-fill me-2"></i>Nova Mensagem
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Enviar" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <!-- DESTINATÁRIO -->
+                        <div class="mb-3">
+                            <label for="destinatarioId" class="form-label">Para: *</label>
+                            <select name="destinatarioId" id="destinatarioId" class="form-select bg-dark text-light border-secondary" required>
+                                <option value="">Selecione um destinatário...</option>
+                                @if (usuarios != null)
+                                {
+                                    @foreach (var user in usuarios)
+                                    {
+                                        <option value="@user.Id" selected="@(destinatarioId != null && destinatarioId == user.Id)">
+                                            @user.NomeCompleto (@user.Email)
+                                        </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <!-- ASSUNTO -->
+                        <div class="mb-3">
+                            <label for="assunto" class="form-label">Assunto: *</label>
+                            <input type="text" name="assunto" id="assunto" class="form-control bg-dark text-light border-secondary" required maxlength="200" placeholder="Digite o assunto da mensagem" />
+                        </div>
+
+                        <!-- CONTEÚDO -->
+                        <div class="mb-3">
+                            <label for="conteudo" class="form-label">Mensagem: *</label>
+                            <textarea name="conteudo" id="conteudo" class="form-control bg-dark text-light border-secondary" rows="10" required maxlength="2000" placeholder="Digite sua mensagem aqui..."></textarea>
+                            <small class="text-muted">Máximo 2000 caracteres</small>
+                        </div>
+
+                        <!-- BOTÕES -->
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left me-2"></i>Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-success">
+                                <i class="bi bi-send-fill me-2"></i>Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
