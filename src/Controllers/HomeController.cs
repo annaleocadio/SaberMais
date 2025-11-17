@@ -22,7 +22,15 @@ namespace SaberMais.Controllers
 
         public IActionResult Index()
         {
+            var recomendados = _context.Cursos
+                .Where(c => c.Recomendado == true)
+                .Take(4)
+                .ToList();
+
             var cursos = _context.Cursos.ToList();
+
+            ViewBag.Recomendados = recomendados;
+
             return View(cursos);
         }
 

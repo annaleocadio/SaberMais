@@ -289,6 +289,13 @@
                 <span asp-validation-for="Arquivo" class="text-danger"></span>
             </div>
 
+            <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" asp-for="Recomendado" />
+                <label class="form-check-label text-white" asp-for="Recomendado">
+                    Marcar como recomendado
+                </label>
+            </div>
+
             <button type="submit" class="btn btn-submit w-100 text-white">
                 Cadastrar Curso
             </button>

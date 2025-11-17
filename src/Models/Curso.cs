@@ -55,5 +55,8 @@ namespace SaberMais.Models
 
         [ForeignKey("UsuarioId")]
         public virtual Usuario Usuario { get; set; }
+
+        [Display(Name = "Recomendado")]
+        public bool Recomendado { get; set; }
     }
 }

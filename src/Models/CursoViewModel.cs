@@ -51,5 +51,9 @@ namespace SaberMais.Models
 
         [Display(Name = "Arquivo do Curso")]
         public IFormFile? Arquivo { get; set; }
+
+        [Display(Name = "Recomendado")]
+        public bool? Recomendado { get; set; }
+
     }
 }

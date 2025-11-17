@@ -78,7 +78,8 @@ namespace SaberMais.Controllers
                 Bairro = model.Bairro,
                 Uf = model.Uf,
                 CreatedAt = DateTime.UtcNow,
-                UsuarioId = usuarioLogado.Id
+                UsuarioId = usuarioLogado.Id,
+                Recomendado = model.Recomendado,
             };
 
             var uploadRoot = Path.Combine(_env.WebRootPath, "uploads");
@@ -145,7 +146,8 @@ namespace SaberMais.Controllers
                 Numero = curso.Numero,
                 Complemento = curso.Complemento,
                 Bairro = curso.Bairro,
-                Uf = curso.Uf
+                Uf = curso.Uf,
+                Recomendado = curso.Recomendado,
             };
 
             return View(model);
@@ -185,6 +187,7 @@ namespace SaberMais.Controllers
             curso.Complemento = model.Complemento;
             curso.Bairro = model.Bairro;
             curso.Uf = model.Uf;
+            curso.Recomendado = model.Recomendado;
 
             var uploadRoot = Path.Combine(_env.WebRootPath, "uploads");
             if (!Directory.Exists(uploadRoot))
