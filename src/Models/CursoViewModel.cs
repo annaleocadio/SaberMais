@@ -53,7 +53,7 @@ namespace SaberMais.Models
         public IFormFile? Arquivo { get; set; }
 
         [Display(Name = "Recomendado")]
-        public bool? Recomendado { get; set; }
+        public bool Recomendado { get; set; }
 
     }
 }
