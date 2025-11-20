@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace SaberMais.Controllers
 {
@@ -42,6 +43,7 @@ namespace SaberMais.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Criar(CursoViewModel model)
         {
+            // ✅ Validação do ModelState (verifica Data Annotations)
             if (!ModelState.IsValid)
                 return View(model);
 
@@ -54,6 +56,7 @@ namespace SaberMais.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
 
+            // ✅ Validação do endereço se for presencial
             if (model.Presencial)
             {
                 if (string.IsNullOrWhiteSpace(model.Cep) ||
@@ -67,6 +70,7 @@ namespace SaberMais.Controllers
 
             var curso = new Curso
             {
+                Cpf = model.Cpf,  // ✅ ADICIONADO CPF
                 Titulo = model.Titulo,
                 Descricao = model.Descricao,
                 Valor = model.Valor,
@@ -127,6 +131,7 @@ namespace SaberMais.Controllers
             return RedirectToAction("Criar");
         }
 
+
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Editar(int id)
@@ -137,6 +142,8 @@ namespace SaberMais.Controllers
 
             var model = new CursoViewModel
             {
+                Id = curso.Id,  // ✅ ADICIONADO ID
+                Cpf = curso.Cpf,  // ✅ ADICIONADO CPF
                 Titulo = curso.Titulo,
                 Descricao = curso.Descricao,
                 Valor = curso.Valor,
@@ -159,6 +166,7 @@ namespace SaberMais.Controllers
         [RequestSizeLimit(50_000_000)]
         public async Task<IActionResult> Editar(int id, CursoViewModel model)
         {
+            // ✅ Validação do ModelState (verifica Data Annotations)
             if (!ModelState.IsValid)
                 return View(model);
 
@@ -166,6 +174,7 @@ namespace SaberMais.Controllers
             if (curso == null)
                 return NotFound();
 
+            // ✅ Validação do endereço se for presencial
             if (model.Presencial)
             {
                 if (string.IsNullOrWhiteSpace(model.Cep) ||
@@ -177,6 +186,7 @@ namespace SaberMais.Controllers
                 }
             }
 
+            curso.Cpf = model.Cpf;  // ✅ ADICIONADO CPF
             curso.Titulo = model.Titulo;
             curso.Descricao = model.Descricao;
             curso.Valor = model.Valor;

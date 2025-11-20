@@ -16,6 +16,7 @@ namespace SaberMais.Models
         [Display(Name = "Descrição do Curso")]
         [StringLength(1000, ErrorMessage = "A descrição deve ter no máximo 1000 caracteres.")]
         public string? Descricao { get; set; }
+        public string Cpf { get; set; }
 
         [Required(ErrorMessage = "Informe o valor do curso.")]
         [Display(Name = "Valor (R$)")]

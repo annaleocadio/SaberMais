@@ -12,6 +12,7 @@ namespace SaberMais.Models
         [Required]
         [Display(Name = "Título")]
         public string Titulo { get; set; }
+        public string Cpf { get; set; }
 
         [Display(Name = "Descrição")]
         public string Descricao { get; set; }
