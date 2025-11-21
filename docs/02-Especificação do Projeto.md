@@ -44,39 +44,29 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-01| O sistema deve permitir que o usuário crie uma conta utilizando e-mail e senha. | ALTA |
-|RF-02| O sistema deve enviar um e-mail de confirmação para ativação da conta após o cadastro. | ALTA |
-|RF-03| O sistema deve permitir que o usuário visualize e edite seus dados cadastrais, incluindo nome, foto de perfil e localização aproximada. | MÉDIA |
-|RF-04| O sistema deve permitir que um usuário cadastre um item, informando nome, descrição, categoria, localização e imagens. | ALTA |
-|RF-05| O sistema deve permitir que edite ou exclua um item previamente cadastrado. | ALTA |
-|RF-06| O sistema deve permitir que um usuário busque itens disponíveis por categoria, localização, palavra-chave, faixa de preço e data de publicação. | MÉDIA |
-|RF-07| O sistema deve exibir uma lista de itens disponíveis na página inicial, organizados por categorias. | ALTA |
-|RF-08| O sistema deve permitir escolher cursos presencias ou online. | ALTA |
-|RF-09| O sistema deve confirmar o envio de documento seja em Ebook, PDF, ou de forma presencial. | ALTA |
-|RF-010| O sistema deve permitir que o usuário siga outros usuários para acompanhar suas recomendações e avaliações. | ALTA |
-|RF-011| O sistema deve permitir que o receptor marque o item como "Recebido" após a entrega ou venda efetuada. | MÉDIA |
-|RF-012| O sistema deve permitir que os usuários avaliem cursos e empresas com notas e comentários. | MÉDIA |
-|RF-013| O sistema deve permitir que administradores revisem denúncias de itens ou usuários e tomem ações como remoção de conteúdo ou suspensão de contas.| MÉDIA |
-|RF-014| O sistema deve impedir que um usuário banido crie uma nova conta com o mesmo e-mail e CPF. | MÉDIA |
-|RF-015| Acessar relatórios de engajamento das minhas recomendações para entender quais cursos têm maior interesse. | MÉDIA |
-
-
+|RF-02| O sistema deve permitir que o usuário visualize e edite seus dados cadastrais, incluindo nome e foto de perfil. | MÉDIA |
+|RF-03| O sistema deve permitir que um usuário cadastre um item, informando nome, descrição, categoria, localização e imagens e documentos. | ALTA |
+|RF-04| O sistema deve permitir que edite ou exclua um item previamente cadastrado. | ALTA |
+|RF-05| O sistema deve permitir que um usuário busque itens disponíveis por categoria, localização, palavra-chave, faixa de preço e data de publicação. | MÉDIA |
+|RF-06| O sistema deve exibir uma lista de itens disponíveis na página inicial, organizados por categorias. | ALTA |
+|RF-07| O sistema deve permitir escolher cursos presencias ou online. | ALTA |
+|RF-08| O sistema deve confirmar o envio de documento seja em Ebook, PDF, ou de forma presencial. | ALTA |
+|RF-09| O sistema deve permitir que o receptor marque o item como "Recebido" após a entrega ou venda efetuada. | MÉDIA |
+|RF-010| O sistema deve permitir que os usuários avaliem cursos e empresas com notas e comentários. | MÉDIA |
+|RF-011| O sistema deve permitir que administradores revisem denúncias de itens ou usuários e tomem ações como remoção de conteúdo ou suspensão de contas.| MÉDIA |
+|RF-012| O sistema deve impedir que um usuário banido crie uma nova conta com o mesmo e-mail e CPF. | MÉDIA |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-01| O sistema deve exigir que a senha tenha no mínimo 8 caracteres, incluindo letras, números e caracteres especiais. | MÉDIA | 
-|RNF-02| O sistema deve carregar a página inicial em no máximo 3 segundos, considerando conexões comuns de acesso à internet. | MÉDIA | 
-|RNF-03| O sistema deve suportar pelo menos 100 acessos simultâneos sem perda significativa de desempenho. | ALTA | 
-|RNF-04| O sistema deve ser compatível com os principais navegadores web (como Google Chrome, Mozilla Firefox, Safari e Microsoft Edge) e dispositivos móveis (smartphones e tablets). | ALTA | 
-|RNF-05| O sistema deve possuir interface responsiva, adaptando-se a diferentes tamanhos de tela (desktop, tablet e celular). | MÉDIA | 
-|RNF-06| A aplicação deve garantir a proteção dos dados pessoais e financeiros dos usuários por meio de criptografias SSL/TLS para transações seguras. | ALTA | 
-|RNF-07| A aplicação deve manter uma identidade visual consistente em todas as páginas, considerando a paleta de cores, a tipografia e o layout. | ALTA | 
-|RNF-08| O sistema deve ser desenvolvido em linguagem C# com .NET, garantindo compatibilidade com servidores que utilizem essa tecnologia. | MÉDIA | 
-|RNF-09| O sistema deve permitir atualização sem comprometer dados já armazenados. | MÉDIA | 
-|RNF-010| O sistema deve realizar backups automáticos dos dados diariamente para evitar perda de informações em caso de falha. | MÉDIA |
-|RNF-011| O sistema deve seguir as diretrizes de acessibilidade WCAG 2.1, permitindo navegação por teclado e suporte a leitores de tela. | MÉDIA |
+|RNF-01| O sistema deve exigir que a senha tenha no mínimo 8 caracteres, incluindo letras, números e caracteres especiais. | MÉDIA |  
+|RNF-02| O sistema deve suportar pelo menos 100 acessos simultâneos sem perda significativa de desempenho. | ALTA |  
+|RNF-03| O sistema deve possuir interface responsiva, adaptando-se a diferentes tamanhos de tela (desktop, tablet e celular). | MÉDIA | 
+|RNF-04| A aplicação deve manter uma identidade visual consistente em todas as páginas, considerando a paleta de cores, a tipografia e o layout. | ALTA | 
+|RNF-05| O sistema deve ser desenvolvido em linguagem C# com .NET, garantindo compatibilidade com servidores que utilizem essa tecnologia. | MÉDIA | 
+|RNF-06| O sistema deve seguir as diretrizes de acessibilidade WCAG 2.1, permitindo navegação por teclado e suporte a leitores de tela. | MÉDIA |
 
 
 ## Restrições
