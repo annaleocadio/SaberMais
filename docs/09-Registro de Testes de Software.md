@@ -7,98 +7,74 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT01 – Cadastrar perfil** 	|
 |--------------------|---------------------------------------|
 |	Requisito Associado 	| RF-01 – O sistema deve permitir que o usuário crie uma conta utilizando e-mail e senha. |
-|Registro de evidência | [Evidência CT01](https://youtu.be/OrNtsWZ2sZw) |
-|Objetivo do Teste | Conseguir realizar o cadastro do usuário, informando os dados para cadastro. |
-|Resultado do Teste | Sucesso, porém falta um retorno. |
+| Objetivo do Teste | Verificar se o usuário consegue criar uma conta corretamente utilizando e-mail e senha válidos. |
+| Resultado do Teste | Sucesso, o sistema cadastra o usuário validando os dados inseridos e retorna uma mensagem de sucesso. |
+| Registro de evidência | [Evidência CT01](https://www.youtube.com/watch?v=kbXDaK5rUBs&list=PLKaK7-baMbforZHbkwPwvWBVsXbkVLgHM) |
 
-[Assista ao vídeo CT-01](/docs/img/registros-de-teste/CT-01.mp4)
-<video 
-  src="/docs/img/registros-de-teste/CT-01.mp4"
-  controls="controls"
-  muted="muted"
-  style="max-height:640px; min-height: 200px">
-</video>
 
-- Necessário adicionar um retorno após conclusão do cadastro, em caso de sucesso ou falha.
-
-| **Caso de Teste** 	| **CT02 – Confirmação de e-mail** 	|
+| **Caso de Teste** 	| **CT02 – Edição de dados cadastrais** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-02 – O sistema deve enviar um e-mail de confirmação para ativação da conta após o cadastro. |
-|Registro de evidência | [Evidência CT02](https://youtu.be/1iIg46Lx5ZY) |
-|Objetivo do Teste | Enviar para o usuário, um E-mail para validar e confirmar o cadastro e a identidade do usuário. |
-|Resultado do Teste | Falhou, o sistema ainda não encaminha um E-mail vinculado pelo usuário. |
+|	Requisito Associado 	| RF-02 – O sistema deve permitir que o usuário visualize e edite seus dados cadastrais. |
+| Objetivo do Teste | Verificar se o usuário consegue visualizar e atualizar nome e foto de perfil. |
+| Resultado do Teste | Sucesso, sistema permite que o usuário logado altere suas informações dos dados cadastrais. |
+| Registro de evidência | [Evidência CT02](https://youtu.be/E4q3_q6qlwE) |
 
-- Necessário revisar se será possível realizar esta feature.
 
-| **Caso de Teste** 	| **CT03 – Visualização e edição de dados** 	|
+| **Caso de Teste** 	| **CT03 – Cadastro de item** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-03 – Visualização e edição de dados. |
-|Registro de evidência | [Evidência CT03](https://youtu.be/yI6w3-nDg0s) |
-|Objetivo do Teste | Permitir que o usuário Edite e visualize os dados de seu perfil. |
-|Resultado do Teste | Falhou, o sistema não permitia o acesso e edição de dados do usuário. |
+|	Requisito Associado 	| RF-03 – O sistema deve permitir que um usuário cadastre um item, informando nome, descrição, categoria, localização e imagens e documentos. |
+| Objetivo do Teste | Verificar se o usuário consegue cadastrar um item informando todos os campos obrigatórios. |
+| Resultado do Teste | Sucesso, o sistema permite o cadastro de novos cursos, retornando uma mensagem de sucesso após o cadastro do mesmo. |
+| Registro de evidência | [Evidência CT03](https://youtu.be/uc-6MDWHWac) |
 
-- Foi desenvolvido uma página própria do usuário onde ele pode acessar suas informações e também edita-las.
-
-| **Caso de Teste** 	| **CT04 – Cadastro de item** 	|
+| **Caso de Teste** 	| **CT04 – Edição e exclusão de item** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-04 – Visualização e edição de dados. |
-|Registro de evidência | [Evidência CT04](https://youtu.be/A9rNs5yIhaU) |
-|Objetivo do Teste | Permitir que o usuário cadastre seus cursos no sistema. |
-|Resultado do Teste | Sucesso, o sistema cadastrou curso normalmente,  retornando uma mensagem de sucesso |
+|	Requisito Associado 	| RF-04 – O sistema deve permitir que edite ou exclua um item previamente cadastrado. |
+| Objetivo do Teste | Validar que o usuário possa editar ou excluir um item previamente cadastrado. |
+| Resultado do Teste | Falhou, o sistema não permitiu que o usuário editasse ou excluísse um item previamente cadastrado. |
+| Registro de evidência | [Evidência CT04](https://youtu.be/nvr1jbF_CLM) |
 
-| **Caso de Teste** 	| **CT05 – Edição/Exclusão de item** 	|
+| **Caso de Teste** 	| **CT05 – Busca de itens** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-05 – Edição/Exclusão de item. |
-|Registro de evidência | [Evidência CT05](https://youtu.be/epev3X_lr_U) |
-|Objetivo do Teste | Permitir que o usuário faça a edição e exclusão dos itens posteriormente postados. |
-|Resultado do Teste | Falhou, o não disponibilizou uma página própria do usuário para Editar e Cadastrar item. |
+|	Requisito Associado 	| RF-05 – O sistema deve permitir que um usuário busque itens disponíveis por categoria, localização, palavra-chave, faixa de preço e data de publicação. |
+| Objetivo do Teste | Verificar se o usuário consegue buscar itens por filtros. |
+| Resultado do Teste | Parcialmente Sucesso, o usuário consegue buscar por meio de uma barra de pesquisas, mas sem filtros. |
+| Registro de evidência | [Evidência CT05](https://youtu.be/MMS9nHg7B24) |
 
-- Necessário desenvolver uma página de gerenciamento, listando os cursos publicados pelo usuário, permitindo edição e exclusão dos mesmos.
-
-| **Caso de Teste** 	| **CT06 – Busca de itens** 	|
+| **Caso de Teste** 	| **CT06 – Listagem inicial de itens** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-06 – Busca de itens. |
-|Registro de evidência | [Evidência CT06](https://youtu.be/TuLn0l2CxzE) |
-|Objetivo do Teste | Permitir que o usuário busque cursos por palavras-chave na tela de Inicio. |
-|Resultado do Teste | Falhou, o sistema não tinha função de busca e filtragem de cursos por palavras-chave. |
+|	Requisito Associado 	| RF-06 – O sistema deve exibir uma lista de itens disponíveis na página inicial, organizados por categorias. |
+| Objetivo do Teste | Verificar se a página inicial exibe itens organizados por categoria. |
+| Resultado do Teste | Parcialmente Sucesso, a tela Inicial categoriza os cursos upados, mas apenas por "Em Alta" e "Recomendados". |
+| Registro de evidência | [Evidência CT06](https://youtu.be/HTFxHQ_afg8) |
 
-- Necessário desenvolver método que permita ao usuário buscar cursos por palavras-chave.
-
-| **Caso de Teste** 	| **CT07 – Listagem de Itens** 	|
+| **Caso de Teste** 	| **CT07 – Escolha de modalidade de curso** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-07 – Lista de itens na página inicial. |
-|Registro de evidência | [Evidência CT07](https://youtu.be/qz1RkOyTzGg) |
-|Objetivo do Teste | Listar os itens de forma classificada e filtrada por categorias para o usuário. |
-|Resultado do Teste | Parcialmente sucesso, o sistema lista os cursos cadastrados porém não os filtra por categorias. |
+|	Requisito Associado 	| RF-07 – O sistema deve permitir escolher cursos presencias ou online. |
+| Objetivo do Teste | Validar que o usuário possa escolher entre cursos online ou presenciais. |
+| Resultado do Teste | Falha, o usuário não consegue pesquisar cursos pela modalidade. |
+| Registro de evidência | [Evidência CT07](https://youtu.be/JahiBFh_tXg) |
 
-- Necessário desenvolver um método que filtre cursos similares na listagem da página inicial.
-
-| **Caso de Teste** 	| **CT08 – Escolha de cursos** 	|
+| **Caso de Teste** 	| **CT08 – Confirmação de envio de documento** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-08 – Escolha de cursos. |
-|Registro de evidência | [Evidência CT08](https://youtu.be/pTAzZE_zhy8) |
-|Objetivo do Teste | Permitir que o usuário filtre os tipos de curso de seu interesse. |
-|Resultado do Teste | Falha, o sistema não permitia filtro dos tipos de curso por interesse do usuário. |
+|	Requisito Associado 	| RF-08 – O sistema deve confirmar o envio de documento seja em Ebook, PDF, ou de forma presencial. |
+| Objetivo do Teste | Verificar se o sistema confirma o envio de documentos em Ebook, PDF ou material presencial. |
+| Resultado do Teste | Sucesso, o sistema valida o documento enviado do curso, ou se a modalidade for presencial, com os campos de Endereço. |
+| Registro de evidência | [Evidência CT08](https://youtu.be/prN2DUn4_8E) |
 
-- Necessário desenvolver métodos que permitam ao usuário filtrar cursos por categorias, tipo e palavras-chave.
-
-| **Caso de Teste** 	| **CT09 – Confirmação de envio** 	|
+| **Caso de Teste** 	| **CT09 – Confirmar recebimento** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-09 – Confirmação de envio de documento. |
-|Registro de evidência | [Evidência CT09](https://youtu.be/DIaYzDlctCg) |
-|Objetivo do Teste | Retornar uma mensagem informativa para o usuário sobre o envio de um documento na aplicação. |
-|Resultado do Teste | Parcialmente sucesso, o sistema retorno apenas o conjunto inteiro do curso, mas não faz validação da imagem e documento enviado. |
+|	Requisito Associado 	| RF-09 – O sistema deve permitir que o receptor marque o item como "Recebido" após a entrega ou venda efetuada. |
+| Objetivo do Teste | Verificar se o receptor consegue marcar um item como recebido. |
+| Resultado do Teste | Falha, o sistema não permite que o usuário marque como "Recebido" um curso pelo qual ele se interessou. |
+| Registro de evidência | [Evidência CT09](https://youtu.be/fXQBXktekJk) |
 
-- Adicionar um retorno após realizar o Upload do Banner do Curso e o Documento.
-
-| **Caso de Teste** 	| **CT11 – Confirmação de recebimento** 	|
+| **Caso de Teste** 	| **CT10 – Avaliação** 	|
 |--------------------|---------------------------------------|
-|	Requisito Associado 	| RF-011 – Marcar item como “Recebido” |
-|Registro de evidência | [Evidência CT11](https://youtu.be/dHLkptJCZZg) |
-|Objetivo do Teste | Permitir que o usuário marque como "Recebido" o curso comprado na plataforma. |
-|Resultado do Teste | Falhou, a plataforma ainda não permitia ao usuário marcar um curso como "Recebido". |
-
-- Desenvolver uma página que liste todos os Cursos cujo o usuário adquiriu, permitindo que o mesmo os marque como "Recebido".
+|	Requisito Associado 	| RF-10 – O sistema deve permitir que os usuários avaliem cursos e empresas com notas e comentários. |
+| Objetivo do Teste | Verificar se o usuário consegue avaliar com nota e comentário. |
+| Resultado do Teste | Sucesso, o sistema permite que o usuário avalie o curso e deixe seu comentário no perfil do responsável. |
+| Registro de evidência | [Evidência CT10](https://youtu.be/6sEX2vRLQDk) |
 
 ## Relatório de testes de software
 
