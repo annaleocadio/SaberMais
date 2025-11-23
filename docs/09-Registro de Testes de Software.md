@@ -15,7 +15,6 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
   src="/docs/img/registros-de-teste/CT-01.mp4"
   controls="controls"
   muted="muted"
-  class="d-block rounded-bottom-2 border-top width-fit"
   style="max-height:640px; min-height: 200px">
 </video>
 
