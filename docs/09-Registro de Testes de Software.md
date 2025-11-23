@@ -11,10 +11,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Objetivo do Teste | Conseguir realizar o cadastro do usuário, informando os dados para cadastro. |
 |Resultado do Teste | Sucesso, porém falta um retorno. |
 
-<video width="320" height="240" controls>
-  <source src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e2-proj-int-t1-sabermais/blob/main/docs/img/registros-de-teste/CT-01.mp4" type="video/mp4">
-  Seu navegador não suporta o elemento de vídeo.
-</video>
+[Assista ao vídeo CT-01](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e2-proj-int-t1-sabermais/blob/main/docs/img/registros-de-teste/CT-01.mp4)
 
 - Necessário adicionar um retorno após conclusão do cadastro, em caso de sucesso ou falha.
 
