@@ -11,6 +11,8 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Objetivo do Teste | Conseguir realizar o cadastro do usuário, informando os dados para cadastro. |
 |Resultado do Teste | Sucesso, porém falta um retorno. |
 
+<iframe width="1296" height="729" src="https://www.youtube.com/embed/6sEX2vRLQDk" title="CT10 – Avaliação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 - Necessário adicionar um retorno após conclusão do cadastro, em caso de sucesso ou falha.
 
 | **Caso de Teste** 	| **CT02 – Confirmação de e-mail** 	|
