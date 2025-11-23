@@ -12,8 +12,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Resultado do Teste | Sucesso, porém falta um retorno. |
 
 <video 
-  src="https://raw.githubusercontent.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e2-proj-int-t1-sabermais/main/docs/img/registros-de-teste/CT-01.mp4"
-  data-canonical-src="https://raw.githubusercontent.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e2-proj-int-t1-sabermais/main/docs/img/registros-de-teste/CT-01.mp4"
+  src="/docs/img/registros-de-teste/CT-01.mp4"
   controls="controls"
   muted="muted"
   class="d-block rounded-bottom-2 border-top width-fit"
