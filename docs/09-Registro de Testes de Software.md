@@ -11,6 +11,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Objetivo do Teste | Conseguir realizar o cadastro do usuário, informando os dados para cadastro. |
 |Resultado do Teste | Sucesso, porém falta um retorno. |
 
+[Assista ao vídeo CT-01](/docs/img/registros-de-teste/CT-01.mp4)
 <video 
   src="/docs/img/registros-de-teste/CT-01.mp4"
   controls="controls"
