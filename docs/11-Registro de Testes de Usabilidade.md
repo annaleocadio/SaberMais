@@ -5,16 +5,16 @@ O registro de testes de usabilidade é um documento ou planilha onde são coleta
 ## Perfil dos usuários que participaram do teste
 - Perfil 1: 50 anos, nível básico incompleto, conhecimento básico tecnologia
 - Perfil 2: 53 anos, nível superior incompleto, conhecimento básico tecnologia
-- Perfil 3: 23 anos, nível superior completo, conhecimento avançado tecnologia
-- Perfil 4: 19 anos, nível superior incompleto, conhecimento avançado tecnologia
-- Perfil 5: 27 anos, nível superior completo, conhecimento avançado tecnologia
+- Perfil 3: 26 anos, nível superior completo, conhecimento avançado tecnologia
+- Perfil 4: 50 anos, nível superior completo, conhecimento avançado tecnologia
+- Perfil 5: 40 anos, nível superior incompleto, conhecimento básico tecnologia
 
 ## Facilidade de uso avaliada pelos usuários (Escala de 1 a 5)
 - Perfil 1: Díficil
 - Perfil 2: Díficil
 - Perfil 3: Fácil
 - Perfil 4: Fácil
-- Perfil 5: Mais ou menos (Sentiu que a plataforma fica confusa em certos pontos)
+- Perfil 5: Difícil (Sentiu que a plataforma fica confusa em certos pontos)
 
 ## Exemplo de tabela de registro dos testes de usabilidade  
 
@@ -25,18 +25,18 @@ Para registrar os indicadores de cada cenário, é preciso manter a coerência c
 | :----------- | :---------------------- | :------------------------ | :-------------------- | :-------------------------------- | :-----------------: | :------------------------------------------------------------------------- |
 | **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         130         | O fato de o cadastro ser interrompido por outra tela de cadastro incomodou |
 | **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         120         | O fato de o cadastro ser interrompido por outra tela de cadastro incomodou |
-| **Perfil 3** | Microsoft Edge          | Notebook Windows          | Sim                   | A aplicação se manteve responsiva |          63         | —                                                                          |
-| **Perfil 4** | Opera GX                | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          67         | —                                                                          |
+| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         167         | Achou bom                                                                  |
+| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          67         | —                                                                          |
 | **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          70         | —                                                                          |
 
 
 **Cenário 2**: Acessar um Curso       
 | **Usuário**  | **Navegador Utilizado** | **Dispositivo Utilizado** | **Tarefa Concluída?** | **Aspectos de Responsividade**    | **Tempo Total (s)** | **Feedback do Usuário**                                                    |
 | :----------- | :---------------------- | :------------------------ | :-------------------- | :-------------------------------- | :-----------------: | :------------------------------------------------------------------------- |
-| **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         35         | —                                                                          |
-| **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         37         | —                                                                          |
-| **Perfil 3** | Microsoft Edge          | Notebook Windows          | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
-| **Perfil 4** | Opera GX                | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
+| **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         35          | —                                                                          |
+| **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         37          | —                                                                          |
+| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
+| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
 | **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
 
 
@@ -45,9 +45,9 @@ Para registrar os indicadores de cada cenário, é preciso manter a coerência c
 | :----------- | :---------------------- | :------------------------ | :-------------------- | :-------------------------------- | :-----------------: | :------------------------------------------------------------------------- |
 | **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         327         | —                                                                          |
 | **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         312         | —                                                                          |
-| **Perfil 3** | Microsoft Edge          | Notebook Windows          | Sim                   | A aplicação se manteve responsiva |          120         | —                                                                          |
-| **Perfil 4** | Opera GX                | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          120         | —                                                                          |
-| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          120         | —                                                                          |
+| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          120        | —                                                                          |
+| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          120        | —                                                                          |
+| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          120        | —                                                                          |
 
 
 ## Relatório dos testes de usabilidade 
