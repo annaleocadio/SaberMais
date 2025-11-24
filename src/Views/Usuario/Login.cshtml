@@ -26,17 +26,22 @@
         <form asp-action="Login" method="post">
             <div class="mb-3">
                 <label for="email" class="form-label" style="color: #c9d1d9;">E-mail</label>
-                <input type="email" name="email"
+                <input type="email"
+                       name="email"
                        class="form-control"
                        style="background-color: #0d1117; color: #e6edf3; border: 1px solid #30363d;"
+                       placeholder="seu@email.com"
                        required />
             </div>
 
             <div class="mb-3">
                 <label for="senha" class="form-label" style="color: #c9d1d9;">Senha</label>
-                <input type="password" name="senha"
+                <input type="password"
+                       name="senha"
                        class="form-control"
                        style="background-color: #0d1117; color: #e6edf3; border: 1px solid #30363d;"
+                       placeholder="Digite sua senha"
+                       minlength="6"
                        required />
             </div>
 
@@ -65,8 +70,3 @@
         </div>
     </div>
 </div>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
-

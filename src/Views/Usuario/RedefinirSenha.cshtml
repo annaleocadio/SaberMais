@@ -13,9 +13,7 @@
             <div class="alert alert-success text-center mb-4">
                 @TempData["MensagemSucesso"]
             </div>
-            <script>
-                setTimeout(() => window.location.href = '/Usuario/Login', 2000);
-            </script>
+            <meta http-equiv="refresh" content="2;url=@Url.Action("Login", "Usuario")">
         }
 
         @if (TempData["MensagemErro"] != null)
@@ -28,27 +26,39 @@
         <form asp-action="RedefinirSenha" method="post">
             <div class="mb-3">
                 <label asp-for="Email" class="form-label fw-semibold">E-mail</label>
-                <input asp-for="Email" class="form-control bg-dark border-secondary text-light" placeholder="Digite seu e-mail" />
+                <input asp-for="Email"
+                       type="email"
+                       class="form-control bg-dark border-secondary text-light"
+                       placeholder="Digite seu e-mail"
+                       required />
                 <span asp-validation-for="Email" class="text-danger small"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="NovaSenha" class="form-label fw-semibold">Nova Senha</label>
-                <input asp-for="NovaSenha" type="password" class="form-control bg-dark border-secondary text-light" placeholder="Digite a nova senha" />
+                <input asp-for="NovaSenha"
+                       type="password"
+                       class="form-control bg-dark border-secondary text-light"
+                       placeholder="Digite a nova senha"
+                       minlength="6"
+                       required />
                 <span asp-validation-for="NovaSenha" class="text-danger small"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="ConfirmarSenha" class="form-label fw-semibold">Confirmar Senha</label>
-                <input asp-for="ConfirmarSenha" type="password" class="form-control bg-dark border-secondary text-light" placeholder="Confirme a nova senha" />
+                <input asp-for="ConfirmarSenha"
+                       type="password"
+                       class="form-control bg-dark border-secondary text-light"
+                       placeholder="Confirme a nova senha"
+                       minlength="6"
+                       required />
                 <span asp-validation-for="ConfirmarSenha" class="text-danger small"></span>
             </div>
 
-            <button type="submit" class="btn w-100 fw-semibold" style="background-color:#00bfa6; color:#fff;">Redefinir Senha</button>
+            <button type="submit" class="btn w-100 fw-semibold" style="background-color:#00bfa6; color:#fff;">
+                Redefinir Senha
+            </button>
         </form>
     </div>
 </div>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}

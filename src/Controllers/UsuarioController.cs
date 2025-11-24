@@ -121,9 +121,18 @@ namespace SaberMais.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult RedefinirSenha(RedefinirSenhaViewModel model)
         {
+            // ✅ VALIDAÇÃO: Verifica se o ModelState é válido
             if (!ModelState.IsValid)
                 return View(model);
 
+            // ✅ VALIDAÇÃO: Verifica se as senhas são iguais
+            if (model.NovaSenha != model.ConfirmarSenha)
+            {
+                ModelState.AddModelError("ConfirmarSenha", "As senhas não coincidem.");
+                return View(model);
+            }
+
+            // ✅ VALIDAÇÃO: Verifica se o email existe
             var usuario = _context.Usuarios.FirstOrDefault(u => u.Email == model.Email);
             if (usuario == null)
             {
@@ -131,6 +140,14 @@ namespace SaberMais.Controllers
                 return View(model);
             }
 
+            // ✅ VALIDAÇÃO: Verifica tamanho mínimo da senha
+            if (model.NovaSenha.Length < 6)
+            {
+                ModelState.AddModelError("NovaSenha", "A senha deve ter pelo menos 6 caracteres.");
+                return View(model);
+            }
+
+            // Atualiza a senha
             usuario.Senha = model.NovaSenha;
             _context.SaveChanges();
 
@@ -139,4 +156,3 @@ namespace SaberMais.Controllers
         }
     }
 }
-
