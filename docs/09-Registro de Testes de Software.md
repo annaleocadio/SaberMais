@@ -12,6 +12,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Verificar se o usuário consegue criar uma conta corretamente utilizando e-mail e senha válidos.                                        |                      |
 | Passos              | - Acessar a tela de cadastro.<br>- Inserir e-mail válido.<br>- Inserir senha válida.<br>- Confirmar senha.<br>- Clicar em “Cadastrar”. |                      |
 | Critério de Êxito   | - O sistema cria a conta e exibe mensagem de sucesso.                                                                                  |                      |
+| Resultado do Teste  | Sucesso, o sistema cadastra o usuário validando os dados inseridos e retorna uma mensagem de sucesso.                                  |                      |
 
 ### CT02 – Edição de dados cadastrais
 | Campo               | Descrição                                                                         | Vídeo (RAW)          |
@@ -21,6 +22,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Verificar se o usuário consegue visualizar e atualizar nome e foto.               |                      |
 | Passos              | - Acessar conta logada.<br>- Ir ao perfil.<br>- Alterar nome e foto.<br>- Salvar. |                      |
 | Critério de Êxito   | Dados atualizados e exibidos corretamente.                                        |                      |
+| Resultado do Teste   | Sucesso, sistema permite que o usuário logado altere suas informações dos dados cadastrais.                                        |                      |
 
 ### CT03 – Cadastro de item
 | Campo               | Descrição                                                                                        | Vídeo (RAW)          |
@@ -30,6 +32,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Verificar cadastro de item com todos os campos obrigatórios.                                     |                      |
 | Passos              | - Logar.<br>- Acessar “Cadastrar item”.<br>- Preencher dados.<br>- Anexar arquivos.<br>- Salvar. |                      |
 | Critério de Êxito   | Item cadastrado e exibido.                                                                       |                      |
+| Resultado do Teste  | Sucesso, o sistema permite o cadastro de novos cursos, retornando uma mensagem de sucesso após o cadastro do mesmo.                                        |                      |
 
 ### CT04 – Edição e exclusão de item
 | Campo               | Descrição                                                  | Vídeo (RAW)          |
@@ -39,6 +42,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Validar edição e exclusão de item.                         |                      |
 | Passos              | - Logar.<br>- Abrir lista.<br>- Editar item.<br>- Excluir. |                      |
 | Critério de Êxito   | Edição salva e exclusão realizada.                         |                      |
+| Resultado do Teste  | Falhou, o sistema não permitiu que o usuário editasse ou excluísse um item previamente cadastrado.                |                      |
 
 ### CT05 – Busca de itens
 | Campo               | Descrição                                                    | Vídeo (RAW)          |
@@ -48,6 +52,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Verificar busca por filtros.                                 |                      |
 | Passos              | - Inserir filtros.<br>- Aplicar.<br>- Visualizar resultados. |                      |
 | Critério de Êxito   | Resultados corretos.                                         |                      |
+| Resultado do Teste  | Parcialmente Sucesso, o usuário consegue buscar por meio de uma barra de pesquisas, mas sem filtros.           |                      |
 
 ### CT06 – Listagem inicial de itens
 | Campo               | Descrição                                 | Vídeo (RAW)          |
@@ -57,6 +62,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Verificar exibição inicial por categoria. |                      |
 | Passos              | - Acessar página inicial.                 |                      |
 | Critério de Êxito   | Itens exibidos por categoria.             |                      |
+| Resultado do Teste  | Parcialmente Sucesso, a tela Inicial categoriza os cursos upados, mas apenas por "Em Alta" e "Recomendados".           |                      |
 
 ### CT07 – Escolha de modalidade de curso
 | Campo               | Descrição                                                 | Vídeo (RAW)          |
@@ -66,6 +72,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Validar escolha entre modalidades.                        |                      |
 | Passos              | - Abrir cursos.<br>- Filtrar modalidade.<br>- Selecionar. |                      |
 | Critério de Êxito   | Modalidade correta exibida.                               |                      |
+| Resultado do Teste  | Falha, o usuário não consegue pesquisar cursos pela modalidade.          |                      |
 
 ### CT08 – Confirmação de envio de documento
 | Campo               | Descrição                                                    | Vídeo (RAW)          |
@@ -75,6 +82,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Verificar confirmação conforme tipo de envio.                |                      |
 | Passos              | - Selecionar entrega.<br>- Enviar documento.<br>- Confirmar. |                      |
 | Critério de Êxito   | Confirmação correta.                                         |                      |
+| Resultado do Teste  | Sucesso, o sistema valida o documento enviado do curso, ou se a modalidade for presencial, com os campos de Endereço.        |                      |
 
 ### CT09 – Confirmar recebimento
 | Campo               | Descrição                                                        | Vídeo (RAW)          |
@@ -84,6 +92,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Validar marcação de item recebido.                               |                      |
 | Passos              | - Logar.<br>- Abrir itens adquiridos.<br>- Marcar como recebido. |                      |
 | Critério de Êxito   | Status atualizado.                                               |                      |
+| Resultado do Teste  | Falha, o sistema não permite que o usuário marque como "Recebido" um curso pelo qual ele se interessou.       |                      |
 
 ### CT10 – Avaliação
 | Campo               | Descrição                                                                | Vídeo (RAW)          |
@@ -93,6 +102,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Verificar envio de nota e comentário.                                    |                      |
 | Passos              | - Abrir página.<br>- Inserir nota.<br>- Inserir comentário.<br>- Enviar. |                      |
 | Critério de Êxito   | Avaliação registrada.                                                    |                      |
+| Resultado do Teste  | Sucesso, o sistema permite que o usuário avalie o curso e deixe seu comentário no perfil do responsável.       |                      |
 
 ### CT11 – Revisão de denúncias
 | Campo               | Descrição                                                  | Vídeo (RAW)          |
