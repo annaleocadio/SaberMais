@@ -3,7 +3,7 @@
 # Plano de Testes de Software
 
 ### 📹 Vídeos de Evidências (CT01 a CT10)
-- **CT01** – [Vídeo](https://github.com/user-attachments/assets/3f2bb043-84c6-462b-ab87-8a5da6dc6b77)
+- 
 - **CT02** – [Vídeo](https://github.com/user-attachments/assets/6dbfb036-59b9-4177-9db7-aa1eaa7122af)
 - **CT03** – [Vídeo](https://github.com/user-attachments/assets/428d8879-fede-4751-81f1-428a994c3161)
 - **CT04** – [Vídeo](https://github.com/user-attachments/assets/c985dad8-165f-42d2-a7f4-7182d1233c3d)
@@ -17,11 +17,14 @@
 ---
 
 | Caso de Teste	| CT01 – Cadastro de usuário 	|
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-|	Requisito Associado 	| RF-01 – O sistema deve permitir que o usuário crie uma conta utilizando e-mail e senha. |
-| Objetivo do Teste 	| Verificar se o usuário consegue criar uma conta corretamente utilizando e-mail e senha válidos. |
-| Passos 	| - Acessar a tela de cadastro. <br> - Inserir e-mail válido.  - Inserir senha válida. <br> - Confirmar senha. <br> - Clicar em “Cadastrar”. |
-| Critério de Êxito | - O sistema cria a conta e exibe uma mensagem de sucesso ou redireciona para a tela de confirmação de e-mail. |
+| Campo               | Descrição                                                                                                                              | Vídeo (RAW)          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| Caso de Teste       | CT01 – Cadastro de usuário                                                                                                             | **CT01** – [Vídeo](https://github.com/user-attachments/assets/3f2bb043-84c6-462b-ab87-8a5da6dc6b77) |
+| Requisito Associado | RF-01 – O sistema deve permitir que o usuário crie uma conta utilizando e-mail e senha.                                                |                      |
+| Objetivo do Teste   | Verificar se o usuário consegue criar uma conta corretamente utilizando e-mail e senha válidos.                                        |                      |
+| Passos              | - Acessar a tela de cadastro.<br>- Inserir e-mail válido.<br>- Inserir senha válida.<br>- Confirmar senha.<br>- Clicar em “Cadastrar”. |                      |
+| Critério de Êxito   | - O sistema cria a conta e exibe mensagem de sucesso.                                                                                  |                      |
+
 
 | Caso de Teste   | CT02 – Edição de dados cadastrais                                                                                 |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
