@@ -13,8 +13,8 @@ O registro de testes de usabilidade é um documento ou planilha onde são coleta
 - Perfil 1: Díficil
 - Perfil 2: Díficil
 - Perfil 3: Fácil
-- Perfil 4: Fácil
-- Perfil 5: Difícil (Sentiu que a plataforma fica confusa em certos pontos)
+- Perfil 4: Média
+- Perfil 5: Média
 
 ## Exemplo de tabela de registro dos testes de usabilidade  
 
