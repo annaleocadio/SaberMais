@@ -25,9 +25,9 @@ Para registrar os indicadores de cada cenário, é preciso manter a coerência c
 | :----------- | :---------------------- | :------------------------ | :-------------------- | :-------------------------------- | :-----------------: | :------------------------------------------------------------------------- |
 | **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         130         | O fato de o cadastro ser interrompido por outra tela de cadastro incomodou |
 | **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         120         | O fato de o cadastro ser interrompido por outra tela de cadastro incomodou |
-| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         167         | Achou bom                                                                  |
-| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          67         | —                                                                          |
-| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          70         | —                                                                          |
+| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         79          | Achou bom                                                                  |
+| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         137         | O fato de o cadastro ser interrompido por outra tela de cadastro incomodou |
+| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         113         | Teve uma leve dificuldade na data de nascimento                            |
 
 
 **Cenário 2**: Acessar um Curso       
@@ -35,9 +35,9 @@ Para registrar os indicadores de cada cenário, é preciso manter a coerência c
 | :----------- | :---------------------- | :------------------------ | :-------------------- | :-------------------------------- | :-----------------: | :------------------------------------------------------------------------- |
 | **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         35          | —                                                                          |
 | **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         37          | —                                                                          |
-| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
-| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
-| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          15         | —                                                                          |
+| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         17          | —                                                                          |
+| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         7           | —                                                                          |
+| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         5           | —                                                                          |
 
 
 **Cenário 3**: Cadastrar um Curso      
@@ -45,9 +45,9 @@ Para registrar os indicadores de cada cenário, é preciso manter a coerência c
 | :----------- | :---------------------- | :------------------------ | :-------------------- | :-------------------------------- | :-----------------: | :------------------------------------------------------------------------- |
 | **Perfil 1** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         327         | —                                                                          |
 | **Perfil 2** | Internet (Samsung)      | Smartphone Android        | Sim                   | A aplicação se manteve responsiva |         312         | —                                                                          |
-| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          120        | —                                                                          |
-| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          120        | —                                                                          |
-| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |          120        | —                                                                          |
+| **Perfil 3** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         167         | —                                                                          |
+| **Perfil 4** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         289         | —                                                                          |
+| **Perfil 5** | Google Chrome           | Computador Windows        | Sim                   | A aplicação se manteve responsiva |         220         | —                                                                          |
 
 
 ## Relatório dos testes de usabilidade 
@@ -60,9 +60,9 @@ Os testes foram organizados em três cenários que abrangem o fluxo principal do
 
 | **Cenário**   | **Descrição**       | **Total de Usuários** | **Taxa de Sucesso (%)** | **Tempo Mínimo (s)** | **Tempo Máximo (s)** | **Tempo Médio (s)** | **Desvio entre Tempos (s)** | **Observações Gerais**                                                                                            |
 | :------------ | :------------------ | :-------------------: | :---------------------: | :------------------: | :------------------: | :-----------------: | :-------------------------: | :---------------------------------------------------------------------------------------------------------------- |
-| **Cenário 1** | Cadastro de Usuário |           5           |           100%          |          63          |          130         |        **90**       |             ±27             | Todos concluíram a tarefa com sucesso; tempos mais altos associados à interrupção por tela duplicada de cadastro. |
-| **Cenário 2** | Acesso a um Curso   |           5           |           100%          |          15          |          37          |        **23**       |             ±10             | Tarefa simples e rápida; desempenho uniforme entre os usuários, sem relatos de dificuldade.                       |
-| **Cenário 3** | Cadastro de Curso   |           5           |           100%          |          120         |          327         |       **200**       |             ±88             | Tarefa mais longa; maior variação de tempo entre usuários (principalmente entre desktop e mobile).                |
+| **Cenário 1** | Cadastro de Usuário |           5           |           100%          |          79          |          137         |        **115,8**    |             ±58             | Todos concluíram a tarefa com sucesso; tempos mais altos associados à interrupção por tela duplicada de cadastro. |
+| **Cenário 2** | Acesso a um Curso   |           5           |           100%          |          5           |          37          |        **20,2**     |             ±32             | Tarefa simples e rápida; desempenho uniforme entre os usuários, sem relatos de dificuldade.                       |
+| **Cenário 3** | Cadastro de Curso   |           5           |           100%          |          167         |          327         |        **263**      |             ±160            | Tarefa mais longa; maior variação de tempo entre usuários (principalmente entre desktop e mobile).                |
 
 Durante a análise dos testes, foi possível identificar diversos padrões de comportamento entre os participantes, especialmente entre os usuários com mais de 50 anos. Esse grupo demonstrou certo incômodo em relação à escolha das cores da plataforma, relatando dificuldades tanto na leitura dos textos quanto na compreensão dos elementos visuais e da estrutura geral da interface.
 
