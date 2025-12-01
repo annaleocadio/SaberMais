@@ -5,9 +5,9 @@ O registro de testes de usabilidade é um documento ou planilha onde são coleta
 ## Perfil dos usuários que participaram do teste
 - Perfil 1: 50 anos, nível básico incompleto, conhecimento básico tecnologia
 - Perfil 2: 53 anos, nível superior incompleto, conhecimento básico tecnologia
-- Perfil 3: 26 anos, nível superior completo, conhecimento avançado tecnologia
-- Perfil 4: 50 anos, nível superior completo, conhecimento avançado tecnologia
-- Perfil 5: 40 anos, nível superior incompleto, conhecimento básico tecnologia
+- Perfil 3: 26 anos, nível superior completo, conhecimento avançado tecnologia / Vídeo: https://github.com/user-attachments/assets/2dd4c881-f838-4e0a-86ba-b10bd3367dda
+- Perfil 4: 50 anos, nível superior completo, conhecimento avançado tecnologia / Vídeo: https://github.com/user-attachments/assets/43c4d5aa-2ad6-4157-bcc8-c6fb5e8760ea
+- Perfil 5: 40 anos, nível superior incompleto, conhecimento básico tecnologia / Vídeo: https://github.com/user-attachments/assets/3495cac5-14cb-4138-9241-aa922ad181f3
 
 ## Facilidade de uso avaliada pelos usuários (Escala de 1 a 5)
 - Perfil 1: Díficil
