@@ -66,7 +66,7 @@ As ferramentas empregadas no projeto são:
 | Git/GitHub | Sistema de controle de versão e hospedagem do código fonte |
 | GitHub Projects | Gerenciamento de tarefas e organização do quadro Kanban |
 | Figma | Criação de wireframes e protótipos interativos da interface |
-| Draw.io | Desenvolvimento de diagramas de fluxo |
+| Draw.io/PlantUML| Desenvolvimento de diagramas de fluxo |
 | Microsoft Teams | Plataforma de comunicação para reuniões virtuais da equipe |
 | WhatsApp | Comunicação rápida e informal entre os membros da equipe |
 
