@@ -92,31 +92,29 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 <img width="812" height="672" alt="Diagrama de caso de uso" src="https://github.com/user-attachments/assets/4f038e44-803f-4503-8078-550d730c788b" />
 
-* Atualizado
+* Atualizado 5ª Etapa
+
 ![Imagem do Diagrama](https://github.com/user-attachments/assets/236cb8b3-634c-4c02-a011-284ae7a9d6ea)
 
 | Ator | Descrição                                               |
 | ---- | ------------------------------------------------------- |
-| Usuário | O usuário se cadastra na plataforma para poder acessar suas funcionalidades.. |
-| Usuário | O usuário faz login ou recupera a senha se necessário. |
-| Usuário | O usuário gerencia seu perfil e configurações pessoais. |
-| Usuário | O sistema notifica o usuário sobre atividades relevantes. |
-| Usuário | O usuário pode denunciar problemas ou outros usuários na plataforma. |
-| Usuário | O usuário pode enviar e receber mensagens. |
-| Usuário | O usuário pode avaliar outro usuário. |
-| Professor | O professor pode editar ou excluir um item que já cadastrou. |
-| Professor | O professor pode indicar como prefere entregar o item. |
-| Professor | O professor pode enviar e receber mensagens. |
-| Professor | O professor cadastra itens disponíveis. |
-| Instituição | A instituição cadastra itens disponíveis. |
-| Instituição | A instituição pode editar ou excluir um item que já cadastrou. |
-| Instituição | A instituição pode indicar como prefere entregar o item. |
-| Instituição | A instituição pode enviar e receber mensagens. |
-| Instituição | A instituição fornece dicas de cursos para alunos e outras instituições. |
-| Receptor | O receptor solicita um item (professor ou instituição). |
-| Receptor | O receptor confirma que recebeu um item. |
-| Receptor | O receptor pode enviar e receber mensagens. |
-| Receptor | O usuário busca itens disponíveis. |
-| Receptor | O usuário solicita um item. |
-| Administrador | O administrador verifica e gerencia anúncios na plataforma. |
-| Administrador | O administrador pode suspender ou banir usuários problemáticos. |
+| Usuário | O usuário se cadastra na plataforma informando e-mail, senha, CPF/CNPJ, nome completo e tipo de pessoa (física/jurídica). (RF-01) |
+| Usuário | O usuário faz login com e-mail e senha ou recupera a senha caso tenha esquecido. (RF-01) |
+| Usuário | O usuário gerencia seu perfil, podendo editar dados cadastrais (nome) e alterar sua foto de perfil. (RF-02) |
+| Usuário | O usuário cadastra um curso informando título, descrição, valor, modalidade (presencial/online), e faz upload de imagem e material (PDF/eBook). (RF-03, RF-07, RF-08)  |
+| Usuário | O usuário edita ou exclui um curso previamente cadastrado por ele. (RF-04)  |
+| Usuário | O usuário pesquisa cursos disponíveis filtrando por categoria, localização, palavra-chave, faixa de preço e data de publicação. (RF-05) |
+| Usuário | O usuário visualiza a lista de cursos disponíveis na página inicial, organizados por categorias. (RF-06) |
+| Usuário | O usuário visualiza o perfil completo de outro usuário, incluindo foto, nome, e avaliações recebidas com média de notas. (RF-010)  |
+| Usuário | O usuário avalia outro usuário dando uma nota de 1 a 5 estrelas e opcionalmente deixando um comentário. (RF-010) |
+| Usuário | O usuário envia mensagens privadas para outros usuários, recebe mensagens, lê mensagens recebidas e exclui mensagens.  |
+| Usuário | O sistema notifica o usuário sobre novos cursos cadastrados e exibe contador de mensagens não lidas no menu.  |
+| Usuário | O usuário marca um curso como "Recebido" após confirmar a entrega ou conclusão do curso. (RF-09) |
+| Usuário | O usuário denuncia outros usuários ou cursos inadequados para revisão administrativa. (RF-011) |
+| Administrador | O administrador visualiza, gerencia e pode excluir cursos cadastrados na plataforma. |
+| Administrador | O administrador revisa denúncias de usuários ou cursos e toma ações como remoção de conteúdo. (RF-011) |
+| Administrador | O administrador suspende ou bane usuários problemáticos, bloqueando acesso por e-mail e CPF. (RF-011, RF-012)  |
+| Administrador | O administrador pode excluir permanentemente contas de usuários. |
+| Administrador | O super administrador pode criar novos administradores e excluir administradores existentes (exceto super admins). |
+| Sistema| O sistema envia notificações automáticas aos usuários quando novos cursos são cadastrados. |
+| Sistema | O sistema exibe um contador de mensagens não lidas no ícone de mensagens do menu de navegação.  |
