@@ -92,6 +92,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 <img width="812" height="672" alt="Diagrama de caso de uso" src="https://github.com/user-attachments/assets/4f038e44-803f-4503-8078-550d730c788b" />
 
+
+
 | Ator | Descrição                                               |
 | ---- | ------------------------------------------------------- |
 | Usuário | O usuário se cadastra na plataforma para poder acessar suas funcionalidades.. |
