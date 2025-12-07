@@ -121,3 +121,13 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Objetivo do Teste   | Impedir cadastro de banidos.                |                      |
 | Passos              | - Tentar criar conta com e-mail/CPF banido. |                      |
 | Critério de Êxito   | Bloqueio e mensagem exibida.                |                      |
+
+### Relatório de testes de software
+
+Os testes foram realizados com base no plano de testes e nas funcionalidades já desenvolvidas na aplicação, com foco em validar o que estava operacional, identificando eventuais problemas e definindo soluções para os ajustes necessários.
+
+Durante a execução dos testes, foi possível verificar o funcionamento do cadastro e login de usuários, edição de dados cadastrais, cadastro e busca de itens, validação da modalidade do curso, confirmação de envio de documentos, avaliação do curso e do usuário responsável, além do bloqueio de usuários banidos pelo administrador.
+
+Como ponto de melhoria, identificou-se a ausência de identificadores específicos para os cursos, o que dificultou uma filtragem mais precisa na listagem inicial. Também não foi disponibilizada a funcionalidade de registro para o usuário comum, o que limitou parte da experiência esperada.
+
+Apesar desses pontos, os testes permitem concluir que a aplicação está funcional e pode ser utilizada normalmente, com suas principais funcionalidades operando de forma adequada.
