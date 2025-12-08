@@ -52,9 +52,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_60C0199B00534946903CF36803A5C58A }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_244C43137A3647A0A6CEECD31129CFA9 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B4734ED4CCBF4DAFA6723FD0EB454477 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6A6563AB95A34BA0AA5DE1F65E1B6C80 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9D87C6737D3449A9BD80993A298F4C3B }}
 
 
       - name: Deploy to Azure Web App
@@ -63,4 +63,5 @@ jobs:
           app-name: 'sabermais'
           slot-name: 'Production'
           package: .
+
 
