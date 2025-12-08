@@ -1,4 +1,4 @@
-name: Build and deploy ASP.NET Core app to Azure Web App
+name: Build and deploy ASP.NET Core app to Azure Web App - sabermais
 
 on:
   push:
@@ -22,13 +22,13 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore ./src/SaberMais.sln
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build ./src/SaberMais.sln --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish ./src/SaberMais.csproj -c Release -o ./publish
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
