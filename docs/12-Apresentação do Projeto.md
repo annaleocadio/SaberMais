@@ -1,12 +1,8 @@
 # Apresentação
 
-## Vídeo de apresentação - Etapa 01
-
-[Apresentação Slide PDF](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e2-proj-int-t1-educacaoqualidade/blob/main/presentation/apresentacaoSlidesEtapa1.pdf)
-
-[Vídeo de Apresentação da ETAPA 01](https://vimeo.com/1114707006?share=copy)
-
 ## Vídeo de apresentação - Etapa 05
+
+[Apresentação Slide PDF](https://github.com/user-attachments/files/24022394/slidesEtapa05-SaberMais.pdf)
 
 Inclua aqui o vídeo de APRESENTAÇÃO FINAL do projeto produzido na Etapa 05.
 
